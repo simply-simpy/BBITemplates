@@ -1,0 +1,84 @@
+/*=========================*
+| Bootstrap Theme Settings |
+*=========================*/
+// NOTE: Each Brand will have a unique color palettes, font families, and overrides
+// Make these global changes in the 'theme.variables' file and leave the vendor
+// Bootstrap v4.1.3 styles as-is.
+
+@import 'theme.functions';  // DEFAULT BOOTSTRAP SASS FUNCTIONS
+@import 'theme.variables';  // CUSTOM GLOBAL THEME SETTINGS
+@import "theme.components"; // BOOTSTRAP COMPONENTS & CUSTOM THEME MIXINS
+@import "theme.layout"; // CUSTOM GLOBAL LAYOUT
+
+/*============================*
+| Plugin Style Styles          |
+*============================*/
+
+@import "plugins/_tempusdominus-bootstrap-4.scss";
+
+/*============================*
+| Bootstrap Element Overrides |
+*============================*/
+
+@import 'element.global';   // Global Settings
+@import 'element.buttons';  // Button Styles
+@import 'element.icons';    // BBI Icons
+@import 'element.headings'; // Heading Styles
+
+// TODO: CONFIRM
+@import 'element.forms';
+@import 'element.images';
+@import 'element.links';
+@import 'element.lists';
+
+/*============================*
+| Custom Utilities |
+*============================*/
+@import 'utilities/utility.clear-float'; // Clear floats at breakpoints.
+@import 'utilities/utility.truncate'; // Truncate multiline text
+
+/*=========================*
+| Template Specific Styles |
+*=========================*/
+@import 'template.location-finder';
+@import 'template.food-menu';
+@import 'template.payment-methods';
+@import 'template.404-error';
+@import 'template.503-error';
+@import 'template.session-timeout';
+@import 'template.location-delivery';
+@import 'template.custom-product';
+@import 'template.order-confirmation';
+@import 'component.notifications';
+@import 'component.confirmation-info';
+@import 'template.contact-info';
+@import 'template.order-review';
+@import 'template.offers';
+@import 'template.brand-site';
+
+/*========================*
+| Global Component Styles |
+*========================*/
+@import 'component.loading-spinner';
+@import 'component.navigation';
+@import 'component.modal';
+@import 'component.progress-wizard';
+@import 'component.menu-item-details';
+@import 'component.customer-order';
+@import 'component.order-info';
+@import 'component.modal-trigger';
+@import 'component.date-time-picker';
+@import 'component.carousel';
+@import 'component.dine-rewards';
+@import 'component.apply-discount';
+@import 'component.google-map';
+@import 'component.page-foot';
+@import 'component.tip-selector';
+@import 'component.view-cart';
+@import "component.promo-alert";
+
+/*========================*
+| UX Updates              |
+*========================*/
+
+

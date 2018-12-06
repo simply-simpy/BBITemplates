@@ -1,0 +1,92 @@
+/*==========================*
+| Primary Navigation Styles |
+*==========================*/
+
+.site-header {
+  background: url(#{$brand-secondary}) 0 0 repeat #262524;
+  color: $brand-fg-light;
+  .icon-cart_bag:before {
+    @include rem(25px);
+  }
+  .icon-logo {
+    color: $brand-fg-light;
+    @include rem(100px);
+    line-height: 0;
+    margin: 10px;
+
+    &::before {
+      line-height: 38px;
+    }
+
+    @include media-breakpoint-up(md) {
+      margin: 25px 1rem;
+      @include rem(183px);
+
+      &::before {
+        @include line-height(68px);
+      }
+    }
+  }
+
+  nav .nav-link {
+    color: $gray-500;
+    font-family: $font-secondary;
+    @include rem(18px);
+
+    &.active {
+      border-bottom: 5px solid $brand-primary;
+      color: $brand-fg-light;
+    }
+
+    &.cart {
+      color: $brand-fg-light;
+      font-family: $font-secondary;
+      text-transform: uppercase;
+      @include rem(18px);
+
+      .icon-cart_bag {
+        position: relative;
+
+        .badge {
+          right: -7px;
+          bottom: -2px;
+          font-size: 10px;
+          font-style: normal;
+          background: $brand-primary;
+          border-radius: 50%;
+          width: 15px;
+          height: 15px;
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          -webkit-font-smoothing: antialiased;
+        }
+      }
+
+      @include media-breakpoint-up(md) {
+        @include rem(30px);
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      @include rem(30px);
+    }
+  }
+  .fulfillment {
+    color: $accent-2;
+    @include rem(20px);
+    @extend .mb-1;
+    a {
+      color: $white;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    .toggle-phone {
+      @extend .text-capitalize;
+      @extend .font-weight-normal;
+    }
+  }
+}

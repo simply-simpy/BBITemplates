@@ -1,0 +1,65 @@
+$btn-secondary-hover: rgba(17,17,17,.1);
+$btn-secondary-active: rgba(17,17,17,.2);
+
+.btn {
+  font-family: $font-secondary;
+  text-transform: uppercase;
+
+
+  &-primary:not(:disabled):not(.disabled):active:focus {
+    box-shadow: $btn-focus-box-shadow;
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: $btn-focus-box-shadow;
+  }
+
+  /*========================*
+  | SECONDARY BUTTON STYLES |
+  *========================*/
+
+  &-outline-secondary {
+    @include hover-focus {
+      background-color: $btn-secondary-hover;
+      color: $brand-fg-dark;
+      text-decoration: none;
+    }
+
+    &:focus,
+    &.focus {
+      background-color: transparent;
+    }
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+      background-color: $btn-secondary-active;
+      color: $brand-fg-dark;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+/*========================*
+| BUTTON TYPES            |
+*========================*/
+.sticky-buttons {
+  @extend .mt-10;
+  .sticky-buttons-inner {
+    background-color: $white;
+    box-shadow: ($box-shadow-reverse);
+    @extend .fixed-bottom;
+    @extend .py-3;
+  }
+  &.sticky-buttons-modal {
+    @extend .mt-0;
+    .sticky-buttons-inner {
+      background-color: $brand-bg-dark;
+      @extend .position-absolute;
+    }
+  }
+}
+

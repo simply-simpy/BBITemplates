@@ -1,0 +1,47 @@
+/*==========================*
+| Bootstrap Modal Overrides |
+*==========================*/
+
+.modal {
+  &-title {
+    @extend .text-uppercase;
+  }
+  &-body {
+    @include rem(20px);
+    li {
+      font-family: $font-primary;
+      @extend .mb-3;
+    }
+  }
+  p {
+    line-height: $display-line-height;
+  }
+  .modal-title {
+    @include rem(24px);
+    @include media-breakpoint-up(md){
+      @include rem(30px);
+    }
+  }
+  &.modal-header-center {
+    .modal-header {
+      border-bottom: 1px solid #73573b;
+      justify-content: center;
+      @extend .my-0;
+      @extend .py-1;
+    }
+    .close {
+      @extend .m-0;
+      position: absolute;
+      @extend .p-1;
+      top: .25rem;
+      @include media-breakpoint-up(md){
+        top: .5rem;
+      }
+      right: 1rem;
+    }
+  }
+}
+
+
+
+

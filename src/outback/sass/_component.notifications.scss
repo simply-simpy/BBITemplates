@@ -1,0 +1,44 @@
+[data-component="notifications"] {
+  border-bottom: 1px dashed $brand-accent-1;
+  @include media-breakpoint-up(lg){
+    border: 2px solid $brand-accent-1;
+  }
+  position: relative;
+  p {
+    line-height: 1;
+    margin-bottom: 0;
+  }
+  .icon-close {
+    color: red;
+    line-height: 1;
+    position: relative;
+    &::before {
+      @include rem(30px);
+      position: relative;
+      right: $spacer/3;
+      top: -$spacer/3;
+    }
+  }
+  .icon-check {
+    color: green;
+    line-height: 1;
+    position: relative;
+    &::before {
+      @include rem(30px);
+      position: relative;
+      right: $spacer/3;
+      top: -$spacer/3;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    &::before {
+      content: "";
+      border-left: 1px dotted $brand-accent-1;
+      height: calc(100% - 2rem);
+      width: 1px;
+      position: absolute;
+      top: 1rem;
+      left: 50%;
+    }
+  }
+}

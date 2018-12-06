@@ -1,0 +1,132 @@
+// IMPORT GLOBAL BOOTSTRAP COMPONENTS
+
+@import "../../bootstrap/mixins";
+@import "../../bootstrap/root";
+@import "../../bootstrap/reboot";
+@import "../../bootstrap/type";
+@import "../../bootstrap/grid";
+@import "../../bootstrap/tables";
+@import "../../bootstrap/forms";
+@import "../../bootstrap/buttons";
+@import "../../bootstrap/transitions";
+@import "../../bootstrap/dropdown";
+@import "../../bootstrap/button-group";
+@import "../../bootstrap/input-group";
+@import "../../bootstrap/nav";
+@import "../../bootstrap/card";
+@import "../../bootstrap/list-group";
+@import "../../bootstrap/close";
+@import "../../bootstrap/modal";
+@import "../../bootstrap/tooltip";
+@import "../../bootstrap/popover";
+@import "../../bootstrap/utilities";
+@import "../../bootstrap/carousel";
+
+// THEME SPECIFIC MIXINS
+
+/*=================================*
+| CONTENTS                         |
+| ---------------------------------|
+| 1. Responsive Images             |
+| 2. Webfont Icon Styles           |
+| 3. Pixels => REM Unit Conversion |
+|    ‣ Font Size                   |
+|    ‣ Margin                      |
+|    ‣ Padding                     |
+|    ‣ Line Height                 |
+|    ‣ Element Height              |
+|    ‣ Element Width               |
+| 4. Truncate Text                 |
+*=================================*/
+
+/*==================*
+| Responsive Images |
+*==================*/
+
+@mixin img-fluid {
+  max-width: 100%; // Set a maximum width relative to the parent
+  height: auto;    // Override the height to auto, otherwise images will be stretched
+}
+.img-fluid {
+  @include img-fluid;
+}
+
+/*====================================================*
+| Webfont Icon Styles                                 |
+| Attaches an icon and default styles to any element  |
+| by nesting this inside the :before or :after pseudo |
+*====================================================*/
+
+%icon {
+  display: inline-flex;
+  font-family: $font-icons;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  overflow: hidden;
+  text-decoration: inherit;
+  vertical-align: middle;
+}
+
+@mixin icon($icon) {
+  @extend %icon;
+  content: $icon;
+}
+
+/*=============================*
+| Pixel to REM Unit Conversion |
+*=============================*/
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+// Font Size
+@mixin rem($size) {
+  font-size: $size; //Fallback in px
+  font-size: calculateRem($size);
+}
+
+// Margin
+@mixin margin($size) {
+  margin: $size; //Fallback in px
+  margin: calculateRem($size);
+}
+
+// Padding
+@mixin padding($size) {
+  padding: $size; //Fallback in px
+  padding: calculateRem($size);
+}
+
+// Line Height
+@mixin line-height($size) {
+  line-height: $size; //Fallback in px
+  line-height: calculateRem($size);
+}
+
+// Element Height
+@mixin height($size) {
+  height: $size; //Fallback in px
+  height: calculateRem($size);
+}
+
+// Element Width
+@mixin width($size) {
+  width: $size; //Fallback in px
+  width: calculateRem($size);
+}
+
+/*=======================================*
+| Truncates long text strings with "..." |
+*=======================================*/
+
+@mixin truncate($truncation-boundary) {
+  max-width: $truncation-boundary;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+

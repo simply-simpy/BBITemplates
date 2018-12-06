@@ -1,0 +1,20 @@
+[data-template="order-confirmation"] {
+  .container {
+    max-width: (920 + $grid-gutter-width);
+  }
+  .title {
+    color: $green;
+    .icon-check {
+      font-size: 3.25rem;
+      @extend .mr-1;
+    }
+  }
+  .dine-rewards {
+    // Each section is divided by dashed line on mobile except for order-summary
+    border-bottom: 1px dashed $brand-accent-1;
+
+    @include media-breakpoint-up(lg) {
+      border: 2px solid $brand-accent-1;
+    }
+  }
+}

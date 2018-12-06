@@ -1,0 +1,102 @@
+[data-template="payment-methods"] {
+  .form-inline {
+    .form-check {
+      width: auto;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    .iframe-container {
+      height: 500px;
+      border: 0;
+    }
+  }
+  .payment-methods {
+    .input-group p {
+      flex-basis: 100%;
+    }
+  }
+  section {
+    @extend .mb-3;
+    @extend .pb-3;
+
+    // Each section is divided by dashed line on mobile except for order-summary
+    border-bottom: 1px dashed $brand-accent-1;
+
+    @include media-breakpoint-up(lg) {
+      border: 2px solid $brand-accent-1;
+      padding: 2rem 10rem;
+    }
+  }
+
+  .promo-code {
+    .active-code {
+      font-weight: bold;
+      word-wrap: break-word;
+    }
+  }
+
+
+  .row {
+    align-items: flex-start;
+    justify-content: space-between;
+
+    &.order-summary {
+      border-bottom: none;
+      h2 {
+        @include rem(24px)
+      }
+      li {
+        line-height: 1.25rem;
+        display: flex;
+        justify-content: space-between;
+        @include rem(20px);
+        h2 {
+          @include rem(24px);
+        }
+      }
+
+      // Show border-bottom (hidden on mobile) for desktop viewport
+      @include media-breakpoint-up(lg) {
+        border-bottom: 2px solid $brand-accent-1;
+      }
+    }
+  }
+
+  // Modal Button
+  // White card which summons modal on click. needs a real name
+  .btn-modal {
+    border-radius: 0;
+    cursor: pointer;
+    .card-body {
+      @include rem(18px);
+      @extend .d-flex;
+      @extend .flex-column;
+      @extend .justify-content-center;
+      line-height: 1.2;
+      @include media-breakpoint-down(sm) {
+        padding-right: 9vw;
+      }
+      h2 {
+        font-weight: normal;
+        font-family: $font-primary;
+        text-align: left;
+        text-transform: none;
+      }
+      .card-title {
+        @extend .mb-1;
+      }
+      &:after {
+        margin-top: -$spacer/2;
+        position: absolute;
+        right: 1.2vw;
+        top: 50%;
+        @include media-breakpoint-up(sm) {
+          right: 1.75rem;
+        }
+        transform: rotate(270deg);
+        @include icon($carat);
+        text-shadow: 1px 0 black;
+      }
+    }
+  }
+}

@@ -1,0 +1,163 @@
+/*=========================*
+| Global Template Settings |
+*=========================*/
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p, label {
+  @include rem(20px);
+}
+.font-size-base {
+  font-size: $font-size-base;
+}
+/*======================*
+| Global Helper Classes |
+*======================*/
+
+.font-weight-bold {
+  font-family: $font-secondary;
+}
+
+.title {
+  @extend .d-block;
+  font-size: $font-size-ex-lg;
+  @include media-breakpoint-up(lg) {
+    font-size: $h1-font-size;
+  }
+  margin-bottom: $spacer;
+  margin-top: $spacer*1.5;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2,
+.h2 {
+  @extend .h5;
+  text-transform: uppercase;
+}
+
+.address {
+  line-height: $display-line-height;
+}
+
+// Line Divider for sections
+.line-divider {
+  height: 1px;
+  border-bottom: 1px dashed $brand-accent-1;
+  span {
+    background: $brand-bg-dark;
+    padding: 0 5px;
+  }
+}
+
+// Vertical Line Divider for forms
+.vertical-divider-left {
+  @include media-breakpoint-between(lg, xl) {
+    border-left: 1px dashed $accent-1;
+  }
+}
+
+.vertical-divider-right {
+  @include media-breakpoint-between(lg, xl) {
+    border-right: 1px dashed $accent-1;
+  }
+}
+
+.map-container {
+  height: 13.75rem;
+  border: $border-1;
+
+  @include media-breakpoint-up(lg) {
+    height: 41rem;
+  }
+}
+
+//// -------- LINE DIVIDER -----------
+//
+
+//
+//// -------- CUSTOM SELECT -----------
+//// Bootstrap default override
+//
+//.custom-select {
+//  height: auto;
+//  @include rem(20px);
+//}
+//
+//// -------- FULL-WIDTH HERO WITH TITLE -----------
+//// Category Header Hero Image
+//
+.full-width-hero {
+  position: relative;
+  img {
+    border: $border-2;
+    @extend .img-fluid;
+    @extend .w-100;
+  }
+  h1,h2 {
+    background-color: $overlay;
+    color: $brand-fg-light;
+    padding: 0.375rem 0;
+    @extend .m-0;
+    @extend .position-absolute;
+    @extend .text-center;
+    @extend .text-uppercase;
+
+  }
+  h1,h2 {
+    bottom: 0;
+    @extend .w-100;
+  }
+
+  // TODO: Refactor this
+  .price {
+    background-color: $overlay;
+    color: $brand-fg-light;
+    line-height: 1;
+    padding: .4rem .5rem;
+    @extend .m-0;
+    @extend .position-absolute;
+    @extend .text-center;
+    @extend .text-uppercase;
+    right: 0;
+    @include rem(16px);
+    @include media-breakpoint-up(lg){
+      @include rem(19px);
+      padding: .65rem;
+    }
+  }
+
+}
+
+
+//// -------- FOOD MENU SIDEBAR -----------
+
+.sidebar-nav {
+  li {
+    @extend .h5;
+    @extend .m-0;
+    @extend .p-0;
+    @extend .text-truncate;
+    @extend .text-uppercase;
+
+    a {
+      text-decoration: none;
+      color: $brand-fg-dark;
+      padding: 1rem 0;
+      border-bottom: $border-3;
+      @extend .d-inline-block;
+      @extend .w-100;
+      &:not(.collapsed) {
+        border-bottom: 2px solid $brand-primary;
+      }
+    }
+  }
+}
+
+// Modal close button override to show 100% opacity and lighter on hover.
+.close {
+  opacity: 1;
+}

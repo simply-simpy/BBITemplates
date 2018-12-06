@@ -1,0 +1,10 @@
+[data-template="404"] {
+  background: url($brand-secondary) repeat #1f1e1d;
+  height: 100%;
+  padding-bottom: 3.5rem;
+  h1 {
+    color: $white;
+    padding-top: 2rem;
+    text-transform: uppercase;
+  }
+}

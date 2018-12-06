@@ -1,0 +1,7 @@
+.carousel-indicators {
+  bottom: -1rem;
+  li {
+    border-radius: 50%;
+    background-color: rgba($carousel-indicator-active-bg, 1);
+  }
+}

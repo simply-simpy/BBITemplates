@@ -1,0 +1,174 @@
+[data-template="custom-product"] {
+  .line-divider {
+    margin-bottom: $spacer;
+    margin-top: $spacer;
+  }
+  .full-width-hero + p {
+    @include rem(24px);
+  }
+  @include rem(20px);
+  padding: 0;
+
+  > .container {
+    display: flex;
+  }
+
+  // Undercooked food advisory
+  .disclaimer {
+    color: $accent-7;
+    line-height: 1.2;
+    @include rem(18px);
+  }
+  .card-image {
+    img {
+      @include media-breakpoint-down(sm) {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .card {
+   p {
+     @include rem(18px);
+   }
+    .card-subtitle {
+      margin-top: -.1rem;
+      @include rem(18px);
+    }
+  }
+
+  // White card which summons modal on click. needs a real name
+  .btn-modal {
+    border-radius: 0;
+    cursor: pointer;
+    .card-body {
+      @include rem(18px);
+      @extend .d-flex;
+      @extend .flex-column;
+      @extend .justify-content-center;
+      line-height: 1.2;
+      @include media-breakpoint-down(sm) {
+        font-size: 1rem;
+        padding: .5rem;
+        padding-right: 1rem;
+      }
+      .card-title {
+        @extend .mb-0;
+        text-transform: uppercase;
+      }
+      &:after {
+        margin-top: -$spacer/2;
+        position: absolute;
+        right: 1.2vw;
+        top: 50%;
+        @include media-breakpoint-up(sm) {
+          right: 1.75rem;
+        }
+        transform: rotate(270deg);
+        @include icon($carat);
+        text-shadow: 1px 0 black;
+      }
+    }
+  }
+
+  @include media-breakpoint-between(xs,lg) {
+    max-width: 100%;
+  }
+}
+
+.form-check-label {
+  @include rem(18px);
+}
+
+[data-component="custom-product-option"] {
+  input :not(.modal) {
+    display: none;
+  }
+  .list-inline.no-images {
+    background-color: $accent-4;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+
+    .list-inline-item {
+      white-space: nowrap;
+      @extend .mr-0;
+      @extend .p-2;
+    }
+    input:checked ~ label {
+      box-shadow: 0 0 0 2px $brand-primary;
+    }
+    span {
+      @extend .px-2;
+    }
+  }
+  .list-inline.has-images {
+    display: flex;
+    overflow-y: scroll;
+    padding-bottom: 1rem;
+
+    input:checked ~ label {
+      background-color: transparent;
+      box-shadow: 0 0 0 2px $brand-primary;
+    }
+
+    label {
+      position: relative;
+    }
+
+    span {
+      bottom: 0;
+      color: $brand-fg-light;
+      font-size: 1rem;
+      padding: 5px;
+      position: absolute;
+      text-align: center;
+      @include line-height(18px);
+    }
+
+    @include media-breakpoint-between(lg, xl) {
+      flex-wrap: wrap;
+      padding-bottom: 0;
+      justify-content: center;
+      align-items: center;
+
+      .list-inline-item {
+        margin: 5px;
+      }
+    }
+  }
+}
+
+[data-component="custom-options-modal"] {
+  .modal-body {
+    @extend .px-0;
+  }
+  .style-1 {
+    .form-check-label {
+      white-space: normal;
+      &:before {
+        @include gradient-y($start-color: transparent, $end-color: rgba(0,0,0,.6), $start-percent: 10%, $end-percent: 100%);
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    .modal-dialog {
+      margin: 0;
+      max-width: 100%;
+    }
+    .btn-confirm {
+      position: fixed;
+      bottom: 0;
+      z-index: 1030;
+      box-shadow: 0px -8px 32px -8px rgba(0,0,0,0.75);
+      width: 100%;
+    }
+  }
+}

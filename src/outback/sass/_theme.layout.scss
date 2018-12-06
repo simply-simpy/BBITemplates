@@ -1,0 +1,9 @@
+/*========================*
+| Global Layout Styles    |
+*========================*/
+
+@include media-breakpoint-down(sm) {
+  .container-fluid > .container {
+    padding: 0;
+  }
+}

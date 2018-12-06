@@ -1,0 +1,41 @@
+/*===========================================*
+| Location Finder Input Field + Button Icons |
+*===========================================*/
+
+[data-template="location-delivery"] {
+  @include rem(20px);
+
+  input {
+    margin-top: 1rem;
+  }
+
+  .wrap {
+    max-width: 37.5rem;
+  }
+
+  .no-results {
+    color: $form-error;
+    margin-bottom: 3rem;
+    @include rem(20px);
+    @include media-breakpoint-up(lg)  {
+        text-align: center;
+    }
+  }
+
+  .disclaimer {
+    font-size: 1rem;
+    margin-bottom: 3.75rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .footer-links {
+    text-align: center;
+    @include rem(20px);
+  }
+
+  .field-input-error {
+    //color: $cherry-red;
+  }
+
+}

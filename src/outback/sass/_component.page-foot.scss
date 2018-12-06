@@ -1,0 +1,99 @@
+/*==========================*
+| Global Page Footer Styles |
+*==========================*/
+
+[data-component="olo-site-footer"] {
+  color: $body-color;
+  @extend .mt-4;
+  > .container {
+    &:before {
+      content: "";
+      display: block;
+      height: 2px;
+      border-top: 2px solid $accent-1;
+      @include media-breakpoint-up(sm) {
+        width: calc(100% + 16px);
+        margin-left: -8px;
+      }
+    }
+  }
+  .col {
+    @extend .p-0;
+  }
+  .nav-footer {
+    color: $body-color;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: $font-secondary;
+    @extend .py-4;
+    @include media-breakpoint-down(md) {
+      max-width: 30rem;
+    }
+    a {
+      color: inherit;
+      line-height: 1;
+      @extend .py-2;
+      width: 50%;
+      @include media-breakpoint-down(md) {
+        padding: .5rem;
+        &:nth-child(even){
+          padding-left: 10%;
+        }
+      }
+      @include media-breakpoint-up(lg) {
+        margin-right: .5rem;
+        width: 9rem;
+      }
+      @include media-breakpoint-up(xl) {
+        margin-right: .2rem;
+        width: 11rem;
+      }
+      &:last-child {
+        margin-right: auto;
+      }
+    }
+  }
+  .social-links {
+    color: $body-color;
+    font-size: 1.25rem;
+    @include media-breakpoint-up(lg) {
+      font-size: 1.5rem;
+    }
+    a {
+      @extend .px-2;
+      color: inherit;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .nav-utility {
+    background-color: $white;
+    font-family: $font-primary;
+    font-size: $font-size-ex-sm;
+    padding-bottom: $spacer * 2;
+    padding-top: $spacer * 2;
+    @include media-breakpoint-up(sm) {
+      padding-bottom: $spacer * 1;
+      padding-top: $spacer * 1;
+    }
+    a {
+      color: inherit;
+    }
+    .col {
+      @extend .d-flex;
+      @extend .align-items-center;
+    }
+  }
+  .nav-utility-item {
+    white-space: nowrap;
+    padding: 0 3vw .5rem;
+    @include media-breakpoint-up(md) {
+      white-space: normal;
+      padding: 0;
+    }
+  }
+}
+.copyright {
+  font-size: $font-size-ex-sm;
+}

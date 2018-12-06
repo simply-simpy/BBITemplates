@@ -1,0 +1,193 @@
+// Required to override global OLO styles.
+[data-template="brand-site"] {
+  background-color: $white;
+
+  // CAROUSEL
+
+  // TYPOGRAPHY
+  [data-component="signup-form"],
+  [data-component="ordering-options"] {
+    .headline {
+      font-family: $font-introRust;
+      @include rem(28px);
+
+      @include media-breakpoint-up(lg) {
+        @include rem(44px);
+      }
+    }
+    .tagline {
+      font-family: $font-jennasue;
+      text-transform: initial;
+      @include rem(40px);
+
+      @include media-breakpoint-up(lg) {
+        @include rem(60px);
+      }
+    }
+  }
+
+  // ORDERING OPTIONS
+  [data-component="ordering-options"] {
+    padding: 2rem 0;
+
+    .headline {
+      color: $brand-primary;
+      //@include media-breakpoint-up(lg) {
+      //  @include rem(60px);
+      //}
+    }
+
+    // Edit Location
+    p {
+      font-size: 1rem;
+      @extend .text-uppercase;
+
+      &.edit-location {
+        @include rem(20px);
+        @extend .font-weight-bold;
+      }
+    }
+
+    .tagline {
+      position: relative;
+      @include rem(40px);
+
+      @include media-breakpoint-up(lg) {
+        @include rem(92.6px);
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      // Arrow control
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 1rem;
+        height: 50px;
+        width: 50px;
+        @include media-breakpoint-up(lg) {
+          top: 3rem;
+          height: 90px;
+          width: 58px;
+        }
+      }
+      &::before {
+        background: url("../img/arrow-left.png") no-repeat;
+        background-size: contain;
+        left: 1rem;
+        @include media-breakpoint-up(lg) {
+          left: -1rem;
+        }
+      }
+      &::after {
+        background: url("../img/arrow-right.png") no-repeat;
+        background-size: contain;
+        right: 0;
+        @include media-breakpoint-up(lg) {
+          right: -1rem;
+        }
+      }
+    }
+    a {
+      text-decoration: underline;
+    }
+
+    .btn {
+      width: 8.375rem;
+      @include media-breakpoint-up(lg) {
+        @include rem(30px);
+        width: 11.25rem;
+        padding: 0;
+      }
+    }
+  }
+
+  // RESPONSIVE IMAGE GRID
+  [data-component="responsive-img-grid"] {
+
+    .card-columns {
+      column-count: 1;
+
+      .card {
+        @extend .mb-3;
+        position: relative;
+
+        .card-title {
+          @include rem(20px);
+          margin-bottom: 0;
+          font-family: $font-introRust;
+
+          @include media-breakpoint-up(xl) {
+            @include rem(27px);
+          }
+        }
+
+        .card-text {
+          font-family: $font-secondary;
+          @include rem(14px);
+          line-height: 14px;
+          margin: .5rem 0;
+          @extend .text-uppercase;
+
+          @include media-breakpoint-up(xl) {
+            font-size: 1rem;
+            line-height: 1rem;
+          }
+        }
+
+        .btn {
+          padding: 0 1rem;
+          position: absolute;
+          bottom: 1rem;
+        }
+      }
+
+      @include media-breakpoint-up(lg) {
+        &.half-width {
+          column-count: 2;
+        }
+        &.third-width {
+          column-count: 3;
+        }
+        .card-body {
+          color: $brand-fg-light;
+          position: absolute;
+          width: 55%;
+          height: 100%;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      //padding: 3rem;
+    }
+  }
+
+  // SIGN UP FORM
+  [data-component="signup-form"] {
+    margin-top: 2rem;
+    padding: 3rem 2rem;
+    background-color: $brand-accent-4;
+
+    .footer {
+      font-size: 1rem;
+
+      a {
+        color: $brand-fg-dark;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // OLO Footer Style Overrides
+  [data-component="olo-site-footer"] {
+    @extend .mt-0;
+    background-color: $brand-accent-3;
+
+    .container::before {
+      border-top: none;
+    }
+  }
+}

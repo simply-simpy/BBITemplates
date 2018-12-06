@@ -1,0 +1,14 @@
+[data-component="promo-alert"] {
+  background-color: $brand-primary;
+  color: $white;
+  font-family: $font-secondary;
+
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    @include rem(24px);
+  }
+}

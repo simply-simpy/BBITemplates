@@ -1,0 +1,88 @@
+/*=====================================*
+| Food Menu Accordion Container Styles |
+*======================================*/
+
+// Applies full bleed effect to menu on mobile breakpoints
+
+[data-template="food-menu"] {
+
+  padding: 0;
+
+  > .container {
+    display: flex;
+  }
+
+  .card {
+    border: 0;
+    background-color: transparent;
+  }
+
+  .menu-items {
+    padding: .5rem;
+    .card {
+      border: none;
+      padding: .5rem;
+      > a  {
+        color: $card-text-color;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      .card-body {
+        background-color: $brand-fg-light;
+        border: $border-2;
+        font-family: $font-secondary;
+        min-height: 7.125rem;
+        border: $border-2;
+        height: 6.5rem;
+        text-align: center;
+        line-height: 1.25rem;
+        .card-text {
+          @include multiLineEllipsis($lineHeight: 1.2em, $lineCount: 3, $bgColor: white);
+          @include rem(16px);
+          margin-right: 0;
+          padding-right: 1rem;
+        }
+      }
+    }
+    h2 {
+      @extend .px-1;
+      @include rem(16px);
+      @include media-breakpoint-up(lg){
+        @include rem(24px);
+      }
+    }
+  }
+
+  .card-header {
+    h1 {
+      @include rem(24px);
+      @include media-breakpoint-up(lg) {
+        @include rem(30px);
+      }
+      cursor: pointer;
+    }
+    h1:after,
+    h2:after {
+      transform: rotate(0deg);
+      @include icon($carat);
+      @include rem(23px);
+      position: absolute;
+      left: 50%;
+      top: 8px;
+      margin-left: 130px;
+      @include media-breakpoint-up(lg){
+        left: auto;
+        right: 22%;
+        top: 13px;
+      }
+
+    }
+    &.collapsed {
+      h1:after,
+      h2:after {
+        transform: rotate(270deg);
+      }
+    }
+  }
+}

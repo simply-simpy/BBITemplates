@@ -1,0 +1,214 @@
+/*=========================================*
+| Bloomin' Brands Outback Steakhouse Icons |
+*=========================================*/
+
+// Glyph Variables
+
+$car           : '1';
+$suv           : '2';
+$van           : '3';
+$truck         : '4';
+$walk          : '5';
+$boomerang     : '\E000';
+$carat         : '\E002';
+$cart_bag      : '\E901';
+$error         : '\E003';
+$facebook      : '\E006';
+$geolocation   : '\E900';
+$help          : '\F1F5';
+$info          : '\F1F7';
+$instagram     : '\E007';
+$logo          : '\E008';
+$menu_download : '\E903';
+$phone         : '\E902';
+$play          : '\E00D';
+$rewards       : '\E005';
+$rewards-alt   : '\E00A';
+$success       : '\E001';
+$tooltip       : '\E004';
+$twitter       : '\E009';
+$hamburger     : '\E904';
+$arrow_left    : '\F2EA';
+$arrow_right   : '\F2EE';
+$check         : '\F26B';
+$calendar      : '\F332';
+$close         : '\F136';
+$time          : '\F337';
+$zmdi_pin      : '\F1AB';
+
+
+// Unicode for material design font icons found here: http://zavoloklom.github.io/material-design-iconic-font/icons.html
+
+// Add this class to any element to display an webfont icon
+// Example: <span class="icon-twitter"></span>
+
+.icon {
+  &-car,
+  &-suv,
+  &-van,
+  &-truck,
+  &-walk
+  {
+    font-family: $font-vehicle;
+    font-size: 1rem;
+    @include media-breakpoint-between(lg, xl) {
+      @include rem(34px);
+    }
+  }
+  &-boomerang::before {
+    @include icon($boomerang);
+  }
+  &-carat {
+    &::before {
+      @include icon($carat);
+      overflow: visible;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+    &.collapsed {
+      &::before {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+  &-double-vert-caret {
+    display: flex;
+    flex-direction: column;
+    &::after {
+      @include icon($carat);
+      font-size: 10px;
+      text-shadow: 1px 0;
+    }
+    &::before {
+      @include icon($carat);
+      font-size: 10px;
+      transform: rotate(-180deg);
+      text-shadow: 1px 0;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &-cart_bag::before {
+    @include icon($cart_bag);
+    overflow: visible;
+  }
+  &-error::before {
+    @include icon($error);
+  }
+  &-facebook::before {
+    @include icon($facebook);
+  }
+  &-geolocation::before {
+    overflow: initial;
+    @extend .pr-2;
+    @include rem(12px);
+    @include icon($geolocation);
+  }
+  &-help::before{
+    color: $brand-primary;
+    font-family: $font-material;
+    @include icon($help);
+  }
+  &-info::before {
+    color: $brand-primary;
+    font-family: $font-material;
+    @include icon($info);
+  }
+  &-instagram::before {
+    @include icon($instagram);
+  }
+  &-logo::before {
+    @include icon($logo);
+  }
+  &-menu::before {
+    overflow: initial;
+    @extend .pr-2;
+    @include rem(20px);
+    @include icon($menu_download);
+  }
+  &-phone::before {
+    overflow: initial;
+    @extend .pr-2;
+    @include rem(20px);
+    @include icon($phone);
+  }
+  &-play::before {
+    @include icon($play);
+  }
+  &-rewards::before {
+    @include icon($rewards);
+  }
+  &-rewards-alt::before {
+    height: 50px;
+    display: flex;
+    line-height: 3rem;
+    @include rem(175px);
+    @include icon($rewards-alt);
+  }
+  &-success::before {
+    @include icon($success);
+  }
+  &-tooltip::before {
+    @include icon($tooltip);
+  }
+  &-twitter::before {
+    @include icon($twitter);
+  }
+  &-arrow-left::before {
+    color: inherit;
+    font-family: $font-material;
+    @include icon($arrow_left);
+  }
+  &-arrow-right::before {
+    color: inherit;
+    font-family: $font-material;
+    @include icon($arrow_right);
+  }
+  &-check::before {
+    color: inherit;
+    font-family: $font-material;
+    @include icon($check);
+  }
+  &-calendar:before {
+    color: inherit;
+    font-family: $font-material;
+    @include icon($calendar);
+    @include rem(18px);
+  }
+  &-close:before {
+    color: inherit;
+    font-family: $font-material;
+    @include icon($close);
+    @include rem(18px);
+  }
+  &-time:before {
+    color: inherit;
+    font-family: $font-material;
+    @include icon($time);
+    @include rem(18px);
+  }
+  &-zmdi-pin:before {
+    color: inherit;
+    font-family: $font-material;
+    @include icon($zmdi_pin);
+    @include rem(18px);
+  }
+}
+
+//IE11 Specific
+_:-ms-fullscreen, :root {
+  .icon-rewards-alt::before {
+    height: 100%;
+    padding-top: 2px;
+  }
+  .icon-rewards::before {
+    margin-top: -10px;
+    padding-top: 10px;
+  }
+  .icon-logo::before {
+    margin-bottom: -8px;
+    padding-top: 8px;
+  }
+}

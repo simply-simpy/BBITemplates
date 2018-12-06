@@ -1,0 +1,141 @@
+[data-component="view-cart"] {
+
+  .cart-price {
+    text-align: right;
+  }
+
+  h2 {
+    margin-bottom: 0;
+    text-transform: capitalize;
+  }
+
+  .modal-title {
+    @extend .mb-1;
+  }
+  p {
+    font-size: inherit;
+  }
+  .item {
+    font-family: $font-secondary;
+  }
+  .menu-item-details p {
+    font-family: $font-primary;
+  }
+  @include rem(18px);
+  // Prevent bootstraps default scrolling behavior for modals.
+  overflow: hidden !important;
+  // Prevent scrollbar being created by active modal.
+  .modal-dialog,
+  .modal-content {
+    height: 90%;
+  }
+  // Override bootstrap default background color
+  .modal-header,
+  .modal-content {
+    background-color: $brand-fg-light;
+  }
+  .modal-dialog {
+    width: 275px;
+    // Sets position of cart modal when opened.
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include media-breakpoint-only(sm) {
+      top: -1.5rem;
+      right: .5rem;
+    }
+    @include media-breakpoint-up(md) {
+      top: .5rem;
+      right: 1rem;
+      width: 400px;
+    }
+    @include media-breakpoint-between(lg,xl) {
+      top: 2rem;
+      right: 0;
+    }
+  }
+  .modal-body {
+    padding: 1rem;
+    overflow-y: scroll;
+    max-height: calc(100% - 120px);
+    @include rem(18px);
+
+    -ms-overflow-style: none;        // IE 10+
+    overflow: -moz-scrollbars-none;  // Firefox
+    &::-webkit-scrollbar {
+      display: none;                 // Safari and Chrome
+    }
+
+    .empty-bag {
+      width: 50%;
+      height: 50%;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .edit-order {
+      border-bottom: $border-1;
+      a {
+        font-family: $font-secondary;
+      }
+    }
+  }
+  .modal-header {
+    flex-shrink: 0;
+    border-bottom: 1px solid $accent-1;
+    @extend .pt-1;
+    @extend .pb-1;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    &:before {
+      border-bottom: 10px solid $brand-fg-light;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      content: '';
+      height: 0;
+      width: 0;
+      position: absolute;
+      right: 10px;
+      top: -10px;
+    }
+  }
+  .modal-footer {
+    background-color: $white;
+    border-top: 1px solid $accent-1;
+    padding: 1rem;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+  // Adjust height of cart if it is empty
+  &.cart-empty {
+    display: block;
+    height: auto;
+
+    .modal-dialog {
+      top: 2.5rem;
+      display: block;
+
+      @include media-breakpoint-only(sm) {
+        top: 1.25rem;
+        right: .5rem;
+      }
+      @include media-breakpoint-up(md) {
+        top: 3.25rem;
+        right: 1rem;
+        width: 400px;
+      }
+      @include media-breakpoint-between(lg,xl) {
+        top: 4.75rem;
+        right: 0;
+      }
+    }
+
+    .modal-content {
+      height: auto;
+    }
+  }
+}

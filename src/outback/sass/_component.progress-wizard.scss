@@ -1,0 +1,91 @@
+[data-component="progress-wizard"] {
+  $mainColor: #931A1A;
+  $baseColor: #111;
+  $bgColor: #F2ECDE;
+  $inactive: #6b6b6b;
+
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0 3rem;
+
+  .step{
+    text-align: center;
+    vertical-align: top;
+    overflow: visible;
+    position:relative;
+    @include rem(20px);
+    color: $inactive;
+    text-transform: uppercase;
+    font-weight: normal;
+    width: 100%;
+
+    &:not(:last-child):before{
+      content: '';
+      display:block;
+      position: absolute;
+      left: 50%;
+      top: 38px;
+      background-color: $baseColor;
+      height: 4px;
+      width: 100%;
+    }
+
+    .node{
+      display: inline-block;
+      border: 3px solid $inactive;
+      background-color: $bgColor;
+      border-radius: 18px;
+      height: 25px;
+      width: 25px;
+      position: absolute;
+      top: 26px;
+      left: 50%;
+      margin-left: -15px;
+    }
+
+    &.complete{
+      color: $baseColor;
+
+      &:before{
+        background-color: $mainColor;
+      }
+      .node{
+        border-color: $mainColor;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        // background-color: $baseColor;
+
+        &:before{
+          font-size: 15px;
+          color: $mainColor;
+          font-family: Material-Design-Iconic-Font, sans-serif;
+          content: '\f26b';
+        }
+      }
+    }
+
+    &.in-progress{
+      color: $mainColor;
+      font-weight: bold;
+
+      &:before{
+        background: $inactive;
+        background: -moz-linear-gradient(left,  $mainColor 0%, $inactive 100%);
+        background: -webkit-linear-gradient(left,  $mainColor 0%, $inactive 100%);
+        background: linear-gradient(to right,  $mainColor 0%, $inactive 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(     startColorstr='#{$mainColor}', endColorstr='#{$inactive}',GradientType=1 );
+      }
+      .node{
+        border-color: $mainColor;
+        background-color: $mainColor;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin: 2rem 0 3rem;
+  }
+}
+
+// TODO: Refactor this file and place variables in the main project variables

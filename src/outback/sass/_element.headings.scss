@@ -1,0 +1,73 @@
+/*=======================*
+| Global Headline Styles |
+*=======================*/
+
+
+
+
+
+
+//
+//// TODO: Refactor this or get rid of file and use bootstrap globals
+//
+//h1, .h1,
+//h2, .h2,
+//h3, .h3,
+//h4, .h4,
+//h5, .h5,
+//h6, .h6 {
+//  font-family: $font-secondary;
+//  //@include font-smoothing(on);
+//
+//  &.title {
+//    align-items: center;
+//    display: flex;
+//    justify-content: center;
+//    text-transform: uppercase;
+//    margin: 2rem 0;
+//
+//    /* Toggle separate title headings
+//    for desktop and mobile views */
+//    &.visible-xs {
+//      @include breakpoint(mobile){
+//        display: none;
+//      }
+//    }
+//      &.visible-lg {
+//        display: none;
+//        text-align: center;
+//        @include breakpoint(mobile){
+//          display: block;
+//        }
+//      }
+//    }
+//
+//    // Add flex to span items within title element to allow for vertically center icons.
+//    > span {
+//      color: $brand-primary;
+//      display: flex;
+//      margin-left: 0.25rem;
+//    }
+//  }
+//
+//h1, .h1 {
+//  @include rem(24px);
+//  @include breakpoint(desktop) {
+//    @include rem(30px);
+//  }
+//}
+//
+//h2, .h2,
+//h5, .h5 {
+//  @extend .text-uppercase;
+//  @include rem(20px);
+//  @include breakpoint(desktop) {
+//    @include rem(24px);
+//  }
+//}
+//
+//h3, .h3,
+//h6, .h6 {
+//  @include rem(18px);
+//}
+//

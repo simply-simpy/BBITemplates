@@ -1,0 +1,23 @@
+/*============================================*
+| Location Finder Input Field + Timeout Modal |
+*============================================*/
+
+[data-template="timeout"] {
+  @include rem(20px);
+
+  .modal-dialog {
+    &.modal-dialog-centered{
+        max-width: 46.875rem;
+    }
+  }
+
+  .modal-body {
+    margin: 0 3.125rem;
+  }
+  
+  .btn {
+    //style button exactly as depicted in comp 
+    width: 100%;
+    margin: 0 3.125rem 1rem;
+  }
+}

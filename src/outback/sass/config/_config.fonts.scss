@@ -1,0 +1,71 @@
+// Refactor in progress. Temporarily commenting this code out but preserving it as-is.
+
+///*==============================*
+//| Import custom fonts and icons |
+//*==============================*/
+//
+//$font-primary: TradeGothic-CondEighteen, sans-serif;
+//$font-secondary: TradeGothic-BoldCondTwenty, sans-serif;
+//$font-material: Material-Design-Iconic-Font, sans-serif;
+//$font-icons: obsGlyphs, bbi-icons, sans-serif;
+//
+//
+//// Body and Navigation Fonts
+//
+//@font-face {
+//  font-family: 'TradeGothic-BoldCondTwenty';
+//  src: url('../../fonts/TradeGothic-BoldCondTwenty/TradeGothic-BoldCondTwenty.eot');
+//  src: url('../../fonts/TradeGothic-BoldCondTwenty/TradeGothic-BoldCondTwenty.eot?#iefix') format('embedded-opentype'),
+//  url('../../fonts/TradeGothic-BoldCondTwenty/TradeGothic-BoldCondTwenty.woff2') format('woff2'),
+//  url('../../fonts/TradeGothic-BoldCondTwenty/TradeGothic-BoldCondTwenty.woff') format('woff'),
+//  url('../../fonts/TradeGothic-BoldCondTwenty/TradeGothic-BoldCondTwenty.ttf') format('truetype'),
+//  url('../../fonts/TradeGothic-BoldCondTwenty/TradeGothic-BoldCondTwenty.svg#svgFontName') format('svg');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+//
+//@font-face {
+//  font-family: 'TradeGothic-CondEighteen';
+//  src: url('../../fonts/TradeGothic-CondEighteen/TradeGothic-CondEighteen.eot');
+//  src: url('../../fonts/TradeGothic-CondEighteen/TradeGothic-CondEighteen.eot?#iefix') format('embedded-opentype'),
+//  url('../../fonts/TradeGothic-CondEighteen/TradeGothic-CondEighteen.woff') format('woff'),
+//  url('../../fonts/TradeGothic-CondEighteen/TradeGothic-CondEighteen.ttf') format('truetype'),
+//  url('../../fonts/TradeGothic-CondEighteen/TradeGothic-CondEighteen.svg#svgFontName') format('svg');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+//
+//// Outback Steakhouse Glyphs
+//// TODO: Determine if this font can be replaced with 'bbi-icons'
+//
+//@font-face {
+//  font-family: 'obsGlyphs';
+//  src: url('../../fonts/obsGlyphs.woff2') format('woff2'),
+//  url('../../fonts/obsGlyphs.woff') format('woff');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+//
+//// Updated Icon Fonts
+//
+//@font-face {
+//  font-family: 'bbi-icons';
+//  src: url('../../fonts/bbi-icons/bbi-icons.eot');
+//  src: url('../../fonts/bbi-icons/bbi-icons.eot?#iefix') format('embedded-opentype'),
+//  url('../../fonts/bbi-icons/bbi-icons.woff') format('woff'),
+//  url('../../fonts/bbi-icons/bbi-icons.ttf') format('truetype'),
+//  url('../../fonts/bbi-icons/bbi-icons.svg#svgFontName') format('svg');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+//
+//@font-face {
+//  font-family: 'Material-Design-Iconic-Font';
+//  src: url('../../fonts/material-design-icons/Material-Design-Iconic-Font.eot?#iefix') format('embedded-opentype'),
+//  url('../../fonts/material-design-icons/Material-Design-Iconic-Font.woff2?v=2.2.0') format('woff2'),
+//  url('../../fonts/material-design-icons/Material-Design-Iconic-Font.woff?v=2.2.0') format('woff'),
+//  url('../../fonts/material-design-icons/Material-Design-Iconic-Font.ttf?v=2.2.0') format('truetype'),
+//  url('../../fonts/TradeGothicLTPro-Cn18/TradeGothicLTPro-Cn18.svg#svgFontName') format('svg');
+//  font-weight: normal;
+//  font-style: normal;
+//}

@@ -1,0 +1,93 @@
+/*===========================================*
+| Location Finder Input Field + Button Icons |
+*===========================================*/
+
+[data-template="location-finder"] {
+  .search-results {
+    padding: 0;
+    list-style: none;
+
+    .item {
+      border: $border-1;
+      line-height: $display-line-height;
+      @extend .p-3;
+      @extend .card;
+      @extend .mb-2;
+      @include rem(20px);
+
+      // Remove margin-top from 'item' if no-results are shown
+      &.no-results {
+        color: $form-error;
+        font-family: $font-secondary;
+        @include rem(18px);
+        @extend .text-center;
+        @extend .mt-0;
+        @extend .px-0;
+        @extend .py-3;
+      }
+
+      // Remove border from any nested lists.
+      .item li {
+        border: 0;
+      }
+    }
+
+    .store-number {
+      background-color: $brand-primary;
+      border-radius: 50%;
+      color: $brand-fg-light;
+      font-family: $font-secondary;
+      height: 30px;
+      justify-content: center;
+      max-height: 30px;
+      min-width: 30px;
+      width: 30px;
+      @extend .align-items-center;
+      @extend .d-flex;
+      @extend .mr-2;
+      @extend .mt--1;
+      @include rem(20px);
+    }
+
+    .store-location p {
+      @extend .m-0;
+      @include truncate(100%);
+    }
+
+    .store-name {
+      @extend .font-weight-bold;
+      @include truncate(100%);
+    }
+
+    .store-details {
+      @extend .d-flex;
+      justify-content: space-around;
+      @include media-breakpoint-up(lg){
+        justify-content: space-between;
+      }
+      .btn {
+        text-transform: capitalize;
+      }
+      a {
+        text-decoration: none;
+        @include media-breakpoint-up(lg){
+          &:first-child {
+            padding-left: 0;
+          }
+          &:last-child{
+            padding-right: 0;
+          }
+        }
+      }
+    }
+
+  }
+  .no-results {
+    @extend .mb-2;
+    @extend .text-danger;
+    @extend .h5;
+    .store-details {
+      @extend .justify-content-around;
+    }
+  }
+}

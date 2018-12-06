@@ -1,0 +1,35 @@
+/*===========================================*
+| Location Finder Input Field + Button Icons |
+*===========================================*/
+
+[data-component="google-map"] {
+  //display: flex;
+  //flex-direction: column;
+  //
+  //.address-bar .form-actions {
+  //  display: none;
+  //  padding-left: 0;
+  //  button:first-of-type {
+  //  margin-right: 0.625rem;
+  //  }
+  //
+  //  @include breakpoint(desktop) {
+  //    display: flex;
+  //    // create space between top-row search and geolocation buttons and the google map below
+  //    margin-bottom: 2.125rem;
+  //  }
+  //}
+  //
+  //// Google Map Container
+  //.map-container {
+  //  height: 13.75rem;
+  //  border: $border-1;
+  //  margin-bottom: 0.625rem;
+  //
+  //  @include breakpoint(desktop) {
+  //    height: 41rem;
+  //  }
+  //}
+}
+
+// TODO: convert units to REM with mixins

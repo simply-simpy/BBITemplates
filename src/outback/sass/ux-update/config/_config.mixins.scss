@@ -1,0 +1,149 @@
+// Toggles
+//
+// Used in conjunction with global variables to enable certain theme features.
+
+// Utilities
+@import "../bootstrap/mixins/breakpoints";
+@import "../bootstrap/mixins/hover";
+@import "../bootstrap/mixins/image";
+@import "../bootstrap/mixins/badge";
+@import "../bootstrap/mixins/resize";
+@import "../bootstrap/mixins/screen-reader";
+@import "../bootstrap/mixins/size";
+@import "../bootstrap/mixins/reset-text";
+@import "../bootstrap/mixins/text-emphasis";
+@import "../bootstrap/mixins/text-hide";
+@import "../bootstrap/mixins/text-truncate";
+@import "../bootstrap/mixins/visibility";
+
+// // Components
+@import "../bootstrap/mixins/alert";
+@import "../bootstrap/mixins/buttons";
+@import "../bootstrap/mixins/caret";
+@import "../bootstrap/mixins/pagination";
+@import "../bootstrap/mixins/lists";
+@import "../bootstrap/mixins/list-group";
+@import "../bootstrap/mixins/nav-divider";
+@import "../bootstrap/mixins/forms";
+@import "../bootstrap/mixins/table-row";
+
+// // Skins
+@import "../bootstrap/mixins/background-variant";
+@import "../bootstrap/mixins/border-radius";
+@import "../bootstrap/mixins/box-shadow";
+@import "../bootstrap/mixins/gradients";
+@import "../bootstrap/mixins/transition";
+
+// // Layout
+@import "mixins/clearfix";
+@import "mixins/grid-framework";
+@import "mixins/grid";
+@import "mixins/float";
+
+
+/*=================================*
+| CONTENTS                         |
+| ---------------------------------|
+| 1. Responsive Images             |
+| 2. Webfont Icon Styles           |
+| 3. Pixels => REM Unit Conversion |
+|    ‣ Font Size                   |
+|    ‣ Margin                      |
+|    ‣ Padding                     |
+|    ‣ Line Height                 |
+|    ‣ Element Height              |
+|    ‣ Element Width               |
+| 4. Truncate Text                 |
+*=================================*/
+
+/*==================*
+| Responsive Images |
+*==================*/
+
+@mixin img-fluid {
+  max-width: 100%; // Set a maximum width relative to the parent
+  height: auto;    // Override the height to auto, otherwise images will be stretched
+}
+.img-fluid {
+  @include img-fluid;
+}
+
+/*====================================================*
+| Webfont Icon Styles                                 |
+| Attaches an icon and default styles to any element  |
+| by nesting this inside the :before or :after pseudo |
+*====================================================*/
+
+%icon {
+  display: inline-flex;
+  font-family: $font-icons;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  overflow: hidden;
+  text-decoration: inherit;
+  vertical-align: middle;
+}
+
+@mixin icon($icon) {
+  @extend %icon;
+  content: $icon;
+}
+
+/*=============================*
+| Pixel to REM Unit Conversion |
+*=============================*/
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+// Font Size
+@mixin rem($size) {
+  font-size: $size; //Fallback in px
+  font-size: calculateRem($size);
+}
+
+// Margin
+@mixin margin($size) {
+  margin: $size; //Fallback in px
+  margin: calculateRem($size);
+}
+
+// Padding
+@mixin padding($size) {
+  padding: $size; //Fallback in px
+  padding: calculateRem($size);
+}
+
+// Line Height
+@mixin line-height($size) {
+  line-height: $size; //Fallback in px
+  line-height: calculateRem($size);
+}
+
+// Element Height
+@mixin height($size) {
+  height: $size; //Fallback in px
+  height: calculateRem($size);
+}
+
+// Element Width
+@mixin width($size) {
+  width: $size; //Fallback in px
+  width: calculateRem($size);
+}
+
+/*=======================================*
+| Truncates long text strings with "..." |
+*=======================================*/
+
+@mixin truncate($truncation-boundary) {
+  max-width: $truncation-boundary;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+

@@ -1,0 +1,85 @@
+/*================================================*
+| OPTIONS                                         |
+|-------------------------------------------------|
+| Quickly modify global styling by enabling or    |
+| disabling optional features.                    |
+*================================================*/
+
+$enable-caret:              true !default;
+$enable-rounded:            true !default;
+$enable-shadows:            false !default;
+$enable-gradients:          false !default;
+$enable-transitions:        true !default;
+$enable-grid-classes:       true !default;
+$enable-print-styles:       true !default;
+
+/*================================================*
+| GLOBAL THEME SETTINGS                           |
+|-------------------------------------------------|
+| Import and define custom fonts and colors       |
+| disabling optional features.                    |
+*================================================*/
+
+@import 'theme.fonts';  // IMPORT CUSTOM WEBFONTS
+@import 'theme.colors'; // THEME COLOR PALETTE SETTINGS
+
+/*=========================================================*
+| SPACERS                                                  |
+|----------------------------------------------------------|
+| Control the default styling of most Bootstrap elements   |
+| by modifying these variables. Mostly focused on spacing. |
+*=========================================================*/
+
+@import 'config/config.spacers'; // SPACER SETTINGS
+
+/*======================================================*
+| <body> STYLES                                         |
+|-------------------------------------------------------|
+| Link styles, paragraphs and media breakpoint settings |
+*======================================================*/
+
+@import 'config/config.body'; // BODY SETTINGS
+@import 'config/config.grid'; // GRID & BREAKPOINT SETTINGS
+
+/*========================================================*
+| COMPONENTS                                              |
+|---------------------------------------------------------|
+| Define common padding and border radius sizes and more. |
+*========================================================*/
+
+@import 'config/config.components'; // COMPONENT SETTINGS
+
+/*================================================================*
+| TYPOGRAPHY                                                      |
+|-----------------------------------------------------------------|
+| Font, line-height, and color for body text, headings, and more. |
+*================================================================*/
+
+@import 'config/config.typography'; // TYPOGRAPHY SETTINGS
+@import 'config/config.buttons';    // BUTTON SETTINGS
+@import 'config/config.card';       // CARD SETTINGS
+@import 'config/config.dropdowns';  // DROPDOWN SETTINGS
+@import 'config/config.list-group'; // LIST GROUP SETTINGS
+@import 'config/config.modals';     // MODAL SETTINGS
+@import 'config/config.navigation'; // NAVIGATION SETTINGS
+@import 'config/config.popover';    // POPOVER SETTINGS
+@import 'config/config.tables';     // TABLE SETTINGS
+@import 'config/config.tooltip';    // TOOLTIP SETTINGS
+@import 'config/config.z-index';    // Z-INDEX MASTER LIST
+@import 'config/config.carousel';    // CAROUSEL
+
+/*========================================================*
+| PLUGINS                                                 |
+|---------------------------------------------------------|
+| Values for 3rd party plugins                            |
+*========================================================*/
+
+@import 'config/_config.date-time-picker.scss'; // DATE AND TIME PICKER SETTINGS
+
+/*========================================================*
+| UX-Updates                                              |
+|---------------------------------------------------------|
+| Values for 3rd party plugins                            |
+*========================================================*/
+@import "ux-update/theme.colors";
+@import "ux-update/config/config.body";

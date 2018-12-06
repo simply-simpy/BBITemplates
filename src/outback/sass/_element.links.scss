@@ -1,0 +1,32 @@
+/*========================*
+| Global Hyperlink Styles |
+*========================*/
+
+.navbar,
+.alert {
+  a {
+    color: $brand-fg-light;
+
+    &:hover {
+      color: $accent-1;
+    }
+  }
+}
+
+.card {
+  .btn {
+    &-link {
+      &:focus {
+        border-radius: 0.0625rem;
+        box-shadow: 0 0 0 0.2rem rgba(181,34,34,.25);
+      }
+    }
+  }
+
+  a {
+    &:focus {
+      border-radius: 0.0625rem;
+      box-shadow: 0 0 0 0.2rem rgba(181,34,34,.25);
+    }
+  }
+}

@@ -1,0 +1,50 @@
+[data-component="dine-rewards"] {
+  @include rem(18px);
+
+  header {
+    * {
+      line-height: 1.1;
+    }
+  }
+
+  p {
+    font-size: inherit;
+    line-height: 1.1;
+    @extend .mb-2;
+  }
+  .input-group + p {
+    margin-top: $spacer/4;
+  }
+
+  .link-number {
+    @include rem(20px);
+    li:last-child {
+      margin-left: auto;
+    }
+  }
+
+  .icon-rewards {
+    @include rem(38px);
+    line-height: 0;
+  }
+
+  span.form-check-label {
+    @include rem(20px);
+  }
+
+  .reward-counter li {
+    background-color: $brand-fg-light;
+    border: $border-3;
+    border-radius: 100%;
+    color: $brand-accent-2;
+    display: inline-flex;
+    height: 50px;
+    width: 50px;
+    @include rem(30px);
+
+    &.active {
+      color: $brand-fg-light;
+      background-color: $brand-fg-dark;
+    }
+  }
+}

@@ -1,0 +1,307 @@
+// TODO: google style adaptive placeholders for text inputs
+// TODO: Make a global checkbox with red background
+
+// Payment Page Buttons
+.input-group {
+  &-append {
+    margin-left: 5px;
+
+    button {
+      border: 2px solid $brand-fg-dark;
+    }
+  }
+}
+// Common Form Input Styles
+%input-styles {
+  background: $white;
+  border: $border-1;
+  border-radius: 0;
+  color: $brand-fg-dark;
+}
+.form-label {
+  @include rem(20px);
+}
+input[type="text"] {
+  @extend %input-styles;
+  width: 100%;
+  margin-bottom: 0.625rem;
+  @include rem(18px);
+  &:focus {
+    outline: none;
+    border-radius: 0.0625rem;
+    box-shadow: $btn-focus-box-shadow
+  }
+}
+ul li input[type=radio] {
+  position: absolute;
+  visibility: hidden;
+}
+ul li label {
+  justify-self: flex-start;
+  cursor: pointer;
+  -webkit-transition: all 0.25s linear;
+
+  // Allow styled radio buttons to be clickable.
+  &.inline {
+    @include rem(20px);
+    padding-left: 20px;
+    margin-left: -18px;
+    z-index: 9;
+  }
+}
+ul li .check {
+  display: block;
+  position: absolute;
+  border: 2px solid $form-disabled;
+  border-radius: 100%;
+  height: 15px;
+  width: 15px;
+  top: 8px;
+  left: 0;
+  //z-index: 5;
+  transition: border .25s linear;
+  -webkit-transition: border .25s linear;
+}
+ul li .check::before {
+  display: block;
+  position: absolute;
+  content: "";
+  border-radius: 100%;
+  height: 7px;
+  width: 7px;
+  margin: auto;
+  transition: background .25s linear;
+  -webkit-transition: background .25s linear;
+  top: 2px;
+  left: 2px;
+}
+input[type=radio]:checked ~ .check {
+  border: 2px solid $brand-primary;
+}
+input[type=radio]:checked ~ .check::before {
+  background: $brand-primary;
+}
+input[type=radio]:checked ~ label {
+  //color: $brand-fg-dark;
+}
+// Global product customization options
+// (responsive single & multi-select with or without images and descriptions)
+.scroll-wrap {
+  overflow: hidden;
+  // used for Sitecore wrapper div
+}
+[data-component="custom-product-options"] {
+  .modal & {
+    &.style-1 .form-check-label {
+      white-space: normal;
+      &:before {
+        @include gradient-y($start-color: transparent, $end-color: rgba(0, 0, 0, .7), $start-percent: 40%, $end-percent: 100%);
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  input[type=checkbox] {
+    position: absolute;
+  }
+  display: flex;
+  &.style-1 {
+    overflow-x: scroll;
+    @include media-breakpoint-up(md) {
+      overflow-x: visible;
+    }
+    padding-left: $spacer * 1.4;
+    @extend .pt-2;
+    li {
+      @extend .mb-2;
+      position: relative;
+    }
+  }
+  input {
+    position: absolute;
+    left: 0;
+    margin: 3px;
+    z-index: $zindex-popover;
+    &:checked ~ label {
+      box-shadow: 0 0 0 5px $brand-primary;
+    }
+  }
+  label {
+    color: $brand-fg-light;
+    display: flex;
+    white-space: nowrap;
+    position: relative;
+  }
+  .price {
+    right: 0;
+    background: $overlay;
+    font-family: $font-secondary;
+    font-size: $font-size-base;
+    padding: 2px 17px;
+    position: absolute;
+    text-transform: uppercase;
+  }
+  .title {
+    bottom: $spacer/2;
+    font-family: $font-secondary;
+    font-size: $font-size-base;
+    left: 0;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    padding: 0 8px;
+    line-height: 1.2;
+  }
+
+  &.style-2 {
+    display: flex;
+    background-color: $accent-4;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    @extend .pl-3;
+    @include media-breakpoint-up(lg) {
+      flex-wrap: wrap;
+      overflow-x: visible;
+    }
+    li {
+      @extend .m-1;
+    }
+    input {
+      display: none;
+      &:checked ~ label {
+        box-shadow: 0 0 0 2px $brand-primary;
+      }
+    }
+    label {
+      color: $brand-fg-dark;
+      display: flex;
+      @extend .pl-2;
+      @extend .pr-2;
+      white-space: nowrap;
+    }
+    .title {
+      padding: 0;
+    }
+  }
+  &.style-3 {
+    li {
+      @extend .col-4;
+      @extend .m-0;
+      @extend .d-flex;
+    }
+    input {
+      display: none;
+      &:checked ~ label {
+        background-color: $brand-bg-dark;
+        box-shadow: 0 0 0 2px $brand-primary;
+      }
+    }
+    label {
+      background-color: $accent-4;
+      color: $brand-fg-dark;
+      display: flex;
+      white-space: wrap;
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+      justify-content: center;
+      padding: 0.5rem;
+      @include line-height(24px);
+    }
+  }
+  &.no-scroll {
+    margin: 0 auto;
+    max-width: 336px;
+    @include media-breakpoint-up(lg) {
+      max-width: 665px;
+    }
+    li {
+      &:last-child {
+        margin-right: $list-inline-padding;
+      }
+    }
+    li {
+      @include media-breakpoint-up(sm) {
+        &:last-child {
+          margin-right: auto;
+        }
+      }
+      @include media-breakpoint-only(md) {
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+      }
+      @include media-breakpoint-up(lg) {
+        &:nth-child(4n) {
+          margin-right: auto;
+        }
+      }
+    }
+  }
+}
+// Mobile input sizes
+
+@include media-breakpoint-down(sm){
+  .form-control {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: $input-padding-y $input-padding-x;
+    font-size: $font-size-base;
+    line-height: $input-line-height;
+  }
+  .btn-lg {
+    padding-bottom: .25rem;
+    padding-top: .25rem;
+  }
+}
+
+
+/*========================================*
+| Stacked List - Select Steak Temperature |
+*========================================*/
+.stacked-list {
+  @extend .my-3;
+
+  .form-check-label {
+    @include rem(20px);
+  }
+
+  li {
+    @extend .text-left;
+
+    // Reset margin and add border-top to first stacked list item
+    &:first-child {
+      input ~ label {
+        border-top: 1px solid $accent-1;
+      }
+      @extend .mb-0;
+    }
+
+    label {
+      @extend .py-2;
+      width: 100%;
+    }
+
+    // Reset background colors and add border-bottom to all stacked list items
+    input {
+      ~ label {
+        background-color: transparent;
+        border-bottom: 1px solid $accent-1;
+      }
+
+      &:checked ~ label {
+        background-color: transparent;
+        box-shadow: none;
+        color: $brand-primary;
+        font-family: $font-secondary;
+        @extend .font-weight-bold;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .clear#{$infix}-left  { clear: left }
+    .clear#{$infix}-right { clear: right }
+    .clear#{$infix}-both  { clear: both }
+    .clear#{$infix}-none  { clear: none }
+  }
+}
