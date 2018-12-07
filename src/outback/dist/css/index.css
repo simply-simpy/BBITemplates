@@ -248,7 +248,7 @@ body {
   line-height: 1.5;
   color: #fff;
   text-align: left;
-  background-color: #353535; }
+  background-color: #4A4A4A; }
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
@@ -1183,7 +1183,7 @@ mark,
   .table tbody + tbody {
     border-top: 2px solid #dee2e6; }
   .table .table {
-    background-color: #353535; }
+    background-color: #4A4A4A; }
 
 .table-sm th,
 .table-sm td {
@@ -1587,7 +1587,7 @@ textarea.form-control {
   background-color: #28852f; }
 
 .was-validated .custom-control-input:valid:focus ~ .custom-control-label::before, .custom-control-input.is-valid:focus ~ .custom-control-label::before {
-  box-shadow: 0 0 0 1px #353535, 0 0 0 0.25rem rgba(28, 94, 33, 0.25); }
+  box-shadow: 0 0 0 1px #4A4A4A, 0 0 0 0.25rem rgba(28, 94, 33, 0.25); }
 
 .was-validated .custom-file-input:valid ~ .custom-file-label, .custom-file-input.is-valid ~ .custom-file-label {
   border-color: #1C5E21; }
@@ -1669,7 +1669,7 @@ textarea.form-control {
   background-color: #e4606d; }
 
 .was-validated .custom-control-input:invalid:focus ~ .custom-control-label::before, .custom-control-input.is-invalid:focus ~ .custom-control-label::before {
-  box-shadow: 0 0 0 1px #353535, 0 0 0 0.25rem rgba(220, 53, 69, 0.25); }
+  box-shadow: 0 0 0 1px #4A4A4A, 0 0 0 0.25rem rgba(220, 53, 69, 0.25); }
 
 .was-validated .custom-file-input:invalid ~ .custom-file-label, .custom-file-input.is-invalid ~ .custom-file-label {
   border-color: #dc3545; }
