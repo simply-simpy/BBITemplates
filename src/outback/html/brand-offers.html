@@ -1,0 +1,25 @@
+{% extends '_layout.html' %}
+{% block content %}
+
+<div class="row">
+    <div class="col">
+        {% import 'components/offer-item.html' as offerItem %}
+        {{ offerItem.addContent(
+        'Free Bloomin\' Onion Mondays',
+        'Save $5 on Aussie Party Platters every NFL game Thursday when you order $20 or more online.',
+        '../img/brand-offers/offer-item-1.jpg'
+        )
+        }}
+
+
+
+
+
+    </div>
+
+
+</div>
+
+
+
+{% endblock %}

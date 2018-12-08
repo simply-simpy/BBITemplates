@@ -33,6 +33,11 @@ gulp.task('js', function() {
     .pipe(gulp.dest('dist/js'))
 });
 
+gulp.task('img', function() {
+  return gulp.src('./img/**/**')
+      .pipe(gulp.dest('dist/img'))
+});
+
 gulp.task('fonts', function() {
     return gulp.src('./fonts/**/**')
         .pipe(gulp.dest('dist/fonts'))
@@ -46,7 +51,7 @@ gulp.task('sass:watch', function () {
   return gulp.watch('./sass/**/*.scss', gulp.series('sass'));
 });
 
-gulp.task('default', gulp.parallel('connect','nunjuckTask', 'sass', 'js', 'fonts', 'watch', 'sass:watch'), function (done) {
+gulp.task('default', gulp.parallel('connect','nunjuckTask', 'sass', 'js', 'fonts', 'watch', 'img', 'sass:watch'), function (done) {
   done();
 });
 
