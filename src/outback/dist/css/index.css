@@ -8150,6 +8150,30 @@ dl, dd {
     [data-template="brand-site"] [data-component="olo-site-footer"] .container::before {
       border-top: none; }
 
+[data-template="brand-offers"] .headline {
+  color: #931A1A;
+  font-family: introRust, sans-serif;
+  font-size: 28px;
+  font-size: 1.75rem; }
+  @media (min-width: 992px) {
+    [data-template="brand-offers"] .headline {
+      font-size: 44px;
+      font-size: 2.75rem; } }
+
+[data-template="brand-offers"] .tagline {
+  font-family: jennasue, sans-serif;
+  text-transform: initial;
+  font-size: 30px;
+  font-size: 1.875rem; }
+  @media (min-width: 992px) {
+    [data-template="brand-offers"] .tagline {
+      font-size: 36px;
+      font-size: 2.25rem;
+      font-weight: bold; } }
+
+[data-template="brand-offers"] section {
+  padding: 1rem 2rem; }
+
 /*========================*
 | Global Component Styles |
 *========================*/
@@ -8795,6 +8819,34 @@ dl, dd {
     [data-component="promo-alert"] {
       font-size: 24px;
       font-size: 1.5rem; } }
+
+[data-component="signup-form"] {
+  margin-top: 2rem;
+  padding: 3rem 2rem;
+  background-color: #D7D3C6; }
+  [data-component="signup-form"] .headline {
+    font-family: introRust, sans-serif;
+    font-size: 28px;
+    font-size: 1.75rem; }
+    @media (min-width: 992px) {
+      [data-component="signup-form"] .headline {
+        font-size: 44px;
+        font-size: 2.75rem; } }
+  [data-component="signup-form"] .tagline {
+    font-family: jennasue, sans-serif;
+    text-transform: initial;
+    font-size: 40px;
+    font-size: 2.5rem; }
+    @media (min-width: 992px) {
+      [data-component="signup-form"] .tagline {
+        font-size: 60px;
+        font-size: 3.75rem; } }
+  [data-component="signup-form"] .footer {
+    font-size: 1rem; }
+    [data-component="signup-form"] .footer a {
+      color: #111111;
+      font-weight: bold;
+      text-decoration: underline; }
 
 /*========================*
 | UX Updates              |

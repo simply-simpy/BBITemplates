@@ -1,0 +1,24 @@
+[data-template="brand-offers"] {
+  .headline {
+    color: $brand-primary;
+    font-family: $font-introRust;
+    @include rem(28px);
+
+    @include media-breakpoint-up(lg) {
+      @include rem(44px);
+    }
+  }
+  .tagline {
+    font-family: $font-jennasue;
+    text-transform: initial;
+    @include rem(30px);
+
+    @include media-breakpoint-up(lg) {
+      @include rem(36px);
+      font-weight: bold;
+    }
+  }
+  section {
+    padding: 1rem 2rem;
+  }
+}

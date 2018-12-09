@@ -1,0 +1,33 @@
+[data-component="signup-form"] {
+  margin-top: 2rem;
+  padding: 3rem 2rem;
+  background-color: $brand-accent-4;
+
+  .headline {
+    font-family: $font-introRust;
+    @include rem(28px);
+
+    @include media-breakpoint-up(lg) {
+      @include rem(44px);
+    }
+  }
+  .tagline {
+    font-family: $font-jennasue;
+    text-transform: initial;
+    @include rem(40px);
+
+    @include media-breakpoint-up(lg) {
+      @include rem(60px);
+    }
+  }
+
+  .footer {
+    font-size: 1rem;
+
+    a {
+      color: $brand-fg-dark;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  }
+}
