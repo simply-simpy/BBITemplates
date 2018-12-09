@@ -1,9 +1,9 @@
 {% macro addContent(offerItemTitle, offerItemText, offerItemImg) %}
-    <div class="card offer-item">
+    <a href="#" class="card offer-item">
         <div class="card-body">
             <h5 class="card-title">{{ offerItemTitle }}</h5>
             <p class="card-text">{{ offerItemText }}</p>
         </div>
-        <img class="card-img-top" src= "{{ offerItemImg }}" alt="Card image cap" />
-    </div>
+        <img class="card-img-top" src= "{{ offerItemImg }}" alt="Card image caption" />
+    </a>
 {% endmacro %}
