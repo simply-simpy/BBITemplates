@@ -1,5 +1,6 @@
-{% macro addContent(heroImg) %}
-<div class="full-width-hero">
-    <img src="{{heroImg}}" class="img-fluid" alt="">
+{% macro addContent(heroImg, imgBottomBorder) %}
+<div class="hero">
+    <img src="{{heroImg}}"  alt="">
+    <img src="{{imgBottomBorder}}"  alt="">
 </div>
 {% endmacro %}
