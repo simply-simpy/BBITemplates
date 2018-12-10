@@ -1,115 +1,68 @@
 {% set dataTemplate = "brand-offers" %}
-
 {% extends '_layout.html' %}
+
+
 {% block content %}
+
 
 {% import 'components/full-width-hero.html' as fullWidthHero %}
 {{ fullWidthHero.addContent(
-'../img/brand-offers/offer-item-1.jpg'
+'../img/brand-offers/hero-brand-offers.jpg'
 )}}
 
-<section>
+<section class="offers">
     {% import 'components/offer-items-title.html' as offerItemsTitle %}
-    {{ offerItemsTitle.addContent(
-    'Fair Digital Dinkum!',
-    'Online Offers'
+        {{ offerItemsTitle.addContent(
+        'Fair Digital Dinkum!',
+        'Online Offers'
+        )
+    }}
+    <div class="row">
+        {% for offer in onlineOffers %}
+        <div class="col">
+            {% include "components/offer-item-2.html" %}
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+
+<section class="offers">
+    {% import 'components/offer-items-title.html' as offerItemsTitle %}
+        {{ offerItemsTitle.addContent(
+        'G\'Deals!',
+        'In-Store Offers'
     )
     }}
     <div class="row">
+        {% for offer in inStoreOffers %}
         <div class="col">
-            {% import 'components/offer-item.html' as offerItem %}
-            {{ offerItem.addContent(
-            'Free Bloomin\' Onion Mondays',
-            'Save $5 on Aussie Party Platters every NFL game Thursday when you order $20 or more online.',
-            '../img/brand-offers/offer-item-1.jpg'
-            )
-            }}
+            {% include "components/offer-item-2.html" %}
         </div>
-        <div class="col">
-            {% import 'components/offer-item.html' as offerItem %}
-            {{ offerItem.addContent(
-            'Free Bloomin\' Onion Mondays',
-            'Save $5 on Aussie Party Platters every NFL game Thursday when you order $20 or more online.',
-            '../img/brand-offers/offer-item-2.jpg'
-            )
-            }}
-        </div>
-        <div class="col">
-            {% import 'components/offer-item.html' as offerItem %}
-            {{ offerItem.addContent(
-            'Free Bloomin\' Onion Mondays',
-            'Save $5 on Aussie Party Platters every NFL game Thursday when you order $20 or more online.',
-            '../img/brand-offers/offer-item-3.jpg'
-            )
-            }}
-        </div>
+        {% if (loop.index) === 2 %}
+        </div><div class="row">
+        {% endif %}
+        {% endfor %}
     </div>
 </section>
-<section>
+
+<section class="offers">
     {% import 'components/offer-items-title.html' as offerItemsTitle %}
     {{ offerItemsTitle.addContent(
-    'G\'Deals!',
-    'In-Store Offers'
+    'OUTBACK EXTRAS',
+    'More Good On Yah!'
     )
     }}
     <div class="row">
+        {% for offer in outbackExtras %}
         <div class="col">
-            {% import 'components/offer-item.html' as offerItem %}
-            {{ offerItem.addContent(
-            'Free Bloomin\' Onion Mondays',
-            'Save $5 on Aussie Party Platters every NFL game Thursday when you order $20 or more online.',
-            '../img/brand-offers/offer-item-4.jpg'
-            )
-            }}
+            {% include "components/offer-item-2.html" %}
         </div>
-        <div class="col">
-            {% import 'components/offer-item.html' as offerItem %}
-            {{ offerItem.addContent(
-            'Free Bloomin\' Onion Mondays',
-            'Save $5 on Aussie Party Platters every NFL game Thursday when you order $20 or more online.',
-            '../img/brand-offers/offer-item-5.jpg'
-            )
-            }}
-        </div>
+        {% endfor %}
     </div>
 </section>
-<section>
-    {% import 'components/offer-items-title.html' as offerItemsTitle %}
-    {{ offerItemsTitle.addContent(
-    'More Good On Yah!',
-    'Outback Extras'
-    )
-    }}
-    <div class="row">
-        <div class="col">
-            {% import 'components/offer-item.html' as offerItem %}
-            {{ offerItem.addContent(
-            'Free Bloomin\' Onion Mondays',
-            'Save $5 on Aussie Party Platters every NFL game Thursday when you order $20 or more online.',
-            '../img/brand-offers/offer-item-6.jpg'
-            )
-            }}
-        </div>
-        <div class="col">
-            {% import 'components/offer-item.html' as offerItem %}
-            {{ offerItem.addContent(
-            'Free Bloomin\' Onion Mondays',
-            'Save $5 on Aussie Party Platters every NFL game Thursday when you order $20 or more online.',
-            '../img/brand-offers/offer-item-7.jpg'
-            )
-            }}
-        </div>
-        <div class="col">
-            {% import 'components/offer-item.html' as offerItem %}
-            {{ offerItem.addContent(
-            'Free Bloomin\' Onion Mondays',
-            'Save $5 on Aussie Party Platters every NFL game Thursday when you order $20 or more online.',
-            '../img/brand-offers/offer-item-8.jpg'
-            )
-            }}
-        </div>
-    </div>
-</section>
+
+
 
 {% include "components/sign-up-form.html" %}
 

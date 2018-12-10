@@ -18,7 +18,19 @@
       font-weight: bold;
     }
   }
-  section {
-    padding: 1rem 2rem;
+  //section {
+  //  padding: 1rem 2rem;
+  //}
+
+  .card {
+    padding: $spacer * 4 $spacer * .75  $spacer * .75;
+  }
+  .offers {
+    div[class^="col"]{
+      display: flex;
+    }
+    .row + .row {
+      margin-top: $spacer;
+    }
   }
 }

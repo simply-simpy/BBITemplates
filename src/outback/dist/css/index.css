@@ -8171,8 +8171,14 @@ dl, dd {
       font-size: 2.25rem;
       font-weight: bold; } }
 
-[data-template="brand-offers"] section {
-  padding: 1rem 2rem; }
+[data-template="brand-offers"] .card, [data-template="brand-offers"] [data-template="location-finder"] .search-results .item, [data-template="location-finder"] .search-results [data-template="brand-offers"] .item {
+  padding: 4rem 0.75rem 0.75rem; }
+
+[data-template="brand-offers"] .offers div[class^="col"] {
+  display: flex; }
+
+[data-template="brand-offers"] .offers .row + .row {
+  margin-top: 1rem; }
 
 /*========================*
 | Global Component Styles |
