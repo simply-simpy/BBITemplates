@@ -1,9 +1,7 @@
 {% set dataTemplate = "brand-offers" %}
 {% extends '_layout.html' %}
 
-
 {% block content %}
-
 
 {% import 'components/full-width-hero.html' as fullWidthHero %}
 {{ fullWidthHero.addContent(
@@ -13,37 +11,43 @@
 
 <section class="offers">
     {% import 'components/offer-items-title.html' as offerItemsTitle %}
-        {{ offerItemsTitle.addContent(
-        'Fair Digital Dinkum!',
-        'Online Offers'
-        )
+    {{ offerItemsTitle.addContent(
+    'Fair Digital Dinkum!',
+    'Online Offers'
+    )
     }}
-    <div class="row">
-        {% for offer in onlineOffers %}
-        <div class="col">
-            {% include "components/offer-item-2.html" %}
+    <div class="container">
+        <div class="row">
+            {% for offer in onlineOffers %}
+            <div class="col-lg-4">
+                {% include "components/offer-item-2.html" %}
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
 </section>
 
 
 <section class="offers">
     {% import 'components/offer-items-title.html' as offerItemsTitle %}
-        {{ offerItemsTitle.addContent(
-        'G\'Deals!',
-        'In-Store Offers'
+    {{ offerItemsTitle.addContent(
+    'G\'Deals!',
+    'In-Store Offers'
     )
     }}
-    <div class="row">
-        {% for offer in inStoreOffers %}
-        <div class="col">
-            {% include "components/offer-item-2.html" %}
+    <div class="container">
+        <div class="row">
+
+            {% for offer in inStoreOffers %}
+            <div class="col-lg-6">
+                {% include "components/offer-item-2.html" %}
+            </div>
+            {% if (loop.index) === 2 %}
         </div>
-        {% if (loop.index) === 2 %}
-        </div><div class="row">
-        {% endif %}
-        {% endfor %}
+        <div class="row">
+            {% endif %}
+            {% endfor %}
+        </div>
     </div>
 </section>
 
@@ -54,15 +58,16 @@
     'More Good On Yah!'
     )
     }}
-    <div class="row">
-        {% for offer in outbackExtras %}
-        <div class="col">
-            {% include "components/offer-item-2.html" %}
+    <div class="container">
+        <div class="row">
+            {% for offer in outbackExtras %}
+            <div class="col-lg-4">
+                {% include "components/offer-item-2.html" %}
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
 </section>
-
 
 
 {% include "components/sign-up-form.html" %}
