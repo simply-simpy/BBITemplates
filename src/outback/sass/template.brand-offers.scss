@@ -6,8 +6,9 @@
 
   .hero {
     img {
-      @extend .img-fluid;
+      display: block;
       width: 100%;
+      @extend .img-fluid;
     }
   }
 

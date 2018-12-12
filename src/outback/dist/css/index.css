@@ -183,7 +183,7 @@
 /*========================================================*
 | UX-Updates                                              |
 |---------------------------------------------------------|
-| Values for 3rd party plugins                            |
+|                                                         |
 *========================================================*/
 /*=============================*
 | BRAND SPECIFIC COLOR PALETTE |
@@ -8157,6 +8157,7 @@ dl, dd {
     overflow: hidden;
     position: relative; }
   [data-template="brand-offers"] .hero img {
+    display: block;
     width: 100%; }
   @media (min-width: 992px) {
     [data-template="brand-offers"] .hgroup {
@@ -8889,6 +8890,9 @@ dl, dd {
       font-size: 24px;
       font-size: 1.5rem; } }
 
+/*========================*
+| UX Updates              |
+*========================*/
 [data-component="signup-form"] {
   margin-top: 2rem;
   padding: 3rem 2rem;
@@ -8922,7 +8926,3 @@ dl, dd {
 
 .grow:hover, .offer-item:hover {
   transform: scale(1.02); }
-
-/*========================*
-| UX Updates              |
-*========================*/
