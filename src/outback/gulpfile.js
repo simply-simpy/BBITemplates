@@ -18,9 +18,6 @@ gulp.task('nunjuckTask', function () {
 });
 
 
-
-
-
 gulp.task('connect', function () {
     connect.server({
         root: 'dist',
@@ -42,6 +39,7 @@ gulp.task('js', function () {
     return gulp.src('./js/**/**')
         .pipe(gulp.dest('dist/js'))
 });
+
 
 gulp.task('img', function () {
     return gulp.src('./img/**/**')

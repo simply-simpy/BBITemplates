@@ -1,9 +1,8 @@
 $body-bg    : $brand-bg-light;
 $body-color : #2d2d2d !global;
 
-body {
-  font-size: 100px !important;
-}
+$body-bg-checkout: $brand-dark-gray;
+
 // Links
 //
 // Style anchor elements.

@@ -1,0 +1,15 @@
+{% macro addContent(text, mobileText, className, id) %}
+<div class="justify-content-center">
+    <div class="row">
+        <div class="col">
+            <button type="button" class="btn btn-primary {{ className }}" id="{{ id }}">
+                <span class="d-md-none">{{text}}</span>
+                <span class="d-none d-md-inline">{{text}}</span>
+            </button>
+        </div>
+    </div>
+</div>
+{% endmacro %}
+
+
+

@@ -1,0 +1,28 @@
+{% set dataTemplate = "checkout" %}
+{% extends '_layout.html' %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 order-lg-last">
+            <section class="your-order">
+                <h1>Your Order</h1>
+                {% include "components/menu-item.html" %}
+            </section>
+        </div>
+        <div class="col-lg-8">
+            <form>
+                {% include "01-contact.html" %}
+                {% include "02-fulfillment.html" %}
+                {% include "03-payment.html" %}
+            </form>
+        </div>
+        <div class="order-steps">
+        </div>
+    </div>
+</div>
+</div>
+
+
+{% endblock %}

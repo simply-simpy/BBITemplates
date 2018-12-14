@@ -1,0 +1,43 @@
+[data-template="checkout"] {
+  background: $body-bg-checkout;
+}
+.your-order {
+  background: #fff;
+  max-width: 346px;
+}
+.step {
+  background: #fff;
+  padding: $spacer * 1.5;
+}
+.step-title {
+  align-items: center;
+  border-bottom: 1px solid $brand-gray;
+  cursor: pointer;
+  display: flex;
+  font-size: $checkout-flow-lg-font-size;
+  text-transform: uppercase;
+  .icon {
+    margin-left: auto;
+    transform: rotate(92deg);
+    &:before {
+      font-size: 3rem;
+    }
+  }
+  &.collapsed {
+    .icon {
+      transform: rotate(-90deg);
+    }
+  }
+  .step-number {
+    background-color: $brand-red;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
