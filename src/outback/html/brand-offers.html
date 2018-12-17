@@ -19,7 +19,7 @@
     <div class="container">
         <div class="row">
             {% for offer in onlineOffers %}
-            <div class="col-lg">
+            <div class="col-lg-4">
                 {% include "components/offer-item-2.html" %}
             </div>
             {% endfor %}
@@ -39,7 +39,7 @@
         <div class="row">
 
             {% for offer in inStoreOffers %}
-            <div class="col-lg">
+            <div class="col-lg-6">
                 {% include "components/offer-item-2.html" %}
             </div>
             {% if (loop.index) === 2 %}
@@ -61,7 +61,7 @@
     <div class="container">
         <div class="row">
             {% for offer in outbackExtras %}
-            <div class="col-lg">
+            <div class="col-lg-4">
                 {% include "components/offer-item-2.html" %}
             </div>
             {% endfor %}
