@@ -13,9 +13,6 @@
   }
 
   .hgroup {
-    @include media-breakpoint-up(lg) {
-      margin-top: $spacer * 2;
-    }
     .headline {
       color: $brand-primary;
       font-family: $font-introRust;
@@ -68,12 +65,17 @@
   }
 
   .offers {
+    @include media-breakpoint-up(lg) {
+      margin-bottom: $spacer * 2;
+      margin-top: $spacer;
+    }
+
     div[class^="col"] {
       display: flex;
     }
 
     .row + .row {
-      @include media-breakpoint-up(lg){
+      @include media-breakpoint-up(lg) {
         margin-top: $spacer * 2;
       }
     }
