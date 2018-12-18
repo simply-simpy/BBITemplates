@@ -188,6 +188,9 @@
 /*=============================*
 | BRAND SPECIFIC COLOR PALETTE |
 *=============================*/
+/*=============================*
+| BORDER COLORS                |
+*=============================*/
 /*================================================================*
 | TYPOGRAPHY                                                      |
 |-----------------------------------------------------------------|
@@ -7209,7 +7212,7 @@ h2, .h2 {
 
 .map-container {
   height: 13.75rem;
-  border: 1px solid #979797; }
+  border: #979797; }
   @media (min-width: 992px) {
     .map-container {
       height: 41rem; } }
@@ -7461,7 +7464,7 @@ _:-ms-fullscreen .icon-logo::before, :root .icon-logo::before {
 
 input[type="text"] {
   background: #FFFFFF;
-  border: 1px solid #979797;
+  border: #979797;
   border-radius: 0;
   color: #111111; }
 
@@ -7770,7 +7773,7 @@ dl, dd {
   padding: 0;
   list-style: none; }
   [data-template="location-finder"] .search-results .item {
-    border: 1px solid #979797;
+    border: #979797;
     line-height: 1.2;
     font-size: 20px;
     font-size: 1.25rem; }
@@ -8556,6 +8559,9 @@ dl, dd {
   background: #fff;
   padding: 1.5rem; }
 
+.step-item {
+  border-bottom: 1px solid #979797; }
+
 .step-title {
   align-items: center;
   border-bottom: 1px solid #979797;
@@ -8812,7 +8818,7 @@ dl, dd {
 *==========================================*/
 [data-component="customer-order"] {
   background-color: #FFFFFF;
-  border: 1px solid #979797; }
+  border: #979797; }
   [data-component="customer-order"] h2 {
     text-transform: none; }
     [data-component="customer-order"] h2 strong {
@@ -9168,7 +9174,7 @@ dl, dd {
       margin: 0 auto;
       display: block; }
     [data-component="view-cart"] .modal-body .edit-order {
-      border-bottom: 1px solid #979797; }
+      border-bottom: #979797; }
       [data-component="view-cart"] .modal-body .edit-order a {
         font-family: TradeGothic-BoldCondTwenty, sans-serif; }
   [data-component="view-cart"] .modal-header {
@@ -9257,6 +9263,22 @@ dl, dd {
       color: #111111;
       font-weight: bold;
       text-decoration: underline; }
+
+[data-component="vehicle-info"] .vehicles .custom-control {
+  padding-left: 0; }
+
+[data-component="vehicle-info"] .vehicles .custom-control-label {
+  align-items: center;
+  display: flex;
+  flex-direction: column; }
+  [data-component="vehicle-info"] .vehicles .custom-control-label:before {
+    align-self: center;
+    position: static; }
+
+[data-component="vehicle-info"] .vehicles .vehicle {
+  border: 1px solid #979797;
+  display: flex;
+  flex-direction: row; }
 
 .grow, .offer-item {
   transition: all .2s ease-in-out; }

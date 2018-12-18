@@ -1,0 +1,21 @@
+[data-component="vehicle-info"] {
+  .vehicles {
+    .custom-control {
+      padding-left: 0;
+    }
+    .custom-control-label {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      &:before {
+        align-self: center;
+        position: static;
+      }
+    }
+    .vehicle {
+      border: 1px solid $border-1;
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}

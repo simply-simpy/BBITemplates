@@ -1,0 +1,70 @@
+<div data-component="vehicle-info">
+    <label for="vehicleType" class="form-label">Choose Vehicle Type</label>
+
+    <div class="vehicles">
+    {% set isImageInput = true %}
+    {% set type = 'radio' %}
+    {% for vehicle in vehicles %}
+    {% set className = vehicle %}
+    {% include './forms/_input.generic.html'  %}
+    {%- endfor %}
+    </div>
+
+
+    <!--<input class="form-check-input" type="radio" value="0" name="customOption" id="singleOption-1">-->
+    <!--<label class="form-check-label" for="singleOption-1">-->
+        <!--<span class="icon-car">1</span>-->
+        <!--<span>Car</span>-->
+    <!--</label>-->
+
+
+    <!--<input class="form-check-input" type="radio" value="0" name="customOption" id="singleOption-2">-->
+    <!--<label class="form-check-label" for="singleOption-2">-->
+        <!--<span class="icon-suv">2</span>-->
+        <!--<span>SUV</span>-->
+    <!--</label>-->
+
+
+    <!--<input class="form-check-input" type="radio" value="0" name="customOption" id="singleOption-3">-->
+    <!--<label class="form-check-label" for="singleOption-3">-->
+        <!--<span class="icon-van">3</span>-->
+        <!--<span>Van</span>-->
+    <!--</label>-->
+
+
+    <!--<input class="form-check-input" type="radio" value="0" name="customOption" id="singleOption-4">-->
+    <!--<label class="form-check-label" for="singleOption-4">-->
+        <!--<span class="icon-truck">4</span>-->
+        <!--<span>Truck</span>-->
+    <!--</label>-->
+
+
+    <!--<input class="form-check-input" type="radio" value="0" name="customOption" id="singleOption-5">-->
+    <!--<label class="form-check-label" for="singleOption-5">-->
+        <!--<span class="icon-walk">5</span>-->
+        <!--<span>Walk-in</span>-->
+    <!--</label>-->
+
+    <label for="vehicleColor" class="form-label">Choose Vehicle Color</label>
+    <!-- Dropdown -->
+    <button type="button" class="btn modal-trigger" data-toggle="modal" data-target="#dateTimePickerModal">
+                            <span class="inner">
+                                <span class="text date-picked font-weight-bold">
+                                    Select a vehicle color...
+                                </span>
+                                <span class="icon icon-carat"></span>
+                            </span>
+    </button>
+
+    <label for="vehicleMake" class="form-label">Choose Vehicle Make</label>
+    <!-- Dropdown -->
+    <button type="button" class="btn modal-trigger" data-toggle="modal" data-target="#dateTimePickerModal">
+                            <span class="inner">
+                                <span class="text date-picked font-weight-bold">
+                                    Select a vehicle make...
+                                </span>
+                                <span class="icon icon-carat"></span>
+                            </span>
+    </button>
+
+</div>

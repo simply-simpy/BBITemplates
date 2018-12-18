@@ -1,0 +1,9 @@
+{% macro addContent(labelName, labelValue, placeholderValue, type, className, name, notificationContent) %}
+<div class="notification">
+    <p class="notification-content">{{notificationContent}}</p>
+    <div class="form-check form-check-inline">
+        <input type="{{type}}" class="form-control{{ classlName }}" id="{{ labelName }}" name="{{ name }}" placeholder="{{ placeholderName }}">
+        <label class="form-check-label" for="{{ labelName }}">{{ labelName }}</label>
+    </div>
+</div>
+{% endmacro %}
