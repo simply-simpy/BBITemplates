@@ -68,7 +68,7 @@ $zmdi_pin      : '\F1AB';
     }
     &.collapsed {
       &::before {
-        transform: rotate(-90deg);
+        transform: rotate(-180deg);
       }
     }
   }

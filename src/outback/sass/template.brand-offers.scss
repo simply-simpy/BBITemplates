@@ -4,14 +4,6 @@
     position: relative;
   }
 
-  .hero {
-    img {
-      display: block;
-      width: 100%;
-      @extend .img-fluid;
-    }
-  }
-
   .hgroup {
     .headline {
       color: $brand-primary;
