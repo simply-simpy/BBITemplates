@@ -1,10 +1,17 @@
-{% macro addContent(heroImg, imgBottomBorder) %}
+{% macro addContent(heroImg, heroImgMobile, imgBottomBorder) %}
 <div class="responsive-hero">
-    <div class="hgroup">
-        <h1 class="title">Outback<br />offers</h1>
-        <h2 class="subtitle">Heaps of specials and extras</h2>
+    <div class="responsive-hero-inner">
+        <div class="hgroup">
+            <h1 class="title">Outback<br/>offers</h1>
+            <h2 class="subtitle">Heaps of specials and extras</h2>
+        </div>
+        <picture>
+            <source media="(min-width: 992px)" srcset="{{heroImg}}"/>
+            <source srcset="{{heroImgMobile}} 2x"/>
+            <img src="{{heroImg}}" alt="default image"/>
+        </picture>
     </div>
-    <img src="{{heroImg}}" alt="">
-    <img src="{{imgBottomBorder}}" alt="">
+    <img class="img-fluid" src="{{imgBottomBorder}}" alt="">
 </div>
 {% endmacro %}
+
