@@ -5,7 +5,28 @@
 
 {% block content %}
 
-<div class="when">When</div>
+<div class="step-item">
+    {% set stepItemTitle = 'Payment Method' %}
+    {% include 'components/_step-item-title.html'  %}
 
+    {% import 'components/modals/_modal-trigger.macro.html' as modalBtn %}
+    {{ modalBtn.addContent(
+    'Pay Online',
+    'payment-method'
+    )}}
+
+    {% import 'components/modals/_modal.macro.html' as modal %}
+    {{ modal.addContent(
+    'Select payment method',
+    'payment-method',
+    'desktop',
+    'mobile',
+    ''
+    )}}
+
+
+
+    <div>time pick</div>
+</div>
 
 {% endblock %}

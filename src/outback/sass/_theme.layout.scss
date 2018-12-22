@@ -7,3 +7,13 @@
     padding: 0;
   }
 }
+
+/*===========================================================*
+| Allows Setting page background color on the page wrapper   |
+*===========================================================*/
+html,
+body,
+body >
+.wrapper {
+  height: 100%;
+}
