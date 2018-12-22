@@ -10,7 +10,9 @@
   padding: $spacer * 1.5;
 }
 .step-item {
-  border-bottom: 1px solid $border-1;
+  border-bottom: $border-1;
+  margin: $spacer 0;
+  padding: $spacer 0;
 }
 .step-title {
   align-items: center;

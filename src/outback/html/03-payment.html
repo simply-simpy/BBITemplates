@@ -23,10 +23,28 @@
     'mobile',
     ''
     )}}
+</div>
+<div class="step-item">
+    {% set stepItemTitle = 'Apply Promo Code' %}
+    {% include 'components/_step-item-title.html'  %}
+    {% import 'components/forms/_input-group-append.macro.html' as promoCode %}
+    {{ promoCode.addContent(
+    'text',
+    '',
+    '0545-8945',
+    'apply',
+    ''
+    )}}
+</div>
+<div class="step-item">
+    {% set stepItemTitle = 'Tip' %}
+    {% include 'components/_step-item-title.html'  %}
 
+    {% set isGridInput = true %}
+    {% for tip in tips %}
+        {% include 'components/forms/_input.generic.html' %}
+    {% endfor %}
 
-
-    <div>time pick</div>
 </div>
 
 {% endblock %}

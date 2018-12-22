@@ -6916,9 +6916,11 @@ a.text-dark:hover, a.text-dark:focus {
 *===========================================================*/
 html,
 body,
-body >
-.wrapper {
+body > .wrapper {
   height: 100%; }
+
+.wrapper {
+  overflow-x: hidden; }
 
 /*============================*
 | Plugin Style Styles          |
@@ -8535,7 +8537,9 @@ dl, dd {
   padding: 1.5rem; }
 
 .step-item {
-  border-bottom: 1px solid 1px solid #979797; }
+  border-bottom: 1px solid #979797;
+  margin: 1rem 0;
+  padding: 1rem 0; }
 
 .step-title {
   align-items: center;
@@ -9358,6 +9362,9 @@ dl, dd {
       font-size: 4.25815037vw;
       background-size: auto 1.3vw;
       padding-top: 2.3vw; } }
+
+.grid-input {
+  border: 1px solid gray; }
 
 .grow, .offer-item {
   transition: all .2s ease-in-out; }

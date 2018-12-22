@@ -13,7 +13,9 @@
 *===========================================================*/
 html,
 body,
-body >
-.wrapper {
+body > .wrapper {
   height: 100%;
+}
+.wrapper {
+  overflow-x: hidden;
 }

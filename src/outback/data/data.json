@@ -70,5 +70,12 @@
     "SUV",
     "Van",
     "Truck"
+  ],
+  "tips": [
+    {"percentage":  "No tip", "amount": "($4.18)", "type":  "radio", "name":  "tip"},
+    {"percentage":  "10%", "amount": "($4.18)","type":  "radio", "name":  "tip"},
+    {"percentage":  "15%", "amount": "($4.18)","type":  "radio", "name":  "tip"},
+    {"percentage":  "20%", "amount": "($4.18)","type":  "radio", "name":  "tip"},
+    {"percentage":  "Enter Custom Tip", "amount": "($4.18)","type":  "radio", "name": "tip"}
   ]
 }
