@@ -243,6 +243,18 @@ input[type=radio]:checked ~ label {
       }
     }
   }
+
+  .list-inline-item {
+    @include media-breakpoint-down(sm) {
+      &:not(:last-child) {
+        margin-left: $list-inline-padding/2;
+        margin-right: $list-inline-padding/2;
+      }
+    }
+  }
+}
+.modal [data-component=custom-product-options].style-1 {
+  overflow-x: visible;
 }
 // Mobile input sizes
 

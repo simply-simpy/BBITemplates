@@ -12,12 +12,14 @@
     line-height: 1.1;
     @extend .mb-2;
   }
+
   .input-group + p {
     margin-top: $spacer/4;
   }
 
   .link-number {
     @include rem(20px);
+
     li:last-child {
       margin-left: auto;
     }
@@ -46,5 +48,9 @@
       color: $brand-fg-light;
       background-color: $brand-fg-dark;
     }
+  }
+
+  span.expiring-soonest {
+    color: $brand-primary;
   }
 }

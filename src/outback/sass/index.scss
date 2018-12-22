@@ -53,10 +53,8 @@
 @import 'component.confirmation-info';
 @import 'template.contact-info';
 @import 'template.order-review';
-@import 'template.offers';
-@import 'template.brand-site';
 @import 'template.brand-offers';
-@import 'template.checkout';
+@import 'template.brand-site';
 
 /*========================*
 | Global Component Styles |
@@ -83,9 +81,5 @@
 | UX Updates              |
 *========================*/
 @import "ux-update/component.signup-form";
-@import "ux-update/component.checkout.vehicle-info";
+@import "ux-update/component.responsive-hero";
 @import "ux-update/theme.animations";
-
-
-
-

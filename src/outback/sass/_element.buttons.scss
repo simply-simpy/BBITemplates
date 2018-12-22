@@ -57,7 +57,7 @@ $btn-secondary-active: rgba(17,17,17,.2);
   &.sticky-buttons-modal {
     @extend .mt-0;
     .sticky-buttons-inner {
-      background-color: $brand-bg-dark;
+      background-color: inherit;
       @extend .position-absolute;
     }
   }

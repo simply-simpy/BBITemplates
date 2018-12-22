@@ -133,6 +133,49 @@ h2,
 }
 
 
+// --- Section Divider which contains messages to Dine Rewards members --- //
+
+.rewards-member-message {
+  background: url(#{$brand-secondary}) 0 0 repeat #262524;
+  color: $brand-fg-light;
+  text-align: center;
+  padding: 2rem 1rem;
+
+  a {
+    color: $brand-fg-light;
+    text-decoration: underline;
+  }
+
+  h1 {
+    font-family: $font-introRust;
+    @include rem(28px);
+
+    @include media-breakpoint-up(lg) {
+      @include rem(44px);
+    }
+  }
+
+  // CTA Font Size Override
+  .btn {
+    padding: 1rem;
+    line-height: 1rem;
+    text-decoration: none;
+    @include rem(20px);
+
+    @include media-breakpoint-up(lg) {
+      @include rem(30px);
+    }
+  }
+
+  @include media-breakpoint-up(lg){
+    padding: 5rem 0;
+
+    .container {
+      width: 39%;
+    }
+  }
+}
+
 //// -------- FOOD MENU SIDEBAR -----------
 
 .sidebar-nav {
@@ -160,4 +203,26 @@ h2,
 // Modal close button override to show 100% opacity and lighter on hover.
 .close {
   opacity: 1;
+}
+
+// Outback Experience Module
+[data-component="outback-experience"] {
+  border: 2px solid $brand-accent-1;
+  font-size: 1rem;
+  line-height: auto;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+
+  a {
+    font-weight: bold;
+  }
+
+  .icon-help {
+    cursor: pointer;
+  }
+
+  @include media-breakpoint-up(lg) {
+    max-width: 330px;
+  }
 }

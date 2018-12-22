@@ -4,12 +4,7 @@
       width: auto;
     }
   }
-  @include media-breakpoint-up(lg) {
-    .iframe-container {
-      height: 500px;
-      border: 0;
-    }
-  }
+
   .payment-methods {
     .input-group p {
       flex-basis: 100%;
@@ -28,13 +23,22 @@
     }
   }
 
+ .embed-responsive {
+   height: 365px;
+   @media (min-width: 600px) {
+     height: 350px;
+   }
+   @include media-breakpoint-up(lg) {
+     height: 270px;
+   }
+ }
+
   .promo-code {
     .active-code {
       font-weight: bold;
       word-wrap: break-word;
     }
   }
-
 
   .row {
     align-items: flex-start;

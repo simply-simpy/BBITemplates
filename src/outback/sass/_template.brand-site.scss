@@ -5,7 +5,6 @@
   // CAROUSEL
 
   // TYPOGRAPHY
-  [data-component="signup-form"],
   [data-component="ordering-options"] {
     .headline {
       font-family: $font-introRust;
@@ -93,7 +92,8 @@
       text-decoration: underline;
     }
 
-    .btn {
+    a.btn {
+      text-decoration: none;
       width: 8.375rem;
       @include media-breakpoint-up(lg) {
         @include rem(30px);
@@ -106,11 +106,14 @@
   // RESPONSIVE IMAGE GRID
   [data-component="responsive-img-grid"] {
 
+    margin-bottom: 2rem;
+
     .card-columns {
       column-count: 1;
 
       .card {
         @extend .mb-3;
+        border: none;
         position: relative;
 
         .card-title {
@@ -138,14 +141,27 @@
 
         .btn {
           padding: 0 1rem;
-          position: absolute;
-          bottom: 1rem;
+
+          @include media-breakpoint-up(lg) {
+            position: absolute;
+            bottom: 1rem;
+          }
         }
       }
 
       @include media-breakpoint-up(lg) {
         &.half-width {
-          column-count: 2;
+          display: flex;
+          justify-content: center;
+          .card {
+            width: 50%;
+            &:first-child {
+              margin-right: .625rem;
+            }
+            &:last-child {
+              margin-left: .625rem;
+            }
+          }
         }
         &.third-width {
           column-count: 3;
@@ -161,23 +177,6 @@
 
     @include media-breakpoint-up(lg) {
       //padding: 3rem;
-    }
-  }
-
-  // SIGN UP FORM
-  [data-component="signup-form"] {
-    margin-top: 2rem;
-    padding: 3rem 2rem;
-    background-color: $brand-accent-4;
-
-    .footer {
-      font-size: 1rem;
-
-      a {
-        color: $brand-fg-dark;
-        font-weight: bold;
-        text-decoration: underline;
-      }
     }
   }
 

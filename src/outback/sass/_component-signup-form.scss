@@ -1,0 +1,97 @@
+// SIGN UP FORM
+[data-component="signup-form"] {
+  padding: 3rem 2rem;
+  background-color: $brand-accent-4;
+
+  .headline {
+    color: $brand-primary;
+  }
+
+  // Button with burst decorations
+  button {
+    @include rem(20px);
+    margin: 1rem 0;
+    padding: 1rem 3rem;
+    line-height: 1rem;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      height: 50px;
+      width: 50px;
+      top: 0;
+    }
+
+    &::before {
+      background: url("../img/burst-left.png") no-repeat;
+      background-size: contain;
+      left: -2.5rem;
+    }
+
+    &::after {
+      background: url("../img/burst-right.png") no-repeat;
+      background-size: contain;
+      right: -3.5rem;
+    }
+  }
+
+
+  @include media-breakpoint-up(lg) {
+    form {
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+
+  .footer {
+    font-size: 1rem;
+
+    a {
+      color: $brand-fg-dark;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  }
+
+  .form-group {
+
+    input {
+      background-color: $brand-accent-4;
+      border: 1px solid $brand-fg-dark;
+      border-radius: 5px;
+      height: 1rem;
+      padding: 1rem;
+      margin-bottom: 0;
+
+      &::placeholder {
+        color: $brand-fg-dark;
+        font-weight: bold;
+        font-size: 1rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .headline {
+    font-family: $font-introRust;
+    @include rem(28px);
+
+    @include media-breakpoint-up(lg) {
+      @include rem(44px);
+    }
+  }
+
+  .tagline {
+    font-family: $font-jennasue;
+    text-transform: initial;
+    text-align: center;
+    @include rem(40px);
+
+    @include media-breakpoint-up(lg) {
+      @include rem(60px);
+    }
+
+  }
+}
