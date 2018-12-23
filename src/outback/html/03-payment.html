@@ -46,5 +46,24 @@
     {% endfor %}
 
 </div>
+<div class="step-item">
+    <div class="iframe-container">
+        <iframe id="credit-card-iframe" class="credit-card-iframe" src="iframe.html" ></iframe>
+    </div>
+    {% import './components/forms/input.button.html' as orderBtn %}
+    {{ orderBtn.addContent(
+    'Place Order',
+    '',
+    'btn-primary'
+    )
+    }}
+    {% import './components/forms/input.button.html' as cancelOrderBtn %}
+    {{ cancelOrderBtn.addContent(
+    'Cancel Order',
+    '',
+    'btn-link'
+    )
+    }}
+</div>
 
 {% endblock %}

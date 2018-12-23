@@ -8527,43 +8527,43 @@ dl, dd {
 
 [data-template="checkout"] {
   background: #4A4A4A; }
-
-.your-order {
-  background: #fff;
-  max-width: 346px; }
-
-.step {
-  background: #fff;
-  padding: 1.5rem; }
-
-.step-item {
-  border-bottom: 1px solid #979797;
-  margin: 1rem 0;
-  padding: 1rem 0; }
-
-.step-title {
-  align-items: center;
-  border-bottom: 1px solid #979797;
-  cursor: pointer;
-  display: flex;
-  text-transform: uppercase; }
-  .step-title .icon {
-    margin-left: auto;
-    transform: rotate(92deg); }
-    .step-title .icon:before {
-      font-size: 3rem; }
-  .step-title.collapsed .icon {
-    transform: rotate(-90deg); }
-  .step-title .step-number {
-    background-color: #8e1110;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    height: 2rem;
-    width: 2rem;
-    border-radius: 50%;
+  [data-template="checkout"] .your-order {
+    background: #fff;
+    max-width: 346px; }
+  [data-template="checkout"] .step {
+    background: #fff;
+    padding: 1.5rem; }
+  [data-template="checkout"] .step-item {
+    border-bottom: 1px solid #979797;
+    margin: 1rem 0;
+    padding: 1rem 0; }
+  [data-template="checkout"] .step-title {
     align-items: center;
-    justify-content: center; }
+    border-bottom: 1px solid #979797;
+    cursor: pointer;
+    display: flex;
+    text-transform: uppercase; }
+    [data-template="checkout"] .step-title .icon {
+      margin-left: auto;
+      transform: rotate(92deg); }
+      [data-template="checkout"] .step-title .icon:before {
+        font-size: 3rem; }
+    [data-template="checkout"] .step-title.collapsed .icon {
+      transform: rotate(-90deg); }
+    [data-template="checkout"] .step-title .step-number {
+      background-color: #8e1110;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      height: 2rem;
+      width: 2rem;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center; }
+  [data-template="checkout"] .credit-card-iframe {
+    border: none;
+    height: 285px;
+    width: 100%; }
 
 /*========================*
 | Global Component Styles |
@@ -9365,6 +9365,29 @@ dl, dd {
 
 .grid-input {
   border: 1px solid gray; }
+
+[data-component="vehicle-info"] .vehicles {
+  display: flex; }
+  [data-component="vehicle-info"] .vehicles .custom-control {
+    padding-left: 0; }
+  [data-component="vehicle-info"] .vehicles .custom-control-label {
+    align-items: center;
+    display: flex;
+    flex-direction: column; }
+    [data-component="vehicle-info"] .vehicles .custom-control-label:before {
+      align-self: center;
+      position: static; }
+  [data-component="vehicle-info"] .vehicles .vehicle {
+    border: 1px solid #979797;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: center;
+    margin-right: 0.3rem;
+    width: 8.125rem; }
+    [data-component="vehicle-info"] .vehicles .vehicle span[class^="icon"] {
+      font-size: 28px;
+      font-size: 1.75rem; }
 
 .grow, .offer-item {
   transition: all .2s ease-in-out; }
