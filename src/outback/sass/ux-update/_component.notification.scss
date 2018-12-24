@@ -1,0 +1,8 @@
+.notification {
+  background: $notification-default;
+  padding: $spacer;
+  @extend .font-weight-bold;
+  .custom-control {
+
+  }
+}

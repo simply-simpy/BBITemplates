@@ -5,7 +5,7 @@
 
 {% block content %}
 
-
+<div data-component="contact-information">
     <div class="row">
         <div class="col-sm">
             {% import './components/forms/input.text.html' as input %}
@@ -78,11 +78,11 @@
     </div>
 
     {% import './components/forms/input.button.html' as btn %}
-        {{ btn.addContent(
-        'Next',
-        '',
-        'btn-primary'
-        )
+    {{ btn.addContent(
+    'Next',
+    '',
+    'btn-primary'
+    )
     }}
-
+</div>
 {% endblock %}

@@ -6,48 +6,35 @@
 {% block content %}
 <div class="step-item">
     {% set stepItemTitle = 'When' %}
-    {% include 'components/_step-item-title.html'  %}
+    {% include 'components/_step-item-title.html' %}
     <div>time pick</div>
 </div>
 <div class="step-item">
     {% set stepItemTitle = 'Pickup Address' %}
-    {% include 'components/_step-item-title.html'  %}
-    <div class="pickup-location">
+    {% include 'components/_step-item-title.html' %}
+    <div data-component="pickup-location" class="pickup-location">
         <p class="font-weight-bold">South Tampa</p>
         <p>3403 Henderson Blvd. Tampa, FL 33609</p>
     </div>
-    <div class="notification">
-        <p class="notification-content">Good news! This location offers curbside pick-up. Would you like to pick-up your order using curbside?</p>
-        {% import './components/forms/_input.generic.macro.html' as input %}
-        {{ input.addContent(
-        'radio',
-        'Yes',
-        'yes',
-        '',
-        '',
-        '',
-        'custom-control-inline'
-        )
-        }}
-        {% import './components/forms/_input.generic.macro.html' as input %}
-        {{ input.addContent(
-        'radio',
-        'No',
-        'no',
-        '',
-        '',
-        '',
-        'custom-control-inline'
-        )
-        }}
-    </div>
+
+    {% include 'components/_notification.html' %}
 </div>
 <div class="step-item">
-    {% set stepItemTitle = 'Vehicle Information' %}
-    {% include 'components/_step-item-title.html'  %}
-    <p>This information is used to identify your car when you pickup your order.</p>
-    {% include 'components/_vehicle-information.html'  %}
+    <div data-component="vehicle-info">
+        {% set stepItemTitle = 'Vehicle Information' %}
+        {% include 'components/_step-item-title.html' %}
+        <p>This information is used to identify your car when you pickup your order.</p>
+        {% include 'components/_vehicle-information.html' %}
+    </div>
 </div>
-
-
+<div class="page-buttons">
+{% import './components/forms/input.button.html' as nextBtn %}
+{{ nextBtn.addContent(
+'Next',
+'',
+'btn-primary'
+)
+}}
+</div>
 {% endblock %}
+

@@ -20,18 +20,21 @@
 
 
 
-    <div class="pickup-location">
+    <div data-component="pickup-location" class="pickup-location">
         <p class="font-weight-bold">South Tampa</p>
         <p>3403 Henderson Blvd. Tampa, FL 33609</p>
     </div>
-    <div class="notification">
-        <p class="notification-content">Good news! This location offers curbside pick-up. Would you like to pick-up your order using curbside?</p>
-        
-        
+
+    <div data-component="notification" class="notification">
+    <p class="notification-content">Good news! This location offers curbside pick-up. Would you like to pick-up your
+        order using curbside?</p>
+
+    
+    
 <div class="custom-control custom-radio custom-control-inline vehicle">
     
         
-        <input type="radio" class="custom-control-input" id="yes" name="">
+        <input type="radio" class="custom-control-input" id="yes" name="curbside">
         
         <label class="custom-control-label" for="yes">Yes</label>
         
@@ -39,12 +42,12 @@
 </div>
 
 
-        
-        
+    
+    
 <div class="custom-control custom-radio custom-control-inline vehicle">
     
         
-        <input type="radio" class="custom-control-input" id="no" name="">
+        <input type="radio" class="custom-control-input" id="no" name="curbside">
         
         <label class="custom-control-label" for="no">No</label>
         
@@ -52,16 +55,19 @@
 </div>
 
 
-    </div>
+</div>
+
+
 </div>
 <div class="step-item">
-    
-    <h2 class="step-item-title">Vehicle Information</h2>
-
-
-
-    <p>This information is used to identify your car when you pickup your order.</p>
     <div data-component="vehicle-info">
+        
+        <h2 class="step-item-title">Vehicle Information</h2>
+
+
+
+        <p>This information is used to identify your car when you pickup your order.</p>
+        <div data-component="vehicle-info">
     <label for="vehicleType" class="form-label">Choose Vehicle Type</label>
 
     <div class="vehicles">
@@ -173,9 +179,19 @@
 
 </div>
 
+    </div>
 </div>
+<div class="page-buttons">
 
 
+
+<button type="button" class="btn btn-primary" id="">
+    <span class="d-md-none">Next</span>
+    <span class="d-none d-md-inline">Next</span>
+</button>
+
+
+</div>
 
         </div>
     </div>

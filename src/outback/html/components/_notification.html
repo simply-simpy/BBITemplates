@@ -1,9 +1,28 @@
-{% macro addContent(labelName, labelValue, placeholderValue, type, className, name, notificationContent) %}
-<div class="notification">
-    <p class="notification-content">{{notificationContent}}</p>
-    <div class="form-check form-check-inline">
-        <input type="{{type}}" class="form-control{{ classlName }}" id="{{ labelName }}" name="{{ name }}" placeholder="{{ placeholderName }}">
-        <label class="form-check-label" for="{{ labelName }}">{{ labelName }}</label>
-    </div>
+<div data-component="notification" class="notification">
+    <p class="notification-content">Good news! This location offers curbside pick-up. Would you like to pick-up your
+        order using curbside?</p>
+
+    {% import './forms/_input.generic.macro.html' as input %}
+    {{ input.addContent(
+    'radio',
+    'Yes',
+    'yes',
+    'curbside',
+    '',
+    '',
+    'custom-control-inline'
+    )
+    }}
+    {% import './forms/_input.generic.macro.html' as input %}
+    {{ input.addContent(
+    'radio',
+    'No',
+    'no',
+    'curbside',
+    '',
+    '',
+    'custom-control-inline'
+    )
+    }}
 </div>
-{% endmacro %}
+

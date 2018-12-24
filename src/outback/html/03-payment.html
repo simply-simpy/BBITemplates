@@ -7,7 +7,7 @@
 
 <div class="step-item">
     {% set stepItemTitle = 'Payment Method' %}
-    {% include 'components/_step-item-title.html'  %}
+    {% include 'components/_step-item-title.html' %}
 
     {% import 'components/modals/_modal-trigger.macro.html' as modalBtn %}
     {{ modalBtn.addContent(
@@ -25,30 +25,33 @@
     )}}
 </div>
 <div class="step-item">
-    {% set stepItemTitle = 'Apply Promo Code' %}
-    {% include 'components/_step-item-title.html'  %}
-    {% import 'components/forms/_input-group-append.macro.html' as promoCode %}
-    {{ promoCode.addContent(
-    'text',
-    '',
-    '0545-8945',
-    'apply',
-    ''
-    )}}
+    <div data-component="apply-discount">
+        {% set stepItemTitle = 'Apply Promo Code' %}
+        {% include 'components/_step-item-title.html' %}
+        {% import 'components/forms/_input-group-append.macro.html' as promoCode %}
+        {{ promoCode.addContent(
+        'text',
+        '',
+        '0545-8945',
+        'apply',
+        ''
+        )}}
+    </div>
 </div>
 <div class="step-item">
-    {% set stepItemTitle = 'Tip' %}
-    {% include 'components/_step-item-title.html'  %}
+    <div data-component="tip-selector">
+        {% set stepItemTitle = 'Tip' %}
+        {% include 'components/_step-item-title.html' %}
 
-    {% set isGridInput = true %}
-    {% for tip in tips %}
+        {% set isGridInput = true %}
+        {% for tip in tips %}
         {% include 'components/forms/_input.generic.html' %}
-    {% endfor %}
-
+        {% endfor %}
+    </div>
 </div>
 <div class="step-item">
     <div class="iframe-container">
-        <iframe id="credit-card-iframe" class="credit-card-iframe" src="iframe.html" ></iframe>
+        <iframe id="credit-card-iframe" class="credit-card-iframe" src="iframe.html"></iframe>
     </div>
     {% import './components/forms/input.button.html' as orderBtn %}
     {{ orderBtn.addContent(

@@ -191,6 +191,9 @@
 /*=============================*
 | BORDER COLORS                |
 *=============================*/
+/*=============================*
+| NOTIFICATIONS                |
+*=============================*/
 :root {
   --brand-primary: #931A1A;
   --indigo: #6610f2;
@@ -6603,7 +6606,7 @@ button.bg-dark:focus {
 .font-weight-normal {
   font-weight: 400 !important; }
 
-.font-weight-bold, .stacked-list li input:checked ~ label, [data-template="location-finder"] .search-results .store-name, [data-component="confirmation-info"] .order-id, [data-template="brand-site"] [data-component="ordering-options"] p.edit-location, [data-component="customer-order"] .edit-buttons, [data-component="customer-order"] .sub-total span {
+.font-weight-bold, .stacked-list li input:checked ~ label, [data-template="location-finder"] .search-results .store-name, [data-component="confirmation-info"] .order-id, [data-template="brand-site"] [data-component="ordering-options"] p.edit-location, [data-component="customer-order"] .edit-buttons, [data-component="customer-order"] .sub-total span, .notification {
   font-weight: 400 !important; }
 
 .font-italic {
@@ -7148,7 +7151,7 @@ p, label {
 /*======================*
 | Global Helper Classes |
 *======================*/
-.font-weight-bold, .stacked-list li input:checked ~ label, [data-template="location-finder"] .search-results .store-name, [data-component="confirmation-info"] .order-id, [data-template="brand-site"] [data-component="ordering-options"] p.edit-location, [data-component="customer-order"] .edit-buttons, [data-component="customer-order"] .sub-total span {
+.font-weight-bold, .stacked-list li input:checked ~ label, [data-template="location-finder"] .search-results .store-name, [data-component="confirmation-info"] .order-id, [data-template="brand-site"] [data-component="ordering-options"] p.edit-location, [data-component="customer-order"] .edit-buttons, [data-component="customer-order"] .sub-total span, .notification {
   font-family: TradeGothic-BoldCondTwenty, sans-serif; }
 
 .title {
@@ -9388,6 +9391,16 @@ dl, dd {
     [data-component="vehicle-info"] .vehicles .vehicle span[class^="icon"] {
       font-size: 28px;
       font-size: 1.75rem; }
+
+.pickup-location {
+  border: 1px solid #979797;
+  padding: 1rem; }
+  .pickup-location p {
+    margin: 0; }
+
+.notification {
+  background: #f2ecde;
+  padding: 1rem; }
 
 .grow, .offer-item {
   transition: all .2s ease-in-out; }
