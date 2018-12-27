@@ -9,6 +9,11 @@
   .step {
     background: #fff;
     padding: $spacer * 1.5;
+    &.inactive {
+      .step-number {
+        background: #5ABB62i;
+      }
+    }
   }
 
   .step-item {
@@ -22,7 +27,7 @@
     border-bottom: 1px solid $brand-gray;
     cursor: pointer;
     display: flex;
-    //font-size: $checkout-flow-lg-font-size;
+    @include rem(20px);
     text-transform: uppercase;
 
     .icon {

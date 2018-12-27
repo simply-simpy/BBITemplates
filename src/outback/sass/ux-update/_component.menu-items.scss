@@ -1,0 +1,38 @@
+.menu-items {
+  border: $border-1;
+  @include rem(18px);
+
+  @include media-breakpoint-up(lg){}
+  margin: $spacer * .625;
+  padding: $spacer;
+  .toggle-menu-item-details {
+    display: flex;
+    flex-direction: column;
+    &:before {
+      align-self: flex-end;
+      @include rem(13px);
+      position: absolute;
+    }
+  }
+  p {
+    margin: 0;
+  }
+  .price {
+    font-family: $font-primary;
+  }
+  .menu-item-img {
+    margin-top: -22px;
+  }
+  .order-row-headers {
+    border-bottom: $border-1;
+  }
+  .menu-item {
+    position:relative;
+    a {
+      color: inherit;
+    }
+    * {
+     font-size: inherit;
+    }
+  }
+}

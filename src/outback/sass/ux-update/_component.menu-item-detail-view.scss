@@ -1,3 +1,6 @@
-.menu-item-details {
-
+.menu-item-detail-view {
+  @include rem(17px);
+  * {
+    font-size: inherit;
+  }
 }

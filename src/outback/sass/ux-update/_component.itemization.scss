@@ -1,0 +1,22 @@
+.itemization {
+  border-top: $border-1;
+  padding:  ($spacer * 1.5) ($spacer * 1.65);
+  @include rem(16px);
+  * {
+    font-size: inherit;
+  }
+  .col + .col {
+    text-align: right;
+  }
+  .row:last-child {
+    border-top: $border-1;
+    margin-top: $spacer *.65;
+    @include rem(19px);
+    * {
+      @extend .font-weight-bold;
+    }
+    [class^="col"] {
+      margin-top: $spacer *.5;
+    }
+  }
+}

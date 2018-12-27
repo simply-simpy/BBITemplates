@@ -81,12 +81,18 @@
 /*========================*
 | UX Updates              |
 *========================*/
+@import "ux-update/component.itemization";
 @import "ux-update/component.signup-form";
 @import "ux-update/component.responsive-hero";
+
 @import "ux-update/component.grid-input";
 @import "ux-update/component.vehicle-info";
 @import "ux-update/component.pickup-location";
+@import "ux-update/component.customer-order-list";
+@import "ux-update/component.customer-order-list";
 @import "ux-update/component.notification";
+@import "ux-update/component.menu-items";
+@import "ux-update/component.menu-item-detail-view";
 @import "ux-update/theme.animations";
 
 
