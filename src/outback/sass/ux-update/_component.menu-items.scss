@@ -5,7 +5,9 @@
   @include media-breakpoint-up(lg){}
   margin: $spacer * .625;
   padding: $spacer;
-
+  .menu-item-img {
+    margin-right: $spacer;
+  }
   .toggle-menu-item-details {
     display: flex;
     flex-direction: column;
@@ -13,6 +15,7 @@
       align-self: flex-end;
       @include rem(13px);
       position: absolute;
+      right: -10px;
       top: 2rem;
     }
   }

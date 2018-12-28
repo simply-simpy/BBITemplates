@@ -9438,6 +9438,8 @@ dl, dd {
   font-size: 1.125rem;
   margin: 0.625rem;
   padding: 1rem; }
+  .menu-items .menu-item-img {
+    margin-right: 1rem; }
   .menu-items .toggle-menu-item-details {
     display: flex;
     flex-direction: column; }
@@ -9446,6 +9448,7 @@ dl, dd {
       font-size: 13px;
       font-size: 0.8125rem;
       position: absolute;
+      right: -10px;
       top: 2rem; }
   .menu-items p {
     margin: 0; }
