@@ -5,6 +5,7 @@
   @include media-breakpoint-up(lg){}
   margin: $spacer * .625;
   padding: $spacer;
+
   .toggle-menu-item-details {
     display: flex;
     flex-direction: column;
@@ -12,6 +13,7 @@
       align-self: flex-end;
       @include rem(13px);
       position: absolute;
+      top: 2rem;
     }
   }
   p {
@@ -20,11 +22,8 @@
   .price {
     font-family: $font-primary;
   }
-  .menu-item-img {
-    margin-top: -22px;
-  }
-  .order-row-headers {
-    border-bottom: $border-1;
+  .col-price.order-row-header {
+    display: none;
   }
   .menu-item {
     position:relative;
@@ -33,6 +32,17 @@
     }
     * {
      font-size: inherit;
+    }
+  }
+  .col.col-price {
+    @extend .offset-2;
+  }
+  [data-template="order-confirmation"]  & {
+    .col-price.order-row-header {
+      display: block;
+    }
+    .col.col-price {
+     margin-left: 0;
     }
   }
 }

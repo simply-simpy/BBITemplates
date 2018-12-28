@@ -741,7 +741,7 @@ mark,
 .offset-1 {
   margin-left: 8.33333%; }
 
-.offset-2 {
+.offset-2, .menu-items .col.col-price {
   margin-left: 16.66667%; }
 
 .offset-3 {
@@ -9291,23 +9291,6 @@ dl, dd {
 /*========================*
 | UX Updates              |
 *========================*/
-.itemization {
-  border-top: 1px solid #979797;
-  padding: 1.5rem 1.65rem;
-  font-size: 16px;
-  font-size: 1rem; }
-  .itemization * {
-    font-size: inherit; }
-  .itemization .col + .col {
-    text-align: right; }
-  .itemization .row:last-child {
-    border-top: 1px solid #979797;
-    margin-top: 0.65rem;
-    font-size: 19px;
-    font-size: 1.1875rem; }
-    .itemization .row:last-child [class^="col"] {
-      margin-top: 0.5rem; }
-
 [data-component="signup-form"] {
   margin-top: 2rem;
   padding: 3rem 2rem;
@@ -9419,14 +9402,22 @@ dl, dd {
   .pickup-location p {
     margin: 0; }
 
-.customer-order-list {
-  background: #fff; }
-  .customer-order-list h1 {
-    font-size: 20px;
-    font-size: 1.25rem; }
-    @media (min-width: 992px) {
-      .customer-order-list h1 {
-        text-align: center; } }
+.itemization {
+  border-top: 1px solid #979797;
+  padding: 1.5rem 1.65rem;
+  font-size: 16px;
+  font-size: 1rem; }
+  .itemization * {
+    font-size: inherit; }
+  .itemization .col + .col {
+    text-align: right; }
+  .itemization .row:last-child {
+    border-top: 1px solid #979797;
+    margin-top: 0.65rem;
+    font-size: 19px;
+    font-size: 1.1875rem; }
+    .itemization .row:last-child [class^="col"] {
+      margin-top: 0.5rem; }
 
 .customer-order-list {
   background: #fff; }
@@ -9454,21 +9445,24 @@ dl, dd {
       align-self: flex-end;
       font-size: 13px;
       font-size: 0.8125rem;
-      position: absolute; }
+      position: absolute;
+      top: 2rem; }
   .menu-items p {
     margin: 0; }
   .menu-items .price {
     font-family: TradeGothic-CondEighteen, sans-serif; }
-  .menu-items .menu-item-img {
-    margin-top: -22px; }
-  .menu-items .order-row-headers {
-    border-bottom: 1px solid #979797; }
+  .menu-items .col-price.order-row-header {
+    display: none; }
   .menu-items .menu-item {
     position: relative; }
     .menu-items .menu-item a {
       color: inherit; }
     .menu-items .menu-item * {
       font-size: inherit; }
+  [data-template="order-confirmation"] .menu-items .col-price.order-row-header {
+    display: block; }
+  [data-template="order-confirmation"] .menu-items .col.col-price {
+    margin-left: 0; }
 
 .menu-item-detail-view {
   font-size: 17px;
