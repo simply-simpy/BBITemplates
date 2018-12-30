@@ -44,20 +44,24 @@
         {% include 'components/_step-item-title.html' %}
 
         {% set isGridInput = true %}
-        {% for tip in tips %}
-        {% include 'components/forms/_input.generic.html' %}
-        {% endfor %}
+        <div class="tip-amounts">
+            {% for tip in tips %}
+            {% include 'components/forms/_input.generic.html' %}
+            {% endfor %}
+        </div>
     </div>
 </div>
 <div class="step-item">
     <div class="iframe-container">
         <iframe id="credit-card-iframe" class="credit-card-iframe" src="iframe.html"></iframe>
     </div>
+</div>
+<div class="page-buttons">
     {% import './components/forms/input.button.html' as orderBtn %}
     {{ orderBtn.addContent(
     'Place Order',
     '',
-    'btn-primary'
+    'btn-primary btn-lg'
     )
     }}
     {% import './components/forms/input.button.html' as cancelOrderBtn %}

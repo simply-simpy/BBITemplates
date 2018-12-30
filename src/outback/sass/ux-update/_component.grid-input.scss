@@ -1,3 +1,16 @@
 .grid-input {
+  display: block;
+  padding: .25rem .5rem;
+}
+
+.tip-amounts {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-gap: $spacer * .5;
+  color: #444;
+}
+
+.grid-item {
+  border-radius: 2px;
   border: 1px solid gray;
 }

@@ -16,13 +16,17 @@
 </div>
 <div class="step-item">
     
-    <h2 class="step-item-title">Pickup Address</h2>
+    <div class="row">
+        <div class="col-lg-6">
+            <h2 class="step-item-title">Pickup Address</h2>
 
 
 
-    <div data-component="pickup-location" class="pickup-location">
-        <p class="font-weight-bold">South Tampa</p>
-        <p>3403 Henderson Blvd. Tampa, FL 33609</p>
+            <div data-component="pickup-location" class="pickup-location step-item-component">
+                <p class="font-weight-bold">South Tampa</p>
+                <p>3403 Henderson Blvd. Tampa, FL 33609</p>
+            </div>
+        </div>
     </div>
 
     <div data-component="notification" class="notification">
@@ -31,7 +35,7 @@
 
     
     
-<div class="custom-control custom-radio custom-control-inline vehicle">
+<div class="custom-control custom-radio custom-control-inline vehicle ">
     
         
         <input type="radio" class="custom-control-input" id="yes" name="curbside">
@@ -44,7 +48,7 @@
 
     
     
-<div class="custom-control custom-radio custom-control-inline vehicle">
+<div class="custom-control custom-radio custom-control-inline vehicle ">
     
         
         <input type="radio" class="custom-control-input" id="no" name="curbside">
@@ -60,7 +64,7 @@
 
 </div>
 <div class="step-item">
-    <div data-component="vehicle-info">
+    <div data-component="vehicle-info" class="step-item-component">
         
         <h2 class="step-item-title">Vehicle Information</h2>
 
@@ -75,7 +79,7 @@
     
     
     
-    <div class="custom-control custom-radio car vehicle">
+    <div class="custom-control custom-radio car vehicle ">
     
     <label class="custom-control-label" for="singleOption-1" >
         <input type="radio" class="custom-control-input" value="1" id="singleOption-1" name="">
@@ -86,7 +90,7 @@
 </div>
 
     
-    <div class="custom-control custom-radio suv vehicle">
+    <div class="custom-control custom-radio suv vehicle ">
     
     <label class="custom-control-label" for="singleOption-2" >
         <input type="radio" class="custom-control-input" value="2" id="singleOption-2" name="">
@@ -97,7 +101,7 @@
 </div>
 
     
-    <div class="custom-control custom-radio van vehicle">
+    <div class="custom-control custom-radio van vehicle ">
     
     <label class="custom-control-label" for="singleOption-3" >
         <input type="radio" class="custom-control-input" value="3" id="singleOption-3" name="">
@@ -108,7 +112,7 @@
 </div>
 
     
-    <div class="custom-control custom-radio truck vehicle">
+    <div class="custom-control custom-radio truck vehicle ">
     
     <label class="custom-control-label" for="singleOption-4" >
         <input type="radio" class="custom-control-input" value="4" id="singleOption-4" name="">
@@ -182,10 +186,10 @@
     </div>
 </div>
 <div class="page-buttons">
+    
+    
 
-
-
-<button type="button" class="btn btn-primary" id="">
+<button type="button" class="btn btn-primary btn-lg" id="">
     <span class="d-md-none">Next</span>
     <span class="d-none d-md-inline">Next</span>
 </button>

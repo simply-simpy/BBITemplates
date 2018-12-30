@@ -4,85 +4,87 @@
 {% extends 'components/_step.html' %}
 
 {% block content %}
-
-<div data-component="contact-information">
-    <div class="row">
-        <div class="col-sm">
-            {% import './components/forms/input.text.html' as input %}
-            {{ input.addContent(
-            'first-name',
-            'First Name',
-            '',
-            'text',
-            ''
-            )
-            }}
+<div class="step-item">
+    <div data-component="contact-information">
+        <div class="row">
+            <div class="col-sm">
+                {% import './components/forms/input.text.html' as input %}
+                {{ input.addContent(
+                'first-name',
+                'First Name',
+                '',
+                'text',
+                ''
+                )
+                }}
+            </div>
+            <div class="col-sm">
+                {% import './components/forms/input.text.html' as input %}
+                {{ input.addContent(
+                'last-name',
+                'Last Name',
+                '',
+                'text',
+                ''
+                )
+                }}
+            </div>
         </div>
-        <div class="col-sm">
-            {% import './components/forms/input.text.html' as input %}
-            {{ input.addContent(
-            'last-name',
-            'Last Name',
-            '',
-            'text',
-            ''
-            )
-            }}
+        <div class="row">
+            <div class="col-sm">
+                {% import './components/forms/input.text.html' as input %}
+                {{ input.addContent(
+                'email-address',
+                'Email',
+                '',
+                'email-address',
+                ''
+                )
+                }}
+            </div>
+            <div class="col-sm">
+                {% import './components/forms/input.text.html' as input %}
+                {{ input.addContent(
+                'phone-number',
+                'Phone Number',
+                '',
+                'phone',
+                ''
+                )
+                }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                {% import './components/forms/input.checkbox.html' as input %}
+                {{ input.addContent(
+                'Sign me up for Dine Rewards',
+                'dine-rewards',
+                'dine-rewards'
+                )
+                }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                {% import './components/forms/input.checkbox.html' as input %}
+                {{ input.addContent(
+                'Sign me up for email',
+                'email-signup',
+                'email-signup'
+                )
+                }}
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm">
-            {% import './components/forms/input.text.html' as input %}
-            {{ input.addContent(
-            'email-address',
-            'Email',
-            '',
-            'email-address',
-            ''
-            )
-            }}
-        </div>
-        <div class="col-sm">
-            {% import './components/forms/input.text.html' as input %}
-            {{ input.addContent(
-            'phone-number',
-            'Phone Number',
-            '',
-            'phone',
-            ''
-            )
-            }}
-        </div>
+    <div class="page-buttons">
+        {% import './components/forms/input.button.html' as btn %}
+        {{ btn.addContent(
+        'Next',
+        '',
+        'btn-primary btn-lg'
+        )
+        }}
     </div>
-    <div class="row">
-        <div class="col">
-            {% import './components/forms/input.checkbox.html' as input %}
-            {{ input.addContent(
-            'Sign me up for Dine Rewards',
-            'dine-rewards',
-            'dine-rewards'
-            )
-            }}
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            {% import './components/forms/input.checkbox.html' as input %}
-            {{ input.addContent(
-            'Sign me up for email',
-            'email-signup',
-            'email-signup'
-            )
-            }}
-        </div>
-    </div>
-
-    {% import './components/forms/input.button.html' as btn %}
-    {{ btn.addContent(
-    'Next',
-    '',
-    'btn-primary'
-    )
-    }}
 </div>
 {% endblock %}

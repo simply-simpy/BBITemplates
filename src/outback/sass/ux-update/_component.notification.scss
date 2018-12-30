@@ -1,8 +1,6 @@
 .notification {
   background: $notification-default;
   padding: $spacer;
+  line-height: 1.2;
   @extend .font-weight-bold;
-  .custom-control {
-
-  }
 }

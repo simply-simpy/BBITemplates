@@ -6890,7 +6890,7 @@ a.text-dark:hover, a.text-dark:focus {
 | Attaches an icon and default styles to any element  |
 | by nesting this inside the :before or :after pseudo |
 *====================================================*/
-.icon-boomerang::before, .icon-carat::before, .icon-double-vert-caret::after, .icon-double-vert-caret::before, .icon-cart_bag::before, .icon-error::before, .icon-facebook::before, .icon-geolocation::before, .icon-help::before, .icon-info::before, .icon-instagram::before, .icon-logo::before, .icon-menu::before, .icon-phone::before, .icon-play::before, .icon-rewards::before, .icon-rewards-alt::before, .icon-success::before, .icon-tooltip::before, .icon-twitter::before, .icon-arrow-left::before, .icon-arrow-right::before, .icon-check::before, [data-component="date-time-picker"] .choose-time li.active::before, .icon-calendar:before, .icon-close:before, .icon-time:before, .icon-zmdi-pin:before, [data-template="food-menu"] .card-header h1:after,
+.icon-boomerang::before, .icon-carat::before, .icon-double-vert-caret::after, .icon-double-vert-caret::before, .icon-cart_bag::before, .icon-error::before, .icon-facebook::before, .icon-geolocation::before, .icon-help::before, .icon-info::before, .icon-instagram::before, .icon-logo::before, .icon-menu::before, .icon-phone::before, .icon-play::before, .icon-rewards::before, .icon-rewards-alt::before, .icon-success::before, .icon-tooltip::before, .icon-twitter::before, .icon-arrow-left::before, .icon-arrow-right::before, .icon-check::before, [data-component="date-time-picker"] .choose-time li.active::before, .icon-calendar:before, .icon-close:before, .icon-time:before, .icon-zmdi-pin:before, .icon-zmdi-chevron-right:before, [data-template="food-menu"] .card-header h1:after,
 [data-template="food-menu"] .card-header h2:after, [data-template="payment-methods"] .btn-modal .card-body:after, [data-template="custom-product"] .btn-modal .card-body:after {
   display: inline-flex;
   font-family: obsGlyphs, bbi-icons, sans-serif;
@@ -7328,7 +7328,7 @@ h2, .h2 {
   text-decoration: none; }
 
 .icon-carat.collapsed::before {
-  transform: rotate(-180deg); }
+  transform: rotate(-90deg); }
 
 .icon-double-vert-caret {
   display: flex;
@@ -7454,6 +7454,13 @@ h2, .h2 {
   color: inherit;
   font-family: Material-Design-Iconic-Font, sans-serif;
   content: "";
+  font-size: 18px;
+  font-size: 1.125rem; }
+
+.icon-zmdi-chevron-right:before {
+  color: inherit;
+  font-family: Material-Design-Iconic-Font, sans-serif;
+  content: "";
   font-size: 18px;
   font-size: 1.125rem; }
 
@@ -8535,18 +8542,21 @@ dl, dd {
     max-width: 346px; }
   [data-template="checkout"] .step {
     background: #fff;
+    margin-bottom: 2rem;
     padding: 1.5rem; }
     [data-template="checkout"] .step.inactive .step-number {
       background: #5ABB62i; }
   [data-template="checkout"] .step-item {
-    border-bottom: 1px solid #979797;
-    margin: 1rem 0;
-    padding: 1rem 0; }
+    padding: 42px 0 0;
+    border-top: 1px solid #979797; }
+  [data-template="checkout"] .step-item-component {
+    margin-bottom: 2.25rem; }
   [data-template="checkout"] .step-title {
     align-items: center;
-    border-bottom: 1px solid #979797;
     cursor: pointer;
     display: flex;
+    padding: 5px;
+    padding: 0.3125rem;
     font-size: 20px;
     font-size: 1.25rem;
     text-transform: uppercase; }
@@ -8558,15 +8568,23 @@ dl, dd {
     [data-template="checkout"] .step-title.collapsed .icon {
       transform: rotate(-90deg); }
     [data-template="checkout"] .step-title .step-number {
+      align-items: center;
       background-color: #8e1110;
+      border-radius: 50%;
       color: #fff;
       display: flex;
       flex-direction: column;
-      height: 2rem;
-      width: 2rem;
-      border-radius: 50%;
-      align-items: center;
-      justify-content: center; }
+      justify-content: center;
+      margin-right: .9375rem;
+      height: 36px;
+      height: 2.25rem;
+      width: 36px;
+      width: 2.25rem;
+      font-size: 22px;
+      font-size: 1.375rem; }
+  [data-template="checkout"] .step-body {
+    padding: 20px 0 0;
+    padding: 20px 0 0/16pxrem; }
   [data-template="checkout"] .credit-card-iframe {
     border: none;
     height: 285px;
@@ -9371,6 +9389,17 @@ dl, dd {
       padding-top: 2.3vw; } }
 
 .grid-input {
+  display: block;
+  padding: .25rem .5rem; }
+
+.tip-amounts {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-gap: 0.5rem;
+  color: #444; }
+
+.grid-item {
+  border-radius: 2px;
   border: 1px solid gray; }
 
 [data-component="vehicle-info"] .vehicles {
@@ -9402,6 +9431,10 @@ dl, dd {
   .pickup-location p {
     margin: 0; }
 
+.page-buttons {
+  display: flex;
+  justify-content: center; }
+
 .itemization {
   border-top: 1px solid #979797;
   padding: 1.5rem 1.65rem;
@@ -9430,7 +9463,8 @@ dl, dd {
 
 .notification {
   background: #f2ecde;
-  padding: 1rem; }
+  padding: 1rem;
+  line-height: 1.2; }
 
 .menu-items {
   border: 1px solid #979797;
