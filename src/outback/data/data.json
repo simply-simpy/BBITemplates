@@ -77,5 +77,19 @@
     {"percentage":  "15%", "amount": "($4.18)","type":  "radio", "name":  "tip"},
     {"percentage":  "20%", "amount": "($4.18)","type":  "radio", "name":  "tip"},
     {"percentage":  "Enter Custom Tip", "amount": "","type":  "radio", "name": "tip"}
+  ],
+  "times": [
+    {"dataTime":  "10:00", "time": "10:00 AM"},
+    {"dataTime":  "10:30", "time": "10:30 PM"},
+    {"dataTime":  "11:00", "time": "11:00 PM"},
+    {"dataTime":  "11:30", "time": "11:30 PM"},
+    {"dataTime":  "12:00", "time": "12:00 PM"},
+    {"dataTime":  "12:30", "time": "12:30 PM"},
+    {"dataTime":  "13:00", "time": "1:00 PM"},
+    {"dataTime":  "13:30", "time": "1:30 PM"},
+    {"dataTime":  "14:00", "time": "2:00 PM"},
+    {"dataTime":  "14:30", "time": "2:30 PM"},
+    {"dataTime":  "15:00", "time": "3:00 PM"},
+    {"dataTime":  "15:30", "time": "3:30 PM"}
   ]
 }

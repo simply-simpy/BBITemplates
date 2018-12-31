@@ -1,9 +1,20 @@
 const gulp = require('gulp');
+const autoprefixer = require('gulp-autoprefixer');
 const nunjucksRender = require('gulp-nunjucks-render');
 const data = require('gulp-data');
 const connect = require('gulp-connect');
 const sass = require('gulp-sass');
 
+const autoprefixer_browsers = [
+    "Android 2.3",
+    "Android >= 4",
+    "Chrome >= 20",
+    "Firefox >= 24",
+    "Explorer >= 8",
+    "iOS >= 6",
+    "Opera >= 12",
+    "Safari >= 6"
+];
 
 gulp.task('nunjuckTask', function () {
     return gulp.src('./html/*.html')
@@ -31,9 +42,18 @@ gulp.task('sass', function () {
     return gulp.src('./sass/index.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('dist/css'))
+        // .pipe(connect.reload());
+});
+gulp.task('css', function () {
+    return gulp.src('./dist/css/index.css')
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false,
+            grid: "autoplace"
+        }))
+        .pipe(gulp.dest('dist/css'))
         .pipe(connect.reload());
 });
-
 
 gulp.task('js', function () {
     return gulp.src('./js/**/**')
@@ -51,6 +71,7 @@ gulp.task('fonts', function () {
         .pipe(gulp.dest('dist/fonts'))
 });
 
+
 gulp.task('watch', function () {
     return gulp.watch('./html/**/*', gulp.series('nunjuckTask'));
 });
@@ -59,7 +80,7 @@ gulp.task('sass:watch', function () {
     return gulp.watch('./sass/**/*.scss', gulp.series('sass'));
 });
 
-gulp.task('default', gulp.parallel('connect', 'nunjuckTask', 'sass', 'js', 'fonts', 'watch', 'img', 'sass:watch'), function (done) {
+gulp.task('default', gulp.parallel('connect', 'nunjuckTask', 'sass', 'css', 'js', 'fonts', 'watch', 'img', 'sass:watch'), function (done) {
     done();
 });
 

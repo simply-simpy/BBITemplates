@@ -1,0 +1,69 @@
+<div class="date-time-picker modal fade  datepicker-open" tabindex="-1" role="dialog" aria-hidden="false"
+     data-component="date-time-picker" id="date-time-picker">
+    <form>
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title">Choose Date And Time</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <h2>Choose Date</h2>
+                            <div class="form-group">
+                                <div class="input-group date" id="datetimepicker" data-target-input="nearest">
+                                    <input type="hidden" class="datetimepicker-input"/>
+                                    <div id="datetimepicker-toggle" class="form-control d-lg-none date-picked"></div>
+                                    <div id="datetimepicker-show"
+                                         class="form-control d-none d-lg-block date-picked"></div>
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">
+                                            <i class="icon-calendar"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="datetimepicker-container"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="choose-time">
+                                <h2>Choose Time</h2>
+                                <div class="times">
+                                {% set type = 'radio' %}
+                                {% set name = 'time' %}
+                                {% set isGridInput = true %}
+                                {% for time in times %}
+                                {% set text1 = time.time %}
+                                {% set data = time.dataTime %}
+                                {% include '../forms/_input.generic.html' %}
+                                {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Back and next buttons-->
+                <div class="sticky-buttons sticky-buttons-modal">
+                    <div class="sticky-buttons-inner">
+                        <div class="container justify-content-center">
+                            <div class="row">
+                                <div class="offset-lg-4 col-lg-4">
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block"
+                                            role="button" aria-pressed="true">
+                                        <span class="d-md-none">OK mobile</span><!--mobile-->
+                                        <span class="d-none d-md-inline">OK</span><!--desktop-->
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

@@ -46,6 +46,11 @@
         {% set isGridInput = true %}
         <div class="tip-amounts">
             {% for tip in tips %}
+            {% set type = tip.type %}
+            {% set name = tip.name %}
+            {% set text1 = tip.percentage %}
+            {% set text2 = tip.amount %}
+            {% set text1Class = "font-weight-bold" %}
             {% include 'components/forms/_input.generic.html' %}
             {% endfor %}
         </div>

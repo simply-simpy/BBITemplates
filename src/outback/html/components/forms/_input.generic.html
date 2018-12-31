@@ -7,15 +7,15 @@
     </label>
     {% elif isGridInput === true %}
     <label class="custom-control-label grid-input">
-        <input type="{{ tip.type }}" class="custom-control-input" name="{{ tip.name }}">
-        <span class="font-weight-bold">{{ tip.percentage }}</span>
-        <span>{{ tip.amount }}</span>
+        <input type="{{ type }}" class="custom-control-input" name="{{ name }}">
+        <span class="{{ text1Class }}">{{ text1 }}</span>
+        {% if text2 %} <span>{{ text2 }}</span>{% endif %}
     </label>
     {% else %}
         {% if type === 'text' %}
         <label class="custom-control-label" for="{{ id }}">{{ text }}</label>
         {% endif %}
-        <input type="{{ type }}" class="custom-control-input" id="{{ id }}" name="{{ name }}">
+        <input type="{{ type }}" data-time="{{ data }}" class="custom-control-input" id="{{ id }}" name="{{ name }}">
         {% if type !== 'text' %}
         <label class="custom-control-label" for="{{ id }}">{{ text }}</label>
         {% endif %}

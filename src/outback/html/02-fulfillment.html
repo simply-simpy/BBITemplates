@@ -8,6 +8,12 @@
     {% set stepItemTitle = 'When' %}
     {% include 'components/_step-item-title.html' %}
     <div>time pick</div>
+    {% import 'components/modals/_modal-trigger.macro.html' as modalBtn %}
+    {{ modalBtn.addContent(
+    'Pay Online',
+    'date-time-picker'
+    )}}
+    {% include 'components/modals/_date-time-picker.html' %}
 </div>
 <div class="step-item">
     {% set stepItemTitle = 'Pickup Address' %}
