@@ -1,6 +1,10 @@
 {% macro addContent(heroImg, imgBottomBorder) %}
-<div class="hero">
-    <img src="{{heroImg}}"  alt="">
-    <img src="{{imgBottomBorder}}"  alt="">
+<div class="responsive-hero">
+    <div class="hgroup">
+        <h1 class="title">Outback<br />offers</h1>
+        <h2 class="subtitle">Heaps of specials and extras</h2>
+    </div>
+    <img src="{{heroImg}}" alt="">
+    <img src="{{imgBottomBorder}}" alt="">
 </div>
 {% endmacro %}
