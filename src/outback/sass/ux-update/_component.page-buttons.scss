@@ -1,4 +1,8 @@
 .page-buttons {
+  align-items: center;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  .btn {
+    padding: 0.25rem 3.75rem;
+  }
 }
