@@ -1964,29 +1964,31 @@ fieldset:disabled a.btn {
     .show > .btn-outline-primary.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.25rem rgba(147, 26, 26, 0.5); }
 
-.btn-outline-secondary, .modal-trigger {
+.btn-outline-secondary, .modal-trigger, .dropdown .dropdown-toggle {
   color: #111111;
   background-color: transparent;
   background-image: none;
   border-color: #111111; }
-  .btn-outline-secondary:hover, .modal-trigger:hover {
+  .btn-outline-secondary:hover, .modal-trigger:hover, .dropdown .dropdown-toggle:hover {
     color: #FFFFFF;
     background-color: #111111;
     border-color: #111111; }
-  .btn-outline-secondary:focus, .modal-trigger:focus, .btn-outline-secondary.focus, .focus.modal-trigger {
+  .btn-outline-secondary:focus, .modal-trigger:focus, .dropdown .dropdown-toggle:focus, .btn-outline-secondary.focus, .focus.modal-trigger, .dropdown .focus.dropdown-toggle {
     box-shadow: 0 0 0 0.25rem rgba(17, 17, 17, 0.5); }
-  .btn-outline-secondary.disabled, .disabled.modal-trigger, .btn-outline-secondary:disabled, .modal-trigger:disabled {
+  .btn-outline-secondary.disabled, .disabled.modal-trigger, .dropdown .disabled.dropdown-toggle, .btn-outline-secondary:disabled, .modal-trigger:disabled, .dropdown .dropdown-toggle:disabled {
     color: #111111;
     background-color: transparent; }
-  .btn-outline-secondary:not(:disabled):not(.disabled):active, .modal-trigger:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active, .modal-trigger:not(:disabled):not(.disabled).active,
+  .btn-outline-secondary:not(:disabled):not(.disabled):active, .modal-trigger:not(:disabled):not(.disabled):active, .dropdown .dropdown-toggle:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active, .modal-trigger:not(:disabled):not(.disabled).active, .dropdown .dropdown-toggle:not(:disabled):not(.disabled).active,
   .show > .btn-outline-secondary.dropdown-toggle,
-  .show > .dropdown-toggle.modal-trigger {
+  .show > .dropdown-toggle.modal-trigger,
+  .dropdown .show > .dropdown-toggle {
     color: #FFFFFF;
     background-color: #111111;
     border-color: #111111; }
-    .btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .modal-trigger:not(:disabled):not(.disabled):active:focus, .btn-outline-secondary:not(:disabled):not(.disabled).active:focus, .modal-trigger:not(:disabled):not(.disabled).active:focus,
+    .btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .modal-trigger:not(:disabled):not(.disabled):active:focus, .dropdown .dropdown-toggle:not(:disabled):not(.disabled):active:focus, .btn-outline-secondary:not(:disabled):not(.disabled).active:focus, .modal-trigger:not(:disabled):not(.disabled).active:focus, .dropdown .dropdown-toggle:not(:disabled):not(.disabled).active:focus,
     .show > .btn-outline-secondary.dropdown-toggle:focus,
-    .show > .dropdown-toggle.modal-trigger:focus {
+    .show > .dropdown-toggle.modal-trigger:focus,
+    .dropdown .show > .dropdown-toggle:focus {
       box-shadow: 0 0 0 0.25rem rgba(17, 17, 17, 0.5); }
 
 .btn-outline-success {
@@ -2156,17 +2158,19 @@ fieldset:disabled a.btn {
   line-height: 1.5;
   border-radius: 0.12rem; }
 
-.btn-block, .modal-trigger {
+.btn-block, .modal-trigger, .dropdown .dropdown-toggle {
   display: block;
   width: 100%; }
-  .btn-block + .btn-block, .modal-trigger + .btn-block, .btn-block + .modal-trigger, .modal-trigger + .modal-trigger {
+  .btn-block + .btn-block, .modal-trigger + .btn-block, .dropdown .dropdown-toggle + .btn-block, .btn-block + .modal-trigger, .modal-trigger + .modal-trigger, .dropdown .dropdown-toggle + .modal-trigger, .dropdown .btn-block + .dropdown-toggle, .dropdown .modal-trigger + .dropdown-toggle, .dropdown .dropdown-toggle + .dropdown-toggle {
     margin-top: 1rem; }
 
-input[type="submit"].btn-block, input.modal-trigger[type="submit"],
+input[type="submit"].btn-block, input.modal-trigger[type="submit"], .dropdown input.dropdown-toggle[type="submit"],
 input[type="reset"].btn-block,
 input.modal-trigger[type="reset"],
+.dropdown input.dropdown-toggle[type="reset"],
 input[type="button"].btn-block,
-input.modal-trigger[type="button"] {
+input.modal-trigger[type="button"],
+.dropdown input.dropdown-toggle[type="button"] {
   width: 100%; }
 
 .fade {
@@ -7014,16 +7018,16 @@ h2, .h2 {
     box-shadow: 0 0 0 0.25rem rgba(240, 43, 43, 0.3); }
   .btn:focus, .btn.focus {
     box-shadow: 0 0 0 0.25rem rgba(240, 43, 43, 0.3); }
-  .btn-outline-secondary:hover, .modal-trigger:hover, .btn-outline-secondary:focus, .modal-trigger:focus {
+  .btn-outline-secondary:hover, .modal-trigger:hover, .dropdown .dropdown-toggle:hover, .btn-outline-secondary:focus, .modal-trigger:focus, .dropdown .dropdown-toggle:focus {
     background-color: rgba(17, 17, 17, 0.1);
     color: #111111;
     text-decoration: none; }
-  .btn-outline-secondary:focus, .modal-trigger:focus, .btn-outline-secondary.focus, .focus.modal-trigger {
+  .btn-outline-secondary:focus, .modal-trigger:focus, .dropdown .dropdown-toggle:focus, .btn-outline-secondary.focus, .focus.modal-trigger, .dropdown .focus.dropdown-toggle {
     background-color: transparent; }
-  .btn-outline-secondary:not(:disabled):not(.disabled):active, .modal-trigger:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active, .modal-trigger:not(:disabled):not(.disabled).active {
+  .btn-outline-secondary:not(:disabled):not(.disabled):active, .modal-trigger:not(:disabled):not(.disabled):active, .dropdown .dropdown-toggle:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active, .modal-trigger:not(:disabled):not(.disabled).active, .dropdown .dropdown-toggle:not(:disabled):not(.disabled).active {
     background-color: rgba(17, 17, 17, 0.2);
     color: #111111; }
-    .btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .modal-trigger:not(:disabled):not(.disabled):active:focus, .btn-outline-secondary:not(:disabled):not(.disabled).active:focus, .modal-trigger:not(:disabled):not(.disabled).active:focus {
+    .btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .modal-trigger:not(:disabled):not(.disabled):active:focus, .dropdown .dropdown-toggle:not(:disabled):not(.disabled):active:focus, .btn-outline-secondary:not(:disabled):not(.disabled).active:focus, .modal-trigger:not(:disabled):not(.disabled).active:focus, .dropdown .dropdown-toggle:not(:disabled):not(.disabled).active:focus {
       box-shadow: none; }
 
 /*========================*
@@ -8024,50 +8028,6 @@ dl, dd {
 [data-template="order-review"] .container {
   max-width: 952px; }
 
-[data-component="more-scroll-link"] {
-  font-size: 1.3rem; }
-  [data-component="more-scroll-link"] a {
-    color: black;
-    text-decoration: none; }
-    [data-component="more-scroll-link"] a:focus {
-      border: none;
-      box-shadow: unset; }
-  [data-component="more-scroll-link"] [class^="icon-"] {
-    color: #c7b079; }
-    [data-component="more-scroll-link"] [class^="icon-"]::before {
-      margin-top: -13px; }
-
-[data-component="offer-cards"] a {
-  color: black;
-  text-decoration: none; }
-  [data-component="offer-cards"] a:focus {
-    border: none;
-    box-shadow: unset; }
-  [data-component="offer-cards"] a:hover .image-inner {
-    transform: scale(1.02, 1.02);
-    transition: transform .2s ease-in; }
-
-[data-component="offer-cards"] .category {
-  color: #931A1A;
-  font-size: 1.2rem; }
-
-[data-component="offer-cards"] h2 {
-  font-size: 2.3rem;
-  line-height: 1; }
-
-[data-component="offer-cards"] p {
-  font-size: 1rem;
-  line-height: 1.2; }
-
-[data-component="offer-cards"] .tract {
-  padding-top: 58.48%; }
-
-[data-component="offer-cards"] .image-outer {
-  overflow: hidden; }
-
-[data-component="offer-cards"] .image-inner {
-  transition: transform .2s ease-in; }
-
 [data-template="brand-site"] {
   background-color: #FFFFFF; }
   [data-template="brand-site"] [data-component="signup-form"] .headline,
@@ -8935,6 +8895,19 @@ dl, dd {
     [data-component="promo-alert"] {
       font-size: 24px;
       font-size: 1.5rem; } }
+
+.dropdown {
+  display: inline-block; }
+  .dropdown .dropdown-toggle {
+    background-color: #FFFFFF;
+    font-weight: 400;
+    font-size: 1.125rem;
+    font-family: TradeGothic-CondEighteen, sans-serif;
+    line-height: 1.5rem;
+    padding: .25rem .75rem;
+    position: relative;
+    text-align: left;
+    text-transform: none; }
 
 /*========================*
 | UX Updates              |
