@@ -10486,30 +10486,33 @@ dl, dd {
   [data-component="vehicle-info"] .vehicles .custom-control {
     padding-left: 0; }
   [data-component="vehicle-info"] .vehicles .custom-control-label {
+    bottom: 0;
+    cursor: pointer;
+    display: block !important;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    margin-bottom: 0;
+    right: 0;
+    top: 0; }
+    [data-component="vehicle-info"] .vehicles .custom-control-label:before {
+      margin: 1rem auto;
+      position: static; }
+  [data-component="vehicle-info"] .vehicles .vehicle {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column; }
-    [data-component="vehicle-info"] .vehicles .custom-control-label:before {
-      -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-      position: static; }
-  [data-component="vehicle-info"] .vehicles .vehicle {
     border: 1px solid #979797;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    font-size: 20px;
+    font-size: 1.25rem;
+    font-family: TradeGothic-BoldCondTwenty, sans-serif;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
@@ -10517,6 +10520,7 @@ dl, dd {
     -ms-flex-pack: center;
     justify-content: center;
     margin-right: 0.3rem;
+    padding-top: 2.63rem;
     width: 8.125rem; }
     [data-component="vehicle-info"] .vehicles .vehicle span[class^="icon"] {
       font-size: 28px;
