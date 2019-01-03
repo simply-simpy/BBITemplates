@@ -72,11 +72,11 @@
     "Truck"
   ],
   "tips": [
-    {"percentage":  "No tip", "amount": "", "type":  "radio", "name":  "tip"},
-    {"percentage":  "10%", "amount": "($4.18)","type":  "radio", "name":  "tip"},
-    {"percentage":  "15%", "amount": "($4.18)","type":  "radio", "name":  "tip"},
-    {"percentage":  "20%", "amount": "($4.18)","type":  "radio", "name":  "tip"},
-    {"percentage":  "Enter Custom Tip", "amount": "","type":  "radio", "name": "tip"}
+    {"percentage":  "NO TIP", "amount": "", "type":  "radio", "name":  "tip", "id": "tip-0"},
+    {"percentage":  "10%", "amount": "($4.18)","type":  "radio", "name":  "tip", "id": "tip-10"},
+    {"percentage":  "15%", "amount": "($4.18)","type":  "radio", "name":  "tip", "id": "tip-15"},
+    {"percentage":  "20%", "amount": "($4.18)","type":  "radio", "name":  "tip", "id": "tip-20"},
+    {"percentage":  "Enter Custom Tip", "amount": "","type":  "radio", "name": "tip", "id": "tip-custom"}
   ],
   "times": [
     {"dataTime":  "10:00", "time": "10:00 AM"},

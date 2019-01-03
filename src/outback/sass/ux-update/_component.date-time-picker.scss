@@ -126,12 +126,21 @@
     background-color: $brand-primary;
   }
 }
-
-.choose-time .times {
-  display: grid;
-  grid-template-columns: 200px 200px;
-  grid-gap: 0.5rem;
-  color: #444;
+.choose-time {
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+  }
+  .dropdown-menu {
+    position: static !important;
+    transform: none !important;
+  }
+  .times {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-gap: 0.5rem;
+    color: #444;
+  }
 }
 
 .grid-item {

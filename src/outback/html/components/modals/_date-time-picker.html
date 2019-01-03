@@ -33,22 +33,32 @@
                         <div class="col">
                             <div class="choose-time">
                                 <h2>Choose Time</h2>
-                                <div class="times">
-                                {% set type = 'radio' %}
-                                {% set name = 'time' %}
-                                {% set isGridInput = true %}
-                                {% for time in times %}
-                                {% set text1 = time.time %}
-                                {% set data = time.dataTime %}
-                                {% include '../forms/_input.generic.html' %}
-                                {% endfor %}
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                        5:00PM
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <div class="times">
+                                            {% set type = 'radio' %}
+                                            {% set name = 'time' %}
+                                            {% set isGridInput = true %}
+                                            {% for time in times %}
+                                            {% set text1 = time.time %}
+                                            {% set data = time.dataTime %}
+                                            {% set id = time.dataTime %}
+                                            {% include '../forms/_input.generic.html' %}
+                                            {% endfor %}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!--Back and next buttons-->
-                <div class="sticky-buttons sticky-buttons-modal">
+                <div class="sticky-buttons sticky-buttons-modal d-none">
                     <div class="sticky-buttons-inner">
                         <div class="container justify-content-center">
                             <div class="row">

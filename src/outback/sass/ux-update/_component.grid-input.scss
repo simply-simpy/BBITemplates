@@ -1,16 +1,24 @@
-.grid-input {
-  display: block;
+.grid-input.custom-control-label {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
   padding: .25rem .5rem;
+  @include rem(16px);
 }
 
 .tip-amounts {
+  color: #444;
   display: grid;
   grid-template-columns: 200px 200px;
   grid-gap: $spacer * .5;
-  color: #444;
 }
 
-.grid-item {
+.grid-item.custom-control {
   border-radius: 2px;
   border: 1px solid gray;
+  padding-left: 0;
+  .custom-control-label:before {
+    position: static;
+    margin-right: $spacer * .5;
+  }
 }

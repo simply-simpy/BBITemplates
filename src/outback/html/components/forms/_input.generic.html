@@ -5,8 +5,8 @@
         <span class="icon-{{vehicle | lower}}">{{loop.index}}</span>
         <span>{{vehicle}}</span>
     {% elif isGridInput === true %}
-    <label class="custom-control-label grid-input">
-        <input type="{{ type }}" class="custom-control-input" name="{{ name }}">
+    <input type="{{ type }}" class="custom-control-input" name="{{ name }}" id={{ id }}>
+    <label class="custom-control-label grid-input x" for="{{ id }}">
         <span class="{{ text1Class }}">{{ text1 }}</span>
         {% if text2 %} <span>{{ text2 }}</span>{% endif %}
     </label>
