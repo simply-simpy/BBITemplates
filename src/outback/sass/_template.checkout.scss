@@ -9,8 +9,9 @@
 
   .step {
     background: #fff;
-    margin-bottom: $spacer * 2;
+    margin-bottom: $spacer * 1.75;
     padding: $spacer * 1.5;
+
     &.inactive {
       .step-number {
         background: #5ABB62i;
@@ -23,9 +24,11 @@
     padding: 42px 0 0;
     border-top: 1px solid $brand-gray
   }
+
   .step-item-component {
     margin-bottom: 2.25rem;
   }
+
   .step-title {
     align-items: center;
     cursor: pointer;
@@ -57,17 +60,31 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      margin-right: .9375rem;
+      margin-right: 1rem;
+      position: relative;
       @include height(36px);
       @include width(36px);
       @include rem(22px);
+
+      &.completed {
+        background-color: $brand-green;
+        text-indent: -9999em;
+        .check {
+          align-items: center;
+          display: flex;
+          @include rem(27px);
+          justify-content: center;
+          position: absolute;
+          text-indent: 0;
+          @extend .icon-check;
+        }
+      }
     }
   }
+
   .step-body {
-
-    @include padding(20px 0 0);
+    @include padding(24px 0px 0px);
   }
-
 
   .credit-card-iframe {
     border: none;

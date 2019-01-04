@@ -70,7 +70,7 @@ $zmdi-var-chevron-right: '\f2fb';
     }
     &.collapsed {
       &::before {
-        transform: rotate(-90deg);
+        transform: rotate(-180deg);
       }
     }
   }

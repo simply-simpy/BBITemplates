@@ -21,7 +21,7 @@
 .form-label {
   @include rem(20px);
 }
-input[type="text"] {
+input[type="text"], .form-control {
   @extend %input-styles;
   width: 100%;
   margin-bottom: 0.625rem;

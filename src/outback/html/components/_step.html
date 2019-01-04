@@ -1,7 +1,9 @@
 <article class="step">
-    <h1 class="step-title collapsed" data-toggle="collapse" data-target="#_{{ stepNumber }}"><span class="step-number">{{ stepNumber | safe }}</span>
-        {{
-        stepTitle | safe }}
+    <h1 class="step-title collapsed" data-toggle="collapse" data-target="#_{{ stepNumber }}">
+        <span class="step-number {% if stepNumber === '1' %}completed{% endif %}">
+            {{ stepNumber | safe }}
+            <span class="check"></span></span>
+        {{ stepTitle | safe }}
         <span class="icon icon-zmdi-chevron-right"></span>
     </h1>
     <div class="collapse" id="_{{ stepNumber }}">

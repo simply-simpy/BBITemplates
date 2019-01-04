@@ -4,7 +4,7 @@
 $brand-bg-dark : #353535 !global;
 $brand-bg-light : #f6f2e8 !global;
 $brand-red: #8e1110 !global;
-
+$brand-green: #5ABB62 !global;
 $brand-gray: #979797 !global;
 $brand-dark-gray: #4A4A4A !global;
 
@@ -17,3 +17,8 @@ $border-1: 1px solid $brand-gray !global;
 | NOTIFICATIONS                |
 *=============================*/
 $notification-default: #f2ecde !global;
+
+/*=============================*
+| CHECKOUT COLORS              |
+*=============================*/
+$checkout-completed: $brand-green !global;
