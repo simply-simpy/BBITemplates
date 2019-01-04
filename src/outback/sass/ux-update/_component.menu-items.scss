@@ -1,8 +1,13 @@
 .menu-items {
   border: $border-1;
   @include rem(18px);
-
-  @include media-breakpoint-up(lg){}
+  .order-row-header.col-qty,
+  .order-row-header.col-item {
+    border-bottom: 1px solid;
+    line-height: 1;
+    margin-top: $spacer * .5;
+  }
+  letter-spacing: -.04em;
   margin: $spacer * .625;
   padding: $spacer;
   .menu-item-img {
@@ -35,6 +40,9 @@
     }
     * {
      font-size: inherit;
+    }
+    .menu-item-detail-view {
+      padding-top: $spacer;
     }
   }
   .col.col-price {

@@ -7883,7 +7883,7 @@ body > .wrapper {
     display: block;
     margin: 2px 0;
     padding: 4px;
-    width: 14rem; }
+    width: 100%; }
     @media (min-width: 576px) {
       .bootstrap-datetimepicker-widget.dropdown-menu.timepicker-sbs {
         width: 38em; } }
@@ -7897,19 +7897,6 @@ body > .wrapper {
       content: '';
       display: inline-block;
       position: absolute; }
-    .bootstrap-datetimepicker-widget.dropdown-menu.bottom:before {
-      border-left: 7px solid transparent;
-      border-right: 7px solid transparent;
-      border-bottom: 7px solid #b1b1b1;
-      border-bottom-color: #b1b1b1;
-      top: -7px;
-      left: 7px; }
-    .bootstrap-datetimepicker-widget.dropdown-menu.bottom:after {
-      border-left: 6px solid transparent;
-      border-right: 6px solid transparent;
-      border-bottom: 6px solid #b1b1b1;
-      top: -6px;
-      left: 8px; }
     .bootstrap-datetimepicker-widget.dropdown-menu.top:before {
       border-left: 7px solid transparent;
       border-right: 7px solid transparent;
@@ -10593,8 +10580,14 @@ dl, dd {
   border: 1px solid #979797;
   font-size: 18px;
   font-size: 1.125rem;
+  letter-spacing: -.04em;
   margin: 0.625rem;
   padding: 1rem; }
+  .menu-items .order-row-header.col-qty,
+  .menu-items .order-row-header.col-item {
+    border-bottom: 1px solid;
+    line-height: 1;
+    margin-top: 0.5rem; }
   .menu-items .menu-item-img {
     margin-right: 1rem; }
   .menu-items .toggle-menu-item-details {
@@ -10625,6 +10618,8 @@ dl, dd {
       color: inherit; }
     .menu-items .menu-item * {
       font-size: inherit; }
+    .menu-items .menu-item .menu-item-detail-view {
+      padding-top: 1rem; }
   [data-template="order-confirmation"] .menu-items .col-price.order-row-header {
     display: block; }
   [data-template="order-confirmation"] .menu-items .col.col-price {
@@ -10638,6 +10633,19 @@ dl, dd {
 
 .date-time-picker {
   height: 90vh; }
+  @media (min-width: 992px) {
+    .date-time-picker .modal-body {
+      margin: 0 auto;
+      width: 500px; } }
+  .date-time-picker .input-group-text {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+  .date-time-picker .bootstrap-datetimepicker-widget {
+    position: static; }
+  .date-time-picker .dropdown:hover .dropdown-menu {
+    max-height: 200px;
+    opacity: 1; }
   .date-time-picker .icon-arrow-right,
   .date-time-picker .icon-arrow-left {
     position: relative;
@@ -10670,11 +10678,6 @@ dl, dd {
     @media (min-width: 992px) {
       .date-time-picker .date-picked {
         cursor: default; } }
-  .date-time-picker .form-group {
-    width: 317px; }
-    @media (min-width: 992px) {
-      .date-time-picker .form-group {
-        margin-bottom: 7rem; } }
   .date-time-picker .choose-time ul {
     max-height: 55vh;
     overflow-y: scroll;
@@ -10710,9 +10713,9 @@ dl, dd {
   .date-time-picker .choose-time .times {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 200px 0.5rem 200px;
-    grid-template-columns: 200px 200px;
-    grid-gap: 0.5rem;
+    -ms-grid-columns: 50% 0 50%;
+    grid-template-columns: 50% 50%;
+    grid-gap: 0;
     color: #444; }
   .date-time-picker .grid-item {
     border-radius: 2px;
@@ -10742,10 +10745,26 @@ dl, dd {
 .choose-time .times {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 200px 0.5rem 200px;
+  -ms-grid-columns: 200px 0 200px;
   grid-template-columns: 200px 200px;
-  grid-gap: 0.5rem;
+  grid-gap: 0;
   color: #444; }
+
+.choose-time .show-times-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 20px;
+  font-size: 1.25rem; }
+  .choose-time .show-times-btn .icon-zmdi-chevron-right {
+    margin-left: auto; }
+    .choose-time .show-times-btn .icon-zmdi-chevron-right:before {
+      font-size: 24px;
+      font-size: 1.5rem; }
 
 .grid-item {
   border-radius: 2px;

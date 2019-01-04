@@ -1,5 +1,24 @@
+
 .date-time-picker {
   height: 90vh;
+  .modal-body {
+    @include media-breakpoint-up(lg){
+      margin: 0 auto;
+      width: 500px;
+    }
+  }
+  .input-group-text {
+    align-items: flex-start;
+  }
+
+  .bootstrap-datetimepicker-widget {
+    position: static;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    max-height: 200px;
+    opacity: 1;
+  }
 
   .icon-arrow-right,
   .icon-arrow-left {
@@ -45,10 +64,10 @@
   }
 
   .form-group {
-    width: 317px;
-    @include media-breakpoint-up(lg) {
-      margin-bottom: $spacer * 7;
-    }
+    //width: 317px;
+    //@include media-breakpoint-up(lg) {
+    //  margin-bottom: $spacer * 7;
+    //}
   }
 
   .choose-time {
@@ -104,8 +123,8 @@
 
   .choose-time .times {
     display: grid;
-    grid-template-columns: 200px 200px;
-    grid-gap: 0.5rem;
+    grid-template-columns: 50% 50%;
+    grid-gap: 0;
     color: #444;
   }
 
@@ -113,6 +132,7 @@
     border-radius: 2px;
     border: 1px solid gray;
   }
+
   .custom-control {
     cursor: pointer;
   }
@@ -126,20 +146,38 @@
     background-color: $brand-primary;
   }
 }
+
 .choose-time {
   .dropdown {
     display: flex;
     flex-direction: column;
   }
+
   .dropdown-menu {
     position: static !important;
     transform: none !important;
   }
+
   .times {
     display: grid;
     grid-template-columns: 200px 200px;
-    grid-gap: 0.5rem;
+    grid-gap: 0;
     color: #444;
+  }
+
+  .show-times-btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    @include rem(20px);
+
+    .icon-zmdi-chevron-right {
+      margin-left: auto;
+
+      &:before {
+        @include rem(24px);
+      }
+    }
   }
 }
 

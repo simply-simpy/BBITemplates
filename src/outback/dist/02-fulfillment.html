@@ -35,13 +35,12 @@
                             <h2>Choose Date</h2>
                             <div class="form-group">
                                 <div class="input-group date" id="datetimepicker" data-target-input="nearest">
+                                    <div id="datetimepicker-toggle" class="form-control  date-picked"></div>
                                     <input type="hidden" class="datetimepicker-input"/>
-                                    <div id="datetimepicker-toggle" class="form-control d-lg-none date-picked"></div>
-                                    <div id="datetimepicker-show"
-                                         class="form-control d-none d-lg-block date-picked"></div>
+
                                     <div class="input-group-append">
                                         <div class="input-group-text">
-                                            <i class="icon-calendar"></i>
+                                            <i class="icon icon-zmdi-chevron-right"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -53,24 +52,19 @@
                         <div class="col">
                             <div class="choose-time">
                                 <h2>Choose Time</h2>
-                                <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button"
-                                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">
-                                        5:00PM
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <div class="times">
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            <div class="custom-control custom-radio  vehicle  grid-item ">
+                                <div class="show-times">
+                                    <button data-time="" class="btn show-times-btn"><span class="time">5:00 PM</span><span class="icon icon-zmdi-chevron-right"></span></button>
+                                    <div class="times">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <div class="custom-control custom-radio  vehicle  grid-item ">
     
-    <input type="radio" class="custom-control-input" name="time" id=10:00>
+    <input type="radio" class="custom-control-input" name="time" id=10:00 data-time="10:00 AM" >
     <label class="custom-control-label grid-input x" for="10:00">
         <span class="">10:00 AM</span>
         
@@ -78,55 +72,55 @@
     
 </div>
 
-                                            
-                                            
-                                            
-                                            
-                                            <div class="custom-control custom-radio  vehicle  grid-item ">
+                                        
+                                        
+                                        
+                                        
+                                        <div class="custom-control custom-radio  vehicle  grid-item ">
     
-    <input type="radio" class="custom-control-input" name="time" id=10:30>
+    <input type="radio" class="custom-control-input" name="time" id=10:30 data-time="10:30 AM" >
     <label class="custom-control-label grid-input x" for="10:30">
-        <span class="">10:30 PM</span>
+        <span class="">10:30 AM</span>
         
     </label>
     
 </div>
 
-                                            
-                                            
-                                            
-                                            
-                                            <div class="custom-control custom-radio  vehicle  grid-item ">
+                                        
+                                        
+                                        
+                                        
+                                        <div class="custom-control custom-radio  vehicle  grid-item ">
     
-    <input type="radio" class="custom-control-input" name="time" id=11:00>
+    <input type="radio" class="custom-control-input" name="time" id=11:00 data-time="11:00 AM" >
     <label class="custom-control-label grid-input x" for="11:00">
-        <span class="">11:00 PM</span>
+        <span class="">11:00 AM</span>
         
     </label>
     
 </div>
 
-                                            
-                                            
-                                            
-                                            
-                                            <div class="custom-control custom-radio  vehicle  grid-item ">
+                                        
+                                        
+                                        
+                                        
+                                        <div class="custom-control custom-radio  vehicle  grid-item ">
     
-    <input type="radio" class="custom-control-input" name="time" id=11:30>
+    <input type="radio" class="custom-control-input" name="time" id=11:30 data-time="11:30 AM" >
     <label class="custom-control-label grid-input x" for="11:30">
-        <span class="">11:30 PM</span>
+        <span class="">11:30 AM</span>
         
     </label>
     
 </div>
 
-                                            
-                                            
-                                            
-                                            
-                                            <div class="custom-control custom-radio  vehicle  grid-item ">
+                                        
+                                        
+                                        
+                                        
+                                        <div class="custom-control custom-radio  vehicle  grid-item ">
     
-    <input type="radio" class="custom-control-input" name="time" id=12:00>
+    <input type="radio" class="custom-control-input" name="time" id=12:00 data-time="12:00 PM" >
     <label class="custom-control-label grid-input x" for="12:00">
         <span class="">12:00 PM</span>
         
@@ -134,13 +128,13 @@
     
 </div>
 
-                                            
-                                            
-                                            
-                                            
-                                            <div class="custom-control custom-radio  vehicle  grid-item ">
+                                        
+                                        
+                                        
+                                        
+                                        <div class="custom-control custom-radio  vehicle  grid-item ">
     
-    <input type="radio" class="custom-control-input" name="time" id=12:30>
+    <input type="radio" class="custom-control-input" name="time" id=12:30 data-time="12:30 PM" >
     <label class="custom-control-label grid-input x" for="12:30">
         <span class="">12:30 PM</span>
         
@@ -148,92 +142,91 @@
     
 </div>
 
-                                            
-                                            
-                                            
-                                            
-                                            <div class="custom-control custom-radio  vehicle  grid-item ">
+                                        
+                                        
+                                        
+                                        
+                                        <div class="custom-control custom-radio  vehicle  grid-item ">
     
-    <input type="radio" class="custom-control-input" name="time" id=13:00>
-    <label class="custom-control-label grid-input x" for="13:00">
+    <input type="radio" class="custom-control-input" name="time" id=1:00 data-time="1:00 PM" >
+    <label class="custom-control-label grid-input x" for="1:00">
         <span class="">1:00 PM</span>
         
     </label>
     
 </div>
 
-                                            
-                                            
-                                            
-                                            
-                                            <div class="custom-control custom-radio  vehicle  grid-item ">
+                                        
+                                        
+                                        
+                                        
+                                        <div class="custom-control custom-radio  vehicle  grid-item ">
     
-    <input type="radio" class="custom-control-input" name="time" id=13:30>
-    <label class="custom-control-label grid-input x" for="13:30">
+    <input type="radio" class="custom-control-input" name="time" id=1:30 data-time="1:30 PM" >
+    <label class="custom-control-label grid-input x" for="1:30">
         <span class="">1:30 PM</span>
         
     </label>
     
 </div>
 
-                                            
-                                            
-                                            
-                                            
-                                            <div class="custom-control custom-radio  vehicle  grid-item ">
+                                        
+                                        
+                                        
+                                        
+                                        <div class="custom-control custom-radio  vehicle  grid-item ">
     
-    <input type="radio" class="custom-control-input" name="time" id=14:00>
-    <label class="custom-control-label grid-input x" for="14:00">
+    <input type="radio" class="custom-control-input" name="time" id=2:00 data-time="2:00 PM" >
+    <label class="custom-control-label grid-input x" for="2:00">
         <span class="">2:00 PM</span>
         
     </label>
     
 </div>
 
-                                            
-                                            
-                                            
-                                            
-                                            <div class="custom-control custom-radio  vehicle  grid-item ">
+                                        
+                                        
+                                        
+                                        
+                                        <div class="custom-control custom-radio  vehicle  grid-item ">
     
-    <input type="radio" class="custom-control-input" name="time" id=14:30>
-    <label class="custom-control-label grid-input x" for="14:30">
+    <input type="radio" class="custom-control-input" name="time" id=2:30 data-time="2:30 PM" >
+    <label class="custom-control-label grid-input x" for="2:30">
         <span class="">2:30 PM</span>
         
     </label>
     
 </div>
 
-                                            
-                                            
-                                            
-                                            
-                                            <div class="custom-control custom-radio  vehicle  grid-item ">
+                                        
+                                        
+                                        
+                                        
+                                        <div class="custom-control custom-radio  vehicle  grid-item ">
     
-    <input type="radio" class="custom-control-input" name="time" id=15:00>
-    <label class="custom-control-label grid-input x" for="15:00">
+    <input type="radio" class="custom-control-input" name="time" id=3:00 data-time="3:00 PM" >
+    <label class="custom-control-label grid-input x" for="3:00">
         <span class="">3:00 PM</span>
         
     </label>
     
 </div>
 
-                                            
-                                            
-                                            
-                                            
-                                            <div class="custom-control custom-radio  vehicle  grid-item ">
+                                        
+                                        
+                                        
+                                        
+                                        <div class="custom-control custom-radio  vehicle  grid-item ">
     
-    <input type="radio" class="custom-control-input" name="time" id=15:30>
-    <label class="custom-control-label grid-input x" for="15:30">
+    <input type="radio" class="custom-control-input" name="time" id=3:30 data-time="3:30 PM" >
+    <label class="custom-control-label grid-input x" for="3:30">
         <span class="">3:30 PM</span>
         
     </label>
     
 </div>
 
-                                            
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -241,7 +234,7 @@
                     </div>
                 </div>
                 <!--Back and next buttons-->
-                <div class="sticky-buttons sticky-buttons-modal d-none">
+                <div class="sticky-buttons sticky-buttons-modal">
                     <div class="sticky-buttons-inner">
                         <div class="container justify-content-center">
                             <div class="row">

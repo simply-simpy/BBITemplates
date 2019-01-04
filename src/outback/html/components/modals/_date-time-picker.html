@@ -15,13 +15,12 @@
                             <h2>Choose Date</h2>
                             <div class="form-group">
                                 <div class="input-group date" id="datetimepicker" data-target-input="nearest">
+                                    <div id="datetimepicker-toggle" class="form-control  date-picked"></div>
                                     <input type="hidden" class="datetimepicker-input"/>
-                                    <div id="datetimepicker-toggle" class="form-control d-lg-none date-picked"></div>
-                                    <div id="datetimepicker-show"
-                                         class="form-control d-none d-lg-block date-picked"></div>
+
                                     <div class="input-group-append">
                                         <div class="input-group-text">
-                                            <i class="icon-calendar"></i>
+                                            <i class="icon icon-zmdi-chevron-right"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -33,24 +32,18 @@
                         <div class="col">
                             <div class="choose-time">
                                 <h2>Choose Time</h2>
-                                <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button"
-                                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">
-                                        5:00PM
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <div class="times">
-                                            {% set type = 'radio' %}
-                                            {% set name = 'time' %}
-                                            {% set isGridInput = true %}
-                                            {% for time in times %}
-                                            {% set text1 = time.time %}
-                                            {% set data = time.dataTime %}
-                                            {% set id = time.dataTime %}
-                                            {% include '../forms/_input.generic.html' %}
-                                            {% endfor %}
-                                        </div>
+                                <div class="show-times">
+                                    <button data-time="" class="btn show-times-btn"><span class="time">5:00 PM</span><span class="icon icon-zmdi-chevron-right"></span></button>
+                                    <div class="times">
+                                        {% set type = 'radio' %}
+                                        {% set name = 'time' %}
+                                        {% set isGridInput = true %}
+                                        {% for time in times %}
+                                        {% set text1 = time.time %}
+                                        {% set data = time.dataTime %}
+                                        {% set id = time.dataId %}
+                                        {% include '../forms/_input.generic.html' %}
+                                        {% endfor %}
                                     </div>
                                 </div>
                             </div>
@@ -58,7 +51,7 @@
                     </div>
                 </div>
                 <!--Back and next buttons-->
-                <div class="sticky-buttons sticky-buttons-modal d-none">
+                <div class="sticky-buttons sticky-buttons-modal">
                     <div class="sticky-buttons-inner">
                         <div class="container justify-content-center">
                             <div class="row">

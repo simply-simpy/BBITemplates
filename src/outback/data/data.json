@@ -79,17 +79,17 @@
     {"percentage":  "Enter Custom Tip", "amount": "","type":  "radio", "name": "tip", "id": "tip-custom"}
   ],
   "times": [
-    {"dataTime":  "10:00", "time": "10:00 AM"},
-    {"dataTime":  "10:30", "time": "10:30 PM"},
-    {"dataTime":  "11:00", "time": "11:00 PM"},
-    {"dataTime":  "11:30", "time": "11:30 PM"},
-    {"dataTime":  "12:00", "time": "12:00 PM"},
-    {"dataTime":  "12:30", "time": "12:30 PM"},
-    {"dataTime":  "13:00", "time": "1:00 PM"},
-    {"dataTime":  "13:30", "time": "1:30 PM"},
-    {"dataTime":  "14:00", "time": "2:00 PM"},
-    {"dataTime":  "14:30", "time": "2:30 PM"},
-    {"dataTime":  "15:00", "time": "3:00 PM"},
-    {"dataTime":  "15:30", "time": "3:30 PM"}
+    {"dataTime":  "10:00 AM", "dataId":  "10:00", "time": "10:00 AM"},
+    {"dataTime":  "10:30 AM", "dataId":  "10:30", "time": "10:30 AM"},
+    {"dataTime":  "11:00 AM", "dataId":  "11:00", "time": "11:00 AM"},
+    {"dataTime":  "11:30 AM", "dataId":  "11:30", "time": "11:30 AM"},
+    {"dataTime":  "12:00 PM", "dataId":  "12:00", "time": "12:00 PM"},
+    {"dataTime":  "12:30 PM", "dataId":  "12:30", "time": "12:30 PM"},
+    {"dataTime":  "1:00 PM", "dataId":  "1:00", "time": "1:00 PM"},
+    {"dataTime":  "1:30 PM", "dataId":  "1:30", "time": "1:30 PM"},
+    {"dataTime":  "2:00 PM", "dataId":  "2:00", "time": "2:00 PM"},
+    {"dataTime":  "2:30 PM", "dataId":  "2:30", "time": "2:30 PM"},
+    {"dataTime":  "3:00 PM", "dataId":  "3:00", "time": "3:00 PM"},
+    {"dataTime":  "3:30 PM", "dataId":  "3:30", "time": "3:30 PM"}
   ]
 }

@@ -71,7 +71,7 @@ $(function() {
       },
     });
 
-    // Toggles the calendar on mobile view
+    // Toggles the calendar
     $datepickerToggle.click(function(event) {
       $($datepicker).datetimepicker('toggle');
       $(event.target)
@@ -80,50 +80,17 @@ $(function() {
       turnOffMonthPicker();
     });
 
-    // Shows the calendar on desktop in case it was hidden while in mobile view
-    $datepickerShow.click(function(event) {
-      $($datepicker).datetimepicker('show');
-      $(event.target)
-        .closest('.modal')
-        .addClass('datepicker-open');
-    });
-
-    // Using match media to test for screen size to determine if calender should be open on modal open.
-    // media query event handler
-    if (matchMedia) {
-      const mq = window.matchMedia('(min-width: 992px)');
-      mq.addListener(widthChange);
-      widthChange(mq);
-    }
-
-    /**
-     * MatchMedia is used to open datepick on mobile.
-     * @param {function} mq The matchMedia function.
-     */
-    function widthChange(mq) {
-      if (mq.matches) {
-        // window width is at least 500px
-      } else {
-        $('.modal').removeClass('datepicker-open');
-        $('#datetimepicker-toggle')
-          .click()
-          .closest('.modal')
-          .toggleClass('datepicker-open');
-      }
-    }
-
     // Shows picked date on page load for display only. This is not the value sent from the input field when submitting the form. The value is in a hidden text input.
-    $($datepicker).on('change.datetimepicker', function(e) {
-      let theValue = e.date.format('dddd, MMMM Do, YYYY');
+    $($datepicker).on('change.datetimepicker', function(event) {
+      let theValue = event.date.format('L');
       $('.date-picked').text(theValue);
-      $(this) // eslint-disable-line no-invalid-this
-        .find('.icon-calendar')
-        .addClass('icon-check')
-        .removeClass('icon-calendar');
+      /* eslint-disable */
+      $(this).datetimepicker('hide');
+      /* eslint-enable */
     });
 
     // Shows today's date on page load for display only. This is not the value sent from the input field when submitting the form. The value is in a hidden text input.
-    let today = moment().format('dddd, MMMM Do, YYYY');
+    let today = moment().format('L');
     $('.date-picked').text(today);
 
     turnOffMonthPicker();
@@ -239,3 +206,21 @@ $('.phone-mask').keypress(function(evt) {
   return true;
   /* eslint-enable */
 });
+
+
+// Set time for date and time picker
+/* eslint-disable */
+$('.show-times .times').toggle();
+$('.show-times .show-times-btn').on('click', function(){
+  $('.show-times .times').toggle();
+});
+
+$('.times').each(function(){
+  $(this).find('input').change(function(){
+    let time =  $(this).data('time');
+    $('.show-times-btn .time').text(time);
+    $('.show-times .show-times-btn').click();
+    $(this).parent('.choose-time').toggleClass('times-visible')
+  })
+});
+
