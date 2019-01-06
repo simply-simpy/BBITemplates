@@ -1,0 +1,30 @@
+{% set modalId = 'change-payment-method' %}
+{% set modalTitle = 'Select Payment Method' %}
+
+{% set name = 'payment-method' %}
+{% set buttonMobile = 'Add a new card' %}
+{% set buttonDesktop = 'Add a new card' %}
+
+{% extends 'components/modals/_modal.html' %}
+{% block modalContent %}
+
+<div data-component="credit-card" class="credit-card">
+    <span class="credit-card-logo credit-card-mastercard"><span class="sr-only">Mastercard</span></span>
+    <span class="credit-card-last-4">**** **** **** 5678</span>
+    <span class="credit-card-expiration">Expires 08/19</span>
+    <button type="button" class="btn btn-outline-secondary">
+        Use this card
+    </button>
+</div>
+
+<div data-component="credit-card" class="credit-card">
+    <span class="credit-card-logo credit-card-visa"><span class="sr-only">Visa</span></span>
+    <span class="credit-card-last-4">**** **** **** 000</span>
+    <span class="credit-card-expiration">Expires 04/20</span>
+    <button type="button" class="btn btn-outline-secondary">
+        Use this card
+    </button>
+</div>
+
+
+{% endblock %}

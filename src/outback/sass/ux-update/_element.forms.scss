@@ -1,3 +1,11 @@
 .custom-control-label {
   line-height: 1.2;
 }
+.form-inline {
+  .custom-control  {
+    & + .custom-control {
+      margin-left: $spacer * 2;
+    }
+
+  }
+}

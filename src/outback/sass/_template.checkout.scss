@@ -1,7 +1,9 @@
 [data-template="checkout"] {
 
   background: $body-bg-checkout;
-
+  .modal-trigger {
+    //margin-top: $spacer * .75;
+  }
   .navbar {
     height: 200px;
     @include media-breakpoint-up(lg) {

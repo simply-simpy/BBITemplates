@@ -507,7 +507,7 @@
         </div>
         <p class="legal d-lg-none small mt-2"><strong>Legal Copy</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur delectus doloremque facere harum, laudantium neque non numquam qui reprehenderit sequi. Dolorem nobis non quaerat quasi suscipit. Eaque odit perferendis suscipit.</p>
     </div>
-    <div class="page-buttons">
+    <div class="button-group">
         
         
 
@@ -930,7 +930,7 @@
 
     </div>
 </div>
-<div class="page-buttons">
+<div class="button-group">
     
     
 
@@ -1021,10 +1021,17 @@
 
             </div>
             <div class="modal-footer">
-                <button  class="btn btn-outline-secondary" role="button" aria-pressed="true">
-                    <span class="d-md-none">Save</span>
-                    <span class="d-none d-md-inline">Save</span>
-                </button>
+                <div class="button-group">
+                    
+                    
+
+<button type="button" class="btn btn-primary btn-lg" id="">
+    <span class="d-md-none">Add a new card</span>
+    <span class="d-none d-md-inline">Add a new card</span>
+</button>
+
+
+                </div>
             </div>
         </div>
     </div>
@@ -1032,7 +1039,7 @@
 
 </div>
 <div class="step-item">
-    <div data-component="apply-discount" class="apply-discount">
+    <div data-component="apply-promo" class="apply-promo">
         
         <h2 class="step-item-title">Apply Promo Code</h2>
 
@@ -1048,6 +1055,60 @@
         <button class="btn btn-primary" type="button">apply</button>
     </div>
 </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="step-item">
+    <div data-component="apply-discount" class="apply-discount">
+        
+        <h2 class="step-item-title">Apply Discount</h2>
+
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <p>Dine Rewards and promo code discounts cannot be combined.</p>
+                <div class="form-inline">
+                    
+                    
+<div class="custom-control custom-radio applydiscount vehicle ">
+    
+        
+        <input type="radio" data-time="" class="custom-control-input" id="dine-rewards-discount" name="dineRewards">
+        
+        <label class="custom-control-label" for="dine-rewards-discount">Dine Rewards</label>
+        
+    
+</div>
+
+
+                    
+                    
+<div class="custom-control custom-radio applydiscount vehicle ">
+    
+        
+        <input type="radio" data-time="" class="custom-control-input" id="promo-code" name="dineRewards">
+        
+        <label class="custom-control-label" for="promo-code">Promo Code</label>
+        
+    
+</div>
+
+
+                </div>
+                
+                
+<button type="button" class="btn form-control modal-trigger apply-discount" data-toggle="modal"
+        data-target="#apply-discount">
+    <span class="inner">
+        <span class="text">
+           Select your reward
+        </span>
+        <span class="icon icon-carat"></span>
+    </span>
+</button>
 
             </div>
         </div>
@@ -1168,13 +1229,84 @@
     </div>
 </div>
 <div class="step-item">
-    <div class="iframe-container">
-        <iframe id="credit-card-iframe" class="credit-card-iframe" src="iframe.html"></iframe>
+    
+    <h2 class="step-item-title">Credit Card</h2>
+
+
+
+    <div data-component="credit-card" class="credit-card">
+        <span class="credit-card-logo credit-card-visa"><span class="sr-only">Visa</span></span>
+        <!--Examples of other credit cards available-->
+        <!--<span class="credit-card-logo credit-card-amex"><span class="sr-only">American Express</span></span>-->
+        <!--<span class="credit-card-logo credit-card-mastercard"><span class="sr-only">Mastercard</span></span>-->
+        <!--<span class="credit-card-logo credit-card-discover"><span class="sr-only">Discover Card</span></span>-->
+        <!--<span class="credit-card-logo credit-card-jcb"><span class="sr-only">JCB</span></span>-->
+        <!--<span class="credit-card-logo credit-card-diners-club"><span class="sr-only">Diners Club</span></span>-->
+        <span class="credit-card-last-4">**** **** **** 0005</span>
+        <span class="credit-card-expiration">Expires 11/20</span>
+        <button type="button" class="btn btn-link" data-target="#change-payment-method" data-toggle="modal">
+            Change payment method
+        </button>
+        <div class="modal " id="change-payment-method" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Select Payment Method</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+
+<div data-component="credit-card" class="credit-card">
+    <span class="credit-card-logo credit-card-mastercard"><span class="sr-only">Mastercard</span></span>
+    <span class="credit-card-last-4">**** **** **** 5678</span>
+    <span class="credit-card-expiration">Expires 08/19</span>
+    <button type="button" class="btn btn-outline-secondary">
+        Use this card
+    </button>
+</div>
+
+<div data-component="credit-card" class="credit-card">
+    <span class="credit-card-logo credit-card-visa"><span class="sr-only">Visa</span></span>
+    <span class="credit-card-last-4">**** **** **** 000</span>
+    <span class="credit-card-expiration">Expires 04/20</span>
+    <button type="button" class="btn btn-outline-secondary">
+        Use this card
+    </button>
+</div>
+
+
+
+            </div>
+            <div class="modal-footer">
+                <div class="button-group">
+                    
+                    
+
+<button type="button" class="btn btn-primary btn-lg" id="">
+    <span class="d-md-none">Add a new card</span>
+    <span class="d-none d-md-inline">Add a new card</span>
+</button>
+
+
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-<div class="page-buttons">
-    
-    
+
+
+    </div>
+    <div class="step-item">
+        <div class="iframe-container">
+            <iframe id="credit-card-iframe" class="credit-card-iframe" src="iframe.html"></iframe>
+        </div>
+    </div>
+    <div class="button-group">
+        
+        
 
 <button type="button" class="btn btn-primary btn-lg" id="">
     <span class="d-md-none">Place Order</span>
@@ -1182,8 +1314,8 @@
 </button>
 
 
-    
-    
+        
+        
 
 <button type="button" class="btn btn-link" id="">
     <span class="d-md-none">Cancel Order</span>
@@ -1191,9 +1323,9 @@
 </button>
 
 
-</div>
+    </div>
 
-
+    
         </div>
     </div>
 </article>

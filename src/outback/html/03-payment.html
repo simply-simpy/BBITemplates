@@ -18,7 +18,7 @@
     {% include 'components/modals/_modal.payment-info.html' %}
 </div>
 <div class="step-item">
-    <div data-component="apply-discount" class="apply-discount">
+    <div data-component="apply-promo" class="apply-promo">
         {% set stepItemTitle = 'Apply Promo Code' %}
         {% include 'components/_step-item-title.html' %}
         <div class="row">
@@ -30,6 +30,45 @@
                 '0545-8945',
                 'apply',
                 ''
+                )}}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="step-item">
+    <div data-component="apply-discount" class="apply-discount">
+        {% set stepItemTitle = 'Apply Discount' %}
+        {% include 'components/_step-item-title.html' %}
+        <div class="row">
+            <div class="col-md-6">
+                <p>Dine Rewards and promo code discounts cannot be combined.</p>
+                <div class="form-inline">
+                    {% import 'components/forms/_input.generic.macro.html' as radio %}
+                    {{ radio.addContent(
+                    'radio',
+                    'Dine Rewards',
+                    'dine-rewards-discount',
+                    'dineRewards',
+                    '',
+                    '',
+                    'applyDiscount'
+                    )}}
+                    {% import 'components/forms/_input.generic.macro.html' as radio %}
+                    {{ radio.addContent(
+                    'radio',
+                    'Promo Code',
+                    'promo-code',
+                    'dineRewards',
+                    '',
+                    '',
+                    'applyDiscount'
+                    )}}
+                </div>
+                {% import 'components/modals/_modal-trigger.macro.html' as modalBtn %}
+                {{ modalBtn.addContent(
+                'Select your reward',
+                'apply-discount',
+                ' apply-discount'
                 )}}
             </div>
         </div>
@@ -62,25 +101,44 @@
     </div>
 </div>
 <div class="step-item">
-    <div class="iframe-container">
-        <iframe id="credit-card-iframe" class="credit-card-iframe" src="iframe.html"></iframe>
-    </div>
-</div>
-<div class="page-buttons">
-    {% import './components/forms/input.button.html' as orderBtn %}
-    {{ orderBtn.addContent(
-    'Place Order',
-    '',
-    'btn-primary btn-lg'
-    )
-    }}
-    {% import './components/forms/input.button.html' as cancelOrderBtn %}
-    {{ cancelOrderBtn.addContent(
-    'Cancel Order',
-    '',
-    'btn-link'
-    )
-    }}
-</div>
+    {% set stepItemTitle = 'Credit Card' %}
+    {% include 'components/_step-item-title.html' %}
+    <div data-component="credit-card" class="credit-card">
+        <span class="credit-card-logo credit-card-visa"><span class="sr-only">Visa</span></span>
+        <!--Examples of other credit cards available-->
+        <!--<span class="credit-card-logo credit-card-amex"><span class="sr-only">American Express</span></span>-->
+        <!--<span class="credit-card-logo credit-card-mastercard"><span class="sr-only">Mastercard</span></span>-->
+        <!--<span class="credit-card-logo credit-card-discover"><span class="sr-only">Discover Card</span></span>-->
+        <!--<span class="credit-card-logo credit-card-jcb"><span class="sr-only">JCB</span></span>-->
+        <!--<span class="credit-card-logo credit-card-diners-club"><span class="sr-only">Diners Club</span></span>-->
+        <span class="credit-card-last-4">**** **** **** 0005</span>
+        <span class="credit-card-expiration">Expires 11/20</span>
+        <button type="button" class="btn btn-link" data-target="#change-payment-method" data-toggle="modal">
+            Change payment method
+        </button>
+        {% include 'components/modals/_modal.change-payment-method.html' %}
 
-{% endblock %}
+    </div>
+    <div class="step-item">
+        <div class="iframe-container">
+            <iframe id="credit-card-iframe" class="credit-card-iframe" src="iframe.html"></iframe>
+        </div>
+    </div>
+    <div class="button-group">
+        {% import './components/forms/input.button.html' as orderBtn %}
+        {{ orderBtn.addContent(
+        'Place Order',
+        '',
+        'btn-primary btn-lg'
+        )
+        }}
+        {% import './components/forms/input.button.html' as cancelOrderBtn %}
+        {{ cancelOrderBtn.addContent(
+        'Cancel Order',
+        '',
+        'btn-link'
+        )
+        }}
+    </div>
+
+    {% endblock %}

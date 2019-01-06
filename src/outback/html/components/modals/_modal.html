@@ -12,10 +12,15 @@
                 {% endblock %}
             </div>
             <div class="modal-footer">
-                <button  class="btn btn-outline-secondary" role="button" aria-pressed="true">
-                    <span class="d-md-none">{{ buttonMobile }}</span>
-                    <span class="d-none d-md-inline">{{ buttonDesktop }}</span>
-                </button>
+                <div class="button-group">
+                    {% import 'components/forms/input.button.html' as orderBtn %}
+                    {{ orderBtn.addContent(
+                    'Add a new card',
+                    '',
+                    'btn-primary btn-lg'
+                    )
+                    }}
+                </div>
             </div>
         </div>
     </div>
