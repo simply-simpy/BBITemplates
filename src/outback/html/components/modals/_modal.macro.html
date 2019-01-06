@@ -1,5 +1,5 @@
 {% macro addContent(modalTitle, modalId, modalContent, modalBtnDesktop, modalBtnPhone, className) %}
-<div class="modal fade{{ className}}" id="{{ modalId }}" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal {{ className}}" id="{{ modalId }}" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -21,3 +21,35 @@
     </div>
 </div>
 {% endmacro %}
+
+<div class="modal"
+     id="forgotPassword"
+     tabindex="-1"
+     role="dialog"
+     aria-labelledby="forgotPassword"
+     aria-hidden="false">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body text-left w-auto">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h2>Forgot Password</h2>
+                        <p>If you forgot your password, enter your email below and we'll send you an email with further instructions. Please remember, this process will also reset your password for your Carrabba's Italian Grill online ordering site.</p>
+
+                        <label for="emailAddress" class="form-label">Email Address (Required)</label>
+                        <div class="input-group">
+                            <input type="text" name="emailAddress" class="form-control col-lg-8" required>
+                            <span class="text-danger mb-3 w-100">Please enter a value.</span>
+                        </div>
+
+                        <!-- SUBMIT/CANCEL -->
+                        <div class="col p-0 col-lg-6 mt-4">
+                            <button class="btn btn-block btn-primary mt-3" data-toggle="modal" data-target="#resetToken">Reset Password</button>
+                            <a href="#" class="text-uppercase text-center text-lg-left d-block mt-3" data-dismiss="modal" aria-label="Close">Cancel Request</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

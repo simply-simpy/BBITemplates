@@ -3911,7 +3911,7 @@ button.close {
   flex-direction: column;
   width: 100%;
   pointer-events: auto;
-  background-color: #F2ECDE;
+  background-color: #fff;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.13rem;
@@ -10820,6 +10820,9 @@ dl, dd {
 .grid-item {
   border-radius: 2px;
   border: 1px solid gray; }
+
+.custom-control-label {
+  line-height: 1.2; }
 
 .custom-control {
   position: relative;

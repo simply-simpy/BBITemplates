@@ -76,6 +76,51 @@
                 }}
             </div>
         </div>
+        <div class="row">
+            <div class="col">
+                {% import './components/forms/input.checkbox.html' as input %}
+                {{ input.addContent(
+                'Create an Outback online ordering account for future orders',
+                ' create-account',
+                'create-account'
+                )
+                }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                {% import './components/forms/input.checkbox.html' as input %}
+                {{ input.addContent(
+                'Sign me up for the Dine Rewards loyalty program <a target="_blank" href="#">terms and conditions</a>',
+                ' dine-rewards-signup',
+                'dine-rewards-signup'
+                )
+                }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                {% import './components/forms/input.checkbox.html' as input %}
+                {{ input.addContent(
+                'Sign me up to receive Outback exclusive email offers and promotions',
+                ' email-signup',
+                'email-signup'
+                )
+                }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                {% import './components/forms/input.checkbox.html' as input %}
+                {{ input.addContent(
+                'Thank you for being a member of the Dine Rewards loyalty program <a target="_blank" href="#">terms and conditions</a>',
+                ' dine-rewards-thank-you',
+                'dine-rewards-thank-you'
+                )
+                }}
+            </div>
+        </div>
+        <p class="legal d-lg-none small mt-2"><strong>Legal Copy</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur delectus doloremque facere harum, laudantium neque non numquam qui reprehenderit sequi. Dolorem nobis non quaerat quasi suscipit. Eaque odit perferendis suscipit.</p>
     </div>
     <div class="page-buttons">
         {% import './components/forms/input.button.html' as btn %}

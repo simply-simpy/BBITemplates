@@ -83,7 +83,7 @@ $(function() {
     // Shows picked date on page load for display only. This is not the value sent from the input field when submitting the form. The value is in a hidden text input.
     $($datepicker).on('change.datetimepicker', function(event) {
       let theValue = event.date.format('L');
-      $('.date-picked').text(theValue);
+      $('.date-time-picker-trigger .text').text(theValue);
       /* eslint-disable */
       $(this).datetimepicker('hide');
       /* eslint-enable */
@@ -91,7 +91,7 @@ $(function() {
 
     // Shows today's date on page load for display only. This is not the value sent from the input field when submitting the form. The value is in a hidden text input.
     let today = moment().format('L');
-    $('.date-picked').text(today);
+    $('.date-time-picker-trigger .text').text(today);
 
     turnOffMonthPicker();
 
