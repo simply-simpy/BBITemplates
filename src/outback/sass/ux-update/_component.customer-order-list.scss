@@ -1,7 +1,10 @@
 .customer-order-list {
   margin-top: 95px;
   background: #fff;
-  h1 {
+  padding-top: $spacer * 1.25;
+  .customer-order-list-heading {
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
     @include rem(20px);
     @include media-breakpoint-up(lg){
       text-align: center;

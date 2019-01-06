@@ -1,12 +1,14 @@
 [data-template="checkout"] {
 
   background: $body-bg-checkout;
+
   .navbar {
     height: 200px;
-    @include media-breakpoint-up(lg){
+    @include media-breakpoint-up(lg) {
       height: 134px;
     }
   }
+
   .your-order {
     background: #fff;
     max-width: 346px;
@@ -16,11 +18,13 @@
     background: #fff;
     margin-bottom: $spacer * 1.75;
     padding: $spacer * 1.5;
+
     .custom-radio.custom-control-inline {
       background: #fff;
       width: 118px;
       padding: .25rem 0 .25rem 2rem;
     }
+
     .date-picked {
       font-family: $font-secondary;
     }
@@ -30,8 +34,27 @@
         background: #5ABB62i;
       }
     }
+
     &:first-child {
       margin-top: 95px;
+    }
+    &.completed {
+      .step-number {
+        background-color: $brand-green;
+        text-indent: -9999em;
+      }
+      .step-title-text {
+        color: #9b9b9b;
+      }
+      .check {
+        align-items: center;
+        display: flex;
+        @include rem(27px);
+        justify-content: center;
+        position: absolute;
+        text-indent: 0;
+        @extend .icon-check;
+      }
     }
   }
 
@@ -80,20 +103,6 @@
       @include height(36px);
       @include width(36px);
       @include rem(22px);
-
-      &.completed {
-        background-color: $brand-green;
-        text-indent: -9999em;
-        .check {
-          align-items: center;
-          display: flex;
-          @include rem(27px);
-          justify-content: center;
-          position: absolute;
-          text-indent: 0;
-          @extend .icon-check;
-        }
-      }
     }
   }
 

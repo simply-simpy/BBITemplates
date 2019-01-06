@@ -5461,7 +5461,7 @@ button.bg-dark:focus {
 .my-1 {
   margin-top: 0.25rem !important; }
 
-.mr-1, [data-template="order-confirmation"] .title .icon-check, [data-template="order-confirmation"] .title [data-template="checkout"] .step-title .step-number.completed .check, [data-template="checkout"] .step-title .step-number.completed [data-template="order-confirmation"] .title .check, [data-template="order-confirmation"] .title .date-time-picker .choose-time li.active, .date-time-picker .choose-time [data-template="order-confirmation"] .title li.active,
+.mr-1, [data-template="order-confirmation"] .title .icon-check, [data-template="order-confirmation"] .title [data-template="checkout"] .step.completed .check, [data-template="checkout"] .step.completed [data-template="order-confirmation"] .title .check, [data-template="order-confirmation"] .title .date-time-picker .choose-time li.active, .date-time-picker .choose-time [data-template="order-confirmation"] .title li.active,
 .mx-1 {
   margin-right: 0.25rem !important; }
 
@@ -7840,7 +7840,7 @@ a.text-dark:hover, a.text-dark:focus {
 | Attaches an icon and default styles to any element  |
 | by nesting this inside the :before or :after pseudo |
 *====================================================*/
-.icon-boomerang::before, .icon-carat::before, .icon-double-vert-caret::after, .icon-double-vert-caret::before, .icon-cart_bag::before, .icon-error::before, .icon-facebook::before, .icon-geolocation::before, .icon-help::before, .icon-info::before, .icon-instagram::before, .icon-logo::before, .icon-menu::before, .icon-phone::before, .icon-play::before, .icon-rewards::before, .icon-rewards-alt::before, .icon-success::before, .icon-tooltip::before, .icon-twitter::before, .icon-arrow-left::before, .icon-arrow-right::before, .icon-check::before, [data-template="checkout"] .step-title .step-number.completed .check::before, .date-time-picker .choose-time li.active::before, .icon-calendar:before, .icon-close:before, .icon-time:before, .icon-zmdi-pin:before, .icon-zmdi-chevron-right:before, [data-template="food-menu"] .card-header h1:after,
+.icon-boomerang::before, .icon-carat::before, .icon-double-vert-caret::after, .icon-double-vert-caret::before, .icon-cart_bag::before, .icon-error::before, .icon-facebook::before, .icon-geolocation::before, .icon-help::before, .icon-info::before, .icon-instagram::before, .icon-logo::before, .icon-menu::before, .icon-phone::before, .icon-play::before, .icon-rewards::before, .icon-rewards-alt::before, .icon-success::before, .icon-tooltip::before, .icon-twitter::before, .icon-arrow-left::before, .icon-arrow-right::before, .icon-check::before, [data-template="checkout"] .step.completed .check::before, .date-time-picker .choose-time li.active::before, .icon-calendar:before, .icon-close:before, .icon-time:before, .icon-zmdi-pin:before, .icon-zmdi-chevron-right:before, [data-template="food-menu"] .card-header h1:after,
 [data-template="food-menu"] .card-header h2:after, [data-template="payment-methods"] .btn-modal .card-body:after, [data-template="custom-product"] .btn-modal .card-body:after {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -8377,7 +8377,7 @@ h2, .h2 {
   font-family: Material-Design-Iconic-Font, sans-serif;
   content: ""; }
 
-.icon-check::before, [data-template="checkout"] .step-title .step-number.completed .check::before, .date-time-picker .choose-time li.active::before {
+.icon-check::before, [data-template="checkout"] .step.completed .check::before, .date-time-picker .choose-time li.active::before {
   color: inherit;
   font-family: Material-Design-Iconic-Font, sans-serif;
   content: ""; }
@@ -9226,7 +9226,7 @@ dl, dd {
 
 [data-template="order-confirmation"] .title {
   color: #1C5E21; }
-  [data-template="order-confirmation"] .title .icon-check, [data-template="order-confirmation"] .title [data-template="checkout"] .step-title .step-number.completed .check, [data-template="checkout"] .step-title .step-number.completed [data-template="order-confirmation"] .title .check, [data-template="order-confirmation"] .title .date-time-picker .choose-time li.active, .date-time-picker .choose-time [data-template="order-confirmation"] .title li.active {
+  [data-template="order-confirmation"] .title .icon-check, [data-template="order-confirmation"] .title [data-template="checkout"] .step.completed .check, [data-template="checkout"] .step.completed [data-template="order-confirmation"] .title .check, [data-template="order-confirmation"] .title .date-time-picker .choose-time li.active, .date-time-picker .choose-time [data-template="order-confirmation"] .title li.active {
     font-size: 3.25rem; }
 
 [data-template="order-confirmation"] .dine-rewards {
@@ -9254,11 +9254,11 @@ dl, dd {
       position: relative;
       right: 0.33333rem;
       top: -0.33333rem; }
-  [data-component="notifications"] .icon-check, [data-component="notifications"] [data-template="checkout"] .step-title .step-number.completed .check, [data-template="checkout"] .step-title .step-number.completed [data-component="notifications"] .check, [data-component="notifications"] .date-time-picker .choose-time li.active, .date-time-picker .choose-time [data-component="notifications"] li.active {
+  [data-component="notifications"] .icon-check, [data-component="notifications"] [data-template="checkout"] .step.completed .check, [data-template="checkout"] .step.completed [data-component="notifications"] .check, [data-component="notifications"] .date-time-picker .choose-time li.active, .date-time-picker .choose-time [data-component="notifications"] li.active {
     color: green;
     line-height: 1;
     position: relative; }
-    [data-component="notifications"] .icon-check::before, [data-component="notifications"] [data-template="checkout"] .step-title .step-number.completed .check::before, [data-template="checkout"] .step-title .step-number.completed [data-component="notifications"] .check::before, [data-component="notifications"] .date-time-picker .choose-time li.active::before, .date-time-picker .choose-time [data-component="notifications"] li.active::before {
+    [data-component="notifications"] .icon-check::before, [data-component="notifications"] [data-template="checkout"] .step.completed .check::before, [data-template="checkout"] .step.completed [data-component="notifications"] .check::before, [data-component="notifications"] .date-time-picker .choose-time li.active::before, .date-time-picker .choose-time [data-component="notifications"] li.active::before {
       font-size: 30px;
       font-size: 1.875rem;
       position: relative;
@@ -9600,6 +9600,25 @@ dl, dd {
       background: #5ABB62i; }
     [data-template="checkout"] .step:first-child {
       margin-top: 95px; }
+    [data-template="checkout"] .step.completed .step-number {
+      background-color: #5ABB62;
+      text-indent: -9999em; }
+    [data-template="checkout"] .step.completed .step-title-text {
+      color: #9b9b9b; }
+    [data-template="checkout"] .step.completed .check {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      font-size: 27px;
+      font-size: 1.6875rem;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      position: absolute;
+      text-indent: 0; }
   [data-template="checkout"] .step-item {
     padding: 42px 0 30px;
     border-top: 1px solid #979797; }
@@ -9652,23 +9671,6 @@ dl, dd {
       width: 2.25rem;
       font-size: 22px;
       font-size: 1.375rem; }
-      [data-template="checkout"] .step-title .step-number.completed {
-        background-color: #5ABB62;
-        text-indent: -9999em; }
-        [data-template="checkout"] .step-title .step-number.completed .check {
-          -webkit-box-align: center;
-          -ms-flex-align: center;
-          align-items: center;
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          font-size: 27px;
-          font-size: 1.6875rem;
-          -webkit-box-pack: center;
-          -ms-flex-pack: center;
-          justify-content: center;
-          position: absolute;
-          text-indent: 0; }
   [data-template="checkout"] .step-body {
     padding: 24px 0px 0px;
     padding: 24px 0px 0px/16pxrem; }
@@ -10050,7 +10052,7 @@ dl, dd {
   [data-component="customer-order"] .sub-total {
     font-size: 1.25rem;
     line-height: 1.2; }
-  [data-component="customer-order"].order-confirmation .icon-check::before, [data-component="customer-order"].order-confirmation [data-template="checkout"] .step-title .step-number.completed .check::before, [data-template="checkout"] .step-title .step-number.completed [data-component="customer-order"].order-confirmation .check::before, [data-component="customer-order"].order-confirmation .date-time-picker .choose-time li.active::before, .date-time-picker .choose-time [data-component="customer-order"].order-confirmation li.active::before {
+  [data-component="customer-order"].order-confirmation .icon-check::before, [data-component="customer-order"].order-confirmation [data-template="checkout"] .step.completed .check::before, [data-template="checkout"] .step.completed [data-component="customer-order"].order-confirmation .check::before, [data-component="customer-order"].order-confirmation .date-time-picker .choose-time li.active::before, .date-time-picker .choose-time [data-component="customer-order"].order-confirmation li.active::before {
     color: green; }
   @media (min-width: 992px) {
     [data-component="customer-order"].order-confirmation .collapse {
@@ -10614,12 +10616,15 @@ dl, dd {
 
 .customer-order-list {
   margin-top: 95px;
-  background: #fff; }
-  .customer-order-list h1 {
+  background: #fff;
+  padding-top: 1.25rem; }
+  .customer-order-list .customer-order-list-heading {
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
     font-size: 20px;
     font-size: 1.25rem; }
     @media (min-width: 992px) {
-      .customer-order-list h1 {
+      .customer-order-list .customer-order-list-heading {
         text-align: center; } }
 
 .notification {
