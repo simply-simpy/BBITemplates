@@ -11,6 +11,14 @@
     background: #fff;
     margin-bottom: $spacer * 1.75;
     padding: $spacer * 1.5;
+    .custom-radio.custom-control-inline {
+      background: #fff;
+      width: 118px;
+      padding: .25rem 0 .25rem 2rem;
+    }
+    .date-picked {
+      font-family: $font-secondary;
+    }
 
     &.inactive {
       .step-number {
@@ -21,7 +29,7 @@
   }
 
   .step-item {
-    padding: 42px 0 0;
+    padding: 42px 0 30px;
     border-top: 1px solid $brand-gray
   }
 

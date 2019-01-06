@@ -4,5 +4,16 @@
   flex-direction: column;
   .btn {
     padding: 0.25rem 3.75rem;
+    &.btn:last-child {
+      margin-top: $spacer * .5;
+    }
+  }
+  .btn-link {
+    color: $body-color;
+    text-decoration: underline;
+    @include rem(14px);
+    &:hover {
+      text-decoration: none;
+    }
   }
 }

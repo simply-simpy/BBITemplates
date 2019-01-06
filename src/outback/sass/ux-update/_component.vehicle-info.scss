@@ -1,6 +1,7 @@
 [data-component="vehicle-info"] {
   .vehicles {
     display: flex;
+    margin-top: $spacer * .5;
     .custom-control {
       padding-left: 0;
     }
@@ -30,7 +31,7 @@
       justify-content: center;
       margin-right: $spacer * .3;
       padding-top: $spacer * 2.63;
-      width: 8.125rem;
+      max-width: 130px;
       span[class^="icon"] {
         @include rem(28px)
       }

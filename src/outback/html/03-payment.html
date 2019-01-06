@@ -2,18 +2,19 @@
 {% set stepTitle = 'Payment Information' %}
 {% extends 'components/_step.html' %}
 
-
 {% block content %}
-
 <div class="step-item">
     {% set stepItemTitle = 'Payment Method' %}
     {% include 'components/_step-item-title.html' %}
-
-    {% import 'components/modals/_modal-trigger.macro.html' as modalBtn %}
-    {{ modalBtn.addContent(
-    'Pay Online',
-    'payment-method'
-    )}}
+    <div class="row">
+        <div class="col-md-6">
+            {% import 'components/modals/_modal-trigger.macro.html' as modalBtn %}
+            {{ modalBtn.addContent(
+            'Pay Online',
+            'payment-method'
+            )}}
+        </div>
+    </div>
 
     {% import 'components/modals/_modal.macro.html' as modal %}
     {{ modal.addContent(
@@ -25,35 +26,46 @@
     )}}
 </div>
 <div class="step-item">
-    <div data-component="apply-discount">
+    <div data-component="apply-discount" class="apply-discount">
         {% set stepItemTitle = 'Apply Promo Code' %}
         {% include 'components/_step-item-title.html' %}
-        {% import 'components/forms/_input-group-append.macro.html' as promoCode %}
-        {{ promoCode.addContent(
-        'text',
-        '',
-        '0545-8945',
-        'apply',
-        ''
-        )}}
+        <div class="row">
+            <div class="col-md-6">
+                {% import 'components/forms/_input-group-append.macro.html' as promoCode %}
+                {{ promoCode.addContent(
+                'text',
+                '',
+                '0545-8945',
+                'apply',
+                ''
+                )}}
+            </div>
+        </div>
     </div>
 </div>
 <div class="step-item">
     <div data-component="tip-selector">
         {% set stepItemTitle = 'Tip' %}
         {% include 'components/_step-item-title.html' %}
-
         {% set isGridInput = true %}
-        <div class="tip-amounts">
-            {% for tip in tips %}
-            {% set type = tip.type %}
-            {% set name = tip.name %}
-            {% set text1 = tip.percentage %}
-            {% set text2 = tip.amount %}
-            {% set id = tip.amount %}
-            {% set text1Class = "font-weight-bold" %}
-            {% include 'components/forms/_input.generic.html' %}
-            {% endfor %}
+        <div class="row no-gutters">
+            <div class="col-lg-6">
+                <div class="tip-amounts">
+                    <div class="row no-gutters">
+                        {% for tip in tips %}
+                        {% set type = tip.type %}
+                        {% set name = tip.name %}
+                        {% set text1 = tip.percentage %}
+                        {% set text2 = tip.amount %}
+                        {% set id = tip.id %}
+                        {% set text1Class = "font-weight-bold" %}
+                        <div class="col-6">
+                            {% include 'components/forms/_input.generic.html' %}
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -5,14 +5,18 @@
 
 {% block content %}
 <div class="step-item">
-    {% set stepItemTitle = 'When' %}
-    {% include 'components/_step-item-title.html' %}
-    {% import 'components/modals/_modal-trigger.macro.html' as modalBtn %}
-    {{ modalBtn.addContent(
-    'Pay Online',
-    'date-time-picker'
-    )}}
-    {% include 'components/modals/_date-time-picker.html' %}
+            {% set stepItemTitle = 'When' %}
+            {% include 'components/_step-item-title.html' %}
+    <div class="row">
+        <div class="col-md-6">
+            {% import 'components/modals/_modal-trigger.macro.html' as modalBtn %}
+            {{ modalBtn.addContent(
+            'Pay Online',
+            'date-time-picker'
+            )}}
+            {% include 'components/modals/_date-time-picker.html' %}
+        </div>
+    </div>
 </div>
 <div class="step-item">
     {% set stepItemTitle = 'Pickup Address' %}
@@ -25,7 +29,6 @@
             </div>
         </div>
     </div>
-
     {% include 'components/_notification.html' %}
 </div>
 <div class="step-item">

@@ -292,13 +292,15 @@
         <div class="step-body">
             
 <div class="step-item">
-    
-    <h2 class="step-item-title">When</h2>
+            
+            <h2 class="step-item-title">When</h2>
 
 
 
-    
-    
+    <div class="row">
+        <div class="col-md-6">
+            
+            
 <button type="button" class="btn form-control modal-trigger" data-toggle="modal"
         data-target="#date-time-picker">
     <span class="inner">
@@ -309,7 +311,7 @@
     </span>
 </button>
 
-    <div class="date-time-picker modal fade  datepicker-open" tabindex="-1" role="dialog" aria-hidden="false"
+            <div class="date-time-picker modal fade  datepicker-open" tabindex="-1" role="dialog" aria-hidden="false"
      data-component="date-time-picker" id="date-time-picker">
     <form>
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -545,6 +547,8 @@
     </form>
 </div>
 
+        </div>
+    </div>
 </div>
 <div class="step-item">
     
@@ -560,7 +564,6 @@
             </div>
         </div>
     </div>
-
     <div data-component="notification" class="notification">
     <p class="notification-content">Good news! This location offers curbside pick-up. Would you like to pick-up your
         order using curbside?</p>
@@ -605,14 +608,13 @@
         <p>This information is used to identify your car when you pickup your order.</p>
         
         <div data-component="vehicle-info">
-    <label for="vehicleType" class="form-label">Choose Vehicle Type</label>
-
+    <span class="form-label">Choose Vehicle Type</span>
     <div class="vehicles">
-    
-    
-    
-    
-    <div class="custom-control custom-radio car vehicle ">
+        
+        
+        
+        
+        <div class="custom-control custom-radio car vehicle ">
     
     <input type="radio" class="custom-control-input" value="1" id="singleOption-1" name="vehicle_type">
     <label class="custom-control-label" for="singleOption-1"></label>
@@ -621,8 +623,8 @@
     
 </div>
 
-    
-    <div class="custom-control custom-radio suv vehicle ">
+        
+        <div class="custom-control custom-radio suv vehicle ">
     
     <input type="radio" class="custom-control-input" value="2" id="singleOption-2" name="vehicle_type">
     <label class="custom-control-label" for="singleOption-2"></label>
@@ -631,8 +633,8 @@
     
 </div>
 
-    
-    <div class="custom-control custom-radio van vehicle ">
+        
+        <div class="custom-control custom-radio van vehicle ">
     
     <input type="radio" class="custom-control-input" value="3" id="singleOption-3" name="vehicle_type">
     <label class="custom-control-label" for="singleOption-3"></label>
@@ -641,8 +643,8 @@
     
 </div>
 
-    
-    <div class="custom-control custom-radio truck vehicle ">
+        
+        <div class="custom-control custom-radio truck vehicle ">
     
     <input type="radio" class="custom-control-input" value="4" id="singleOption-4" name="vehicle_type">
     <label class="custom-control-label" for="singleOption-4"></label>
@@ -652,31 +654,34 @@
 </div>
 
     </div>
-
-
-    <label for="vehicleColor" class="form-label">Choose Vehicle Color</label>
-    <!-- Dropdown -->
-    <button type="button" class="btn modal-trigger" data-toggle="modal" data-target="#dateTimePickerModal">
-                            <span class="inner">
-                                <span class="text date-picked font-weight-bold">
-                                    Select a vehicle color...
-                                </span>
-                                <span class="icon icon-carat"></span>
-                            </span>
-    </button>
-
-    <label for="vehicleMake" class="form-label">Choose Vehicle Make</label>
-    <!-- Dropdown -->
-    <button type="button" class="btn modal-trigger" data-toggle="modal" data-target="#dateTimePickerModal">
-                            <span class="inner">
-                                <span class="text date-picked font-weight-bold">
-                                    Select a vehicle make...
-                                </span>
-                                <span class="icon icon-carat"></span>
-                            </span>
-    </button>
-
+    <div class="row">
+        <div class="col-md-6">
+            <span class="form-label">Choose Vehicle Color</span>
+            <!-- Dropdown -->
+            <button type="button" class="btn modal-trigger" data-toggle="modal" data-target="#dateTimePickerModal">
+                <span class="inner">
+                    <span class="text date-picked font-weight-bold">
+                        Select a vehicle color...
+                    </span>
+                    <span class="icon icon-carat"></span>
+                </span>
+            </button>
+        </div>
+        <div class="col-md-6">
+            <span class="form-label">Choose Vehicle Make</span>
+            <!-- Dropdown -->
+            <button type="button" class="btn modal-trigger" data-toggle="modal" data-target="#dateTimePickerModal">
+                    <span class="inner">
+                        <span class="text date-picked font-weight-bold">
+                            Select a vehicle make...
+                        </span>
+                        <span class="icon icon-carat"></span>
+                    </span>
+            </button>
+        </div>
+    </div>
 </div>
+
 
     </div>
 </div>
@@ -708,16 +713,16 @@
     <div class="collapse" id="_3">
         <div class="step-body">
             
-
 <div class="step-item">
     
     <h2 class="step-item-title">Payment Method</h2>
 
 
 
-
-    
-    
+    <div class="row">
+        <div class="col-md-6">
+            
+            
 <button type="button" class="btn form-control modal-trigger" data-toggle="modal"
         data-target="#payment-method">
     <span class="inner">
@@ -728,6 +733,8 @@
     </span>
 </button>
 
+        </div>
+    </div>
 
     
     
@@ -755,14 +762,16 @@
 
 </div>
 <div class="step-item">
-    <div data-component="apply-discount">
+    <div data-component="apply-discount" class="apply-discount">
         
         <h2 class="step-item-title">Apply Promo Code</h2>
 
 
 
-        
-        
+        <div class="row">
+            <div class="col-md-6">
+                
+                
 <div class="input-group">
     <input type="text" class="form-control" placeholder="" aria-label="" >
     <div class="input-group-append">
@@ -770,6 +779,8 @@
     </div>
 </div>
 
+            </div>
+        </div>
     </div>
 </div>
 <div class="step-item">
@@ -779,95 +790,110 @@
 
 
 
-
         
-        <div class="tip-amounts">
-            
-            
-            
-            
-            
-            
-            
-            <div class="custom-control custom-radio  vehicle  grid-item ">
+        <div class="row no-gutters">
+            <div class="col-lg-6">
+                <div class="tip-amounts">
+                    <div class="row no-gutters">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <div class="col-6">
+                            <div class="custom-control custom-radio  vehicle  grid-item ">
     
-    <input type="radio" class="custom-control-input" name="tip" id= data-time="" >
-    <label class="custom-control-label grid-input x" for="">
+    <input type="radio" class="custom-control-input" name="tip" id=tip-0 data-time="" >
+    <label class="custom-control-label grid-input x" for="tip-0">
         <span class="font-weight-bold">NO TIP</span>
         
     </label>
     
 </div>
 
-            
-            
-            
-            
-            
-            
-            
-            <div class="custom-control custom-radio  vehicle  grid-item ">
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <div class="col-6">
+                            <div class="custom-control custom-radio  vehicle  grid-item ">
     
-    <input type="radio" class="custom-control-input" name="tip" id=($4.18) data-time="" >
-    <label class="custom-control-label grid-input x" for="($4.18)">
+    <input type="radio" class="custom-control-input" name="tip" id=tip-10 data-time="" >
+    <label class="custom-control-label grid-input x" for="tip-10">
         <span class="font-weight-bold">10%</span>
          <span>($4.18)</span>
     </label>
     
 </div>
 
-            
-            
-            
-            
-            
-            
-            
-            <div class="custom-control custom-radio  vehicle  grid-item ">
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <div class="col-6">
+                            <div class="custom-control custom-radio  vehicle  grid-item ">
     
-    <input type="radio" class="custom-control-input" name="tip" id=($4.18) data-time="" >
-    <label class="custom-control-label grid-input x" for="($4.18)">
+    <input type="radio" class="custom-control-input" name="tip" id=tip-15 data-time="" >
+    <label class="custom-control-label grid-input x" for="tip-15">
         <span class="font-weight-bold">15%</span>
          <span>($4.18)</span>
     </label>
     
 </div>
 
-            
-            
-            
-            
-            
-            
-            
-            <div class="custom-control custom-radio  vehicle  grid-item ">
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <div class="col-6">
+                            <div class="custom-control custom-radio  vehicle  grid-item ">
     
-    <input type="radio" class="custom-control-input" name="tip" id=($4.18) data-time="" >
-    <label class="custom-control-label grid-input x" for="($4.18)">
+    <input type="radio" class="custom-control-input" name="tip" id=tip-20 data-time="" >
+    <label class="custom-control-label grid-input x" for="tip-20">
         <span class="font-weight-bold">20%</span>
          <span>($4.18)</span>
     </label>
     
 </div>
 
-            
-            
-            
-            
-            
-            
-            
-            <div class="custom-control custom-radio  vehicle  grid-item ">
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <div class="col-6">
+                            <div class="custom-control custom-text  vehicle  grid-item ">
     
-    <input type="radio" class="custom-control-input" name="tip" id= data-time="" >
-    <label class="custom-control-label grid-input x" for="">
+    <input type="text" class="custom-control-input" name="tip" id=tip-custom data-time="" >
+    <label class="custom-control-label grid-input x" for="tip-custom">
         <span class="font-weight-bold">Enter Custom Tip</span>
         
     </label>
     
 </div>
 
-            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

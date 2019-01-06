@@ -385,7 +385,7 @@ table {
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  color: #6c757d;
+  color: #828181;
   text-align: left;
   caption-side: bottom; }
 
@@ -1834,7 +1834,7 @@ textarea.form-control {
   margin-top: 0.3rem;
   margin-left: -1.25rem; }
   .form-check-input:disabled ~ .form-check-label {
-    color: #6c757d; }
+    color: #828181; }
 
 .form-check-label {
   margin-bottom: 0; }
@@ -7587,7 +7587,7 @@ a.text-dark:hover, a.text-dark:focus {
   color: #2d2d2d !important; }
 
 .text-muted {
-  color: #6c757d !important; }
+  color: #828181 !important; }
 
 .text-black-50 {
   color: rgba(0, 0, 0, 0.5) !important; }
@@ -9585,10 +9585,16 @@ dl, dd {
     background: #fff;
     margin-bottom: 1.75rem;
     padding: 1.5rem; }
+    [data-template="checkout"] .step .custom-radio.custom-control-inline {
+      background: #fff;
+      width: 118px;
+      padding: .25rem 0 .25rem 2rem; }
+    [data-template="checkout"] .step .date-picked {
+      font-family: TradeGothic-BoldCondTwenty, sans-serif; }
     [data-template="checkout"] .step.inactive .step-number {
       background: #5ABB62i; }
   [data-template="checkout"] .step-item {
-    padding: 42px 0 0;
+    padding: 42px 0 30px;
     border-top: 1px solid #979797; }
   [data-template="checkout"] .step-item-component {
     margin-bottom: 2.25rem; }
@@ -10063,7 +10069,8 @@ dl, dd {
 .modal-trigger {
   background-color: #FFFFFF;
   font-weight: 400;
-  font-size: 1.125rem;
+  font-size: 20px;
+  font-size: 1.25rem;
   font-family: TradeGothic-CondEighteen, sans-serif;
   padding: .25rem .75rem;
   position: relative;
@@ -10413,6 +10420,11 @@ dl, dd {
       font-weight: bold;
       text-decoration: underline; }
 
+.apply-discount .input-group-append {
+  margin-left: 0; }
+  .apply-discount .input-group-append .btn {
+    border: none; }
+
 .responsive-hero .responsive-hero-inner {
   position: relative; }
 
@@ -10479,17 +10491,16 @@ dl, dd {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: .25rem .5rem;
+  padding: .5rem .5rem;
   font-size: 16px;
   font-size: 1rem; }
 
 .tip-amounts {
-  color: #444;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 200px 0.5rem 200px;
-  grid-template-columns: 200px 200px;
-  grid-gap: 0.5rem; }
+  color: #444; }
+  .tip-amounts [class^="col"] {
+    padding-bottom: 0.35rem; }
+    .tip-amounts [class^="col"]:nth-child(even) {
+      padding-left: 0.35rem; }
 
 .grid-item.custom-control {
   border-radius: 2px;
@@ -10502,7 +10513,8 @@ dl, dd {
 [data-component="vehicle-info"] .vehicles {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  margin-top: 0.5rem; }
   [data-component="vehicle-info"] .vehicles .custom-control {
     padding-left: 0; }
   [data-component="vehicle-info"] .vehicles .custom-control-label {
@@ -10541,7 +10553,7 @@ dl, dd {
     justify-content: center;
     margin-right: 0.3rem;
     padding-top: 2.63rem;
-    width: 8.125rem; }
+    max-width: 130px; }
     [data-component="vehicle-info"] .vehicles .vehicle span[class^="icon"] {
       font-size: 28px;
       font-size: 1.75rem; }
@@ -10565,6 +10577,15 @@ dl, dd {
   flex-direction: column; }
   .page-buttons .btn {
     padding: 0.25rem 3.75rem; }
+    .page-buttons .btn.btn:last-child {
+      margin-top: 0.5rem; }
+  .page-buttons .btn-link {
+    color: #2d2d2d;
+    text-decoration: underline;
+    font-size: 14px;
+    font-size: 0.875rem; }
+    .page-buttons .btn-link:hover {
+      text-decoration: none; }
 
 .itemization {
   border-top: 1px solid #979797;
@@ -10595,8 +10616,11 @@ dl, dd {
 
 .notification {
   background: #f2ecde;
-  padding: 1rem;
-  line-height: 1.2; }
+  padding: 1.5rem 12rem 1.25rem 1.25rem;
+  line-height: 1.15; }
+  .notification .custom-radio.custom-control-inline {
+    margin-left: 0.5rem;
+    margin-top: 0.25rem; }
 
 .menu-items {
   border: 1px solid #979797;

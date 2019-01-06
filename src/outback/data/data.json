@@ -76,7 +76,7 @@
     {"percentage":  "10%", "amount": "($4.18)","type":  "radio", "name":  "tip", "id": "tip-10"},
     {"percentage":  "15%", "amount": "($4.18)","type":  "radio", "name":  "tip", "id": "tip-15"},
     {"percentage":  "20%", "amount": "($4.18)","type":  "radio", "name":  "tip", "id": "tip-20"},
-    {"percentage":  "Enter Custom Tip", "amount": "","type":  "radio", "name": "tip", "id": "tip-custom"}
+    {"percentage":  "Enter Custom Tip", "amount": "","type":  "text", "name": "tip", "id": "tip-custom"}
   ],
   "times": [
     {"dataTime":  "10:00 AM", "dataId":  "10:00", "time": "10:00 AM"},

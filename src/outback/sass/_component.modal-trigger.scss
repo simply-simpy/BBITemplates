@@ -1,7 +1,7 @@
 .modal-trigger {
   background-color: $white;
   font-weight: $font-weight-base;
-  font-size: $font-size-md;
+  @include rem(20px);
   font-family: $font-family-base;
   padding: .25rem .75rem;
   position: relative;
@@ -9,11 +9,13 @@
   text-transform: none;
   @extend .btn-outline-secondary;
   @extend .btn-block;
+
   .inner {
     align-items: center;
     display: flex;
     justify-content: space-between;
   }
+
   .icon-carat {
     transform: rotate(-90deg);
   }

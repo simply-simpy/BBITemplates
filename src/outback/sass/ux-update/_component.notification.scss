@@ -1,6 +1,11 @@
 .notification {
   background: $notification-default;
-  padding: $spacer;
-  line-height: 1.2;
+  padding: $spacer * 1.5 $spacer * 12  $spacer * 1.25 $spacer * 1.25;
+  line-height: 1.15;
+  .custom-radio.custom-control-inline {
+    margin-left: $spacer * .5;
+    margin-top: $spacer * .25;
+  }
   @extend .font-weight-bold;
+
 }
