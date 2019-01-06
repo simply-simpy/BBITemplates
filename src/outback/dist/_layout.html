@@ -20,6 +20,206 @@
 
 <body>
 <div class="wrapper" data-template="">
+    <nav class="navbar navbar-expand-lg navbar-dark justify-content-start w-100">
+    <!-- Logo -->
+    <div class="container">
+        <a href="#"><img src="../img/logo.png" class="logo" alt="brand logo"></a>
+        <div class="text-right account-wrapper">
+            <!-- EDIT LOCATION DESKTOP -->
+            <div class="edit-location d-none d-lg-block">
+                <p class="m-0 text-right">
+                    <span class="text-uppercase font-weight-bold label">Delivery:</span>
+                    <span class="text-uppercase font-weight-bold address">3403 Henderson Blvd.</span>
+                    (<a href="#">Edit</a>)
+                </p>
+            </div>
+            <!-- LOGGED OUT -->
+            <a href="#" class="pr-2 text-uppercase" data-toggle="modal" data-target="#signIn">Sign In</a>
+
+            <!-- LOGGED IN -->
+            <a href="#" class="pr-2 d-none" data-toggle="modal" data-target="#account-info">Hi John <i
+                    class="carat-down"></i></a>
+
+            <!--
+                NOTE TO SITECORE DEV:
+                A script will be required to close 'createAccount' modal when either 'forgotPassword' or 'signIn' is opened.
+            -->
+
+            <!-- ACCOUNT SIGN-IN MODAL -->
+            <div class="modal" id="signIn" tabindex="-1" role="dialog" aria-labelledby="signIn" aria-hidden="false">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title" id="exampleModalCenterTitle">Sign in or Register</h1>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body text-left w-auto">
+
+                            <div class="row">
+                                <div class="col-lg-6 p-0 col-left">
+                                    <!-- EMAIL -->
+                                    <div class="col">
+                                        <label for="emailAddress" class="form-label">Email Address (Required)</label>
+                                        <div class="input-group mb-3">
+                                            <input type="text" name="emailAddress" class="form-control" required="">
+                                            <span class="text-danger w-100">Please enter a value.</span>
+                                        </div>
+                                    </div>
+                                    <!-- PASSWORD -->
+                                    <div class="col">
+                                        <label for="passwordConfirm" class="form-label">Password (Required)</label>
+                                        <div class="input-group mb-3">
+                                            <input type="password" name="passwordConfirm"
+                                                   class="form-control passwordInput"
+                                                   aria-label="Enter Password" aria-describedby="passwordToggle">
+                                            <div class="input-group-append d-lg-none ml-0">
+                                                <button class="btn btn-sm btn-outline-secondary passwordToggle"
+                                                        type="button">SHOW
+                                                </button>
+                                            </div>
+                                            <div class="w-100 d-flex justify-content-between">
+                                                <span class="text-danger mb-3">Please enter a value.</span>
+                                                <a href="#" class="text-right" data-toggle="modal"
+                                                   data-target="#forgotPassword">Forgot Password?</a>
+                                            </div>
+                                        </div>
+
+                                        <!-- SIGN IN BUTTON -->
+                                        <div class="col p-0 col-lg-6 mt-4">
+                                            <button type="submit" class="btn btn-block btn-primary disabled">Sign In
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-right">
+                                    <h2 class="mb-3 d-none d-lg-block">Create An Account</h2>
+                                    <p class="mt-4 d-none d-lg-block">Tell us more about yourself and check out faster
+                                        next
+                                        time. It's easy!</p>
+                                    <p class="d-none d-lg-block">Plus, sign up to receive special offers &amp; discounts
+                                        from Outback Steakhouse.</p>
+                                    <!-- REGISTER BUTTON -->
+                                    <button class="btn btn-block btn-outline-secondary mt-3" data-toggle="modal"
+                                            data-target="#createAccount">Register
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /ACCOUNT SIGN-IN MODAL -->
+
+
+            <!-- ACCOUNT INFO FLYOUT MENU (LOGGED IN) -->
+            <div class="modal" id="account-info" data-component="account-info" tabindex="-1" role="dialog"
+                 aria-hidden="false">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title text-uppercase">Your Account</h1>
+                        </div>
+                        <div class="modal-body">
+                            <a href="#" class="btn btn-block btn-outline-secondary">Account Information</a>
+                            <a href="#" class="btn btn-block btn-outline-secondary">My Wallet</a>
+                            <a href="#" class="btn btn-block btn-outline-secondary">Location Preference</a>
+                            <a href="#" class="btn btn-block btn-primary">Sign Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VIEW CART MODAL -->
+            <div data-component="view-cart" class="modal" id="viewCart" tabindex="-1" role="dialog"
+                 aria-labelledby="viewCart" aria-hidden="false">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                    <div class="modal-content">
+                        <!-- Cart Header -->
+                        <div class="modal-header row w-100 ml-0">
+                            <div class="row m-0 w-100 text-uppercase">
+                                <h1 class="modal-title text-center col-12 p-0" id="viewCartTitle">Your Order</h1>
+                                <div class="row w-100 m-0">
+                                    <p class="col-8 col-lg-9 pl-0 m-0">Item</p>
+                                    <p class="col-auto m-0">Price</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Cart Body -->
+                        <div class="modal-body">
+                            <div class="row m-0">
+                                <ul class="list-unstyled d-flex flex-column cart-content w-100">
+                                    <li class="item row mb-3">
+                                        <div class="col-8 col-lg-9 cart-items">
+                                            <p class="text-uppercase m-0">Victoria's Filet® Mignon</p>
+                                            <p class="mb-0">6 oz. Medium</p>
+                                        </div>
+
+                                        <div class="col-auto cart-price">$37.73</div>
+                                        <div class="edit-order w-100 pb-2 mx-3">
+                                            <a href="#">Edit</a> | <span>Confirm Item Removal?</span>
+
+                                            <!-- CONFIRM DELETE -->
+                                            <div class="w-100 mt-3 d-flex justify-content-center">
+                                                <button type="button" class="btn btn-outline-dark mb-2 m-0">Cancel
+                                                </button>
+                                                <button type="button" class="btn btn-outline-dark mb-2 ml-3">Delete
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item row mb-3">
+                                        <div class="col-8 col-lg-9 cart-items">
+                                            <p class="text-uppercase m-0">Victoria's Filet® Mignon</p>
+                                            <p class="mb-0">6 oz. Medium</p>
+                                        </div>
+
+                                        <div class="col-auto cart-price">$37.73</div>
+                                        <div class="edit-order w-100 pb-2 mx-3">
+                                            <a href="#">Edit</a> | <a href="#">Delete</a>
+                                        </div>
+                                    </li>
+                                    <li class="item row mb-3">
+                                        <div class="col-8 col-lg-9 cart-items">
+                                            <p class="text-uppercase m-0">Victoria's Filet® Mignon</p>
+                                            <p class="mb-0">6 oz. Medium</p>
+                                        </div>
+
+                                        <div class="col-auto cart-price">$37.73</div>
+                                        <div class="edit-order w-100 pb-2 mx-3">
+                                            <a href="#">Edit</a> | <a href="#">Delete</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="modal-footer d-block">
+                            <ul class="list-unstyled">
+                                <li class="row">
+                                    <div class="col-8 col-lg-9">
+                                        <h2>Subtotal</h2>
+                                    </div>
+                                    <div class="col-auto">
+                                        <h2>$37.73</h2>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="row justify-content-lg-between">
+                                <button type="button" class="btn btn-outline-dark">Add More Food</button>
+                                <button type="button" class="btn btn-primary">Checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <i class="icon-cart_bag pl-2" data-toggle="modal" data-target="#viewCart">
+            </i>
+        </div>
+    </div>
+</nav>
+
         
         
 </div>

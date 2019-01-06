@@ -9578,6 +9578,11 @@ dl, dd {
 
 [data-template="checkout"] {
   background: #4A4A4A; }
+  [data-template="checkout"] .navbar {
+    height: 200px; }
+    @media (min-width: 992px) {
+      [data-template="checkout"] .navbar {
+        height: 134px; } }
   [data-template="checkout"] .your-order {
     background: #fff;
     max-width: 346px; }
@@ -9593,6 +9598,8 @@ dl, dd {
       font-family: TradeGothic-BoldCondTwenty, sans-serif; }
     [data-template="checkout"] .step.inactive .step-number {
       background: #5ABB62i; }
+    [data-template="checkout"] .step:first-child {
+      margin-top: 95px; }
   [data-template="checkout"] .step-item {
     padding: 42px 0 30px;
     border-top: 1px solid #979797; }
@@ -10606,6 +10613,7 @@ dl, dd {
       margin-top: 0.6rem; }
 
 .customer-order-list {
+  margin-top: 95px;
   background: #fff; }
   .customer-order-list h1 {
     font-size: 20px;

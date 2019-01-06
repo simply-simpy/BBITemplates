@@ -1,7 +1,12 @@
 [data-template="checkout"] {
 
   background: $body-bg-checkout;
-
+  .navbar {
+    height: 200px;
+    @include media-breakpoint-up(lg){
+      height: 134px;
+    }
+  }
   .your-order {
     background: #fff;
     max-width: 346px;
@@ -23,8 +28,10 @@
     &.inactive {
       .step-number {
         background: #5ABB62i;
-
       }
+    }
+    &:first-child {
+      margin-top: 95px;
     }
   }
 

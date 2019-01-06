@@ -15,15 +15,7 @@
             )}}
         </div>
     </div>
-
-    {% import 'components/modals/_modal.macro.html' as modal %}
-    {{ modal.addContent(
-    'Select payment method',
-    'payment-method',
-    'desktop',
-    'mobile',
-    ''
-    )}}
+    {% include 'components/modals/_modal.payment-info.html' %}
 </div>
 <div class="step-item">
     <div data-component="apply-discount" class="apply-discount">

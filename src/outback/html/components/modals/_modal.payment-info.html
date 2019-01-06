@@ -1,0 +1,19 @@
+{% set modalId = 'payment-method' %}
+{% set modalTitle = 'Select Payment Method' %}
+{% set type = 'radio' %}
+{% set name = 'payment-method' %}
+{% set buttonMobile = 'Save' %}
+{% set buttonDesktop = 'Save' %}
+
+{% extends 'components/modals/_modal.html' %}
+{% block modalContent %}
+{% set text = 'Pay Online' %}
+{% set text1 = 'pay-online' %}
+{% set id = 'pay-online' %}
+{% include '../forms/_input.generic.html' %}
+
+{% set text = 'Pay at Restaurant' %}
+{% set text1 = 'pay-at-restaurant' %}
+{% set id = 'pay-at-restaurant' %}
+{% include '../forms/_input.generic.html' %}
+{% endblock %}
