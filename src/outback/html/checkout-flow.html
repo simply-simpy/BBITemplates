@@ -1,15 +1,24 @@
 {% set dataTemplate = "checkout" %}
 {% extends '_layout.html' %}
 {% block content %}
-<div class="container-fluid">
+<section class="customer-order-list d-lg-none" data-component="customer-order-list">
+    <h1 class="customer-order-list-heading collapsed d-lg-none" data-toggle="collapse"
+        data-target="#menu-items-content-mobile">Your
+        Order<span class="icon icon-zmdi-chevron-right"></span></h1>
+    <div class="menu-items-content d-lg-none collapse" id="menu-items-content-mobile">
+        <div class="menu-items">
+            {% include "components/menu-item-details.html" %}
+        </div>
+        {% include "components/_itemization.html" %}
+    </div>
+</section>
+<div class="container checkout-wrap">
     <div class="row">
-        <div class="col-lg-4 order-lg-last">
+        <div class="col-lg-4 order-lg-last d-none d-lg-block">
             <section class="customer-order-list" data-component="customer-order-list">
-                <h1 class="customer-order-list-heading d-none d-lg-block">Your Order</h1>
-                <h1 class="customer-order-list-heading collapsed d-lg-none" data-toggle="collapse" data-target="#menu-items-content">Your
-                    Order</h1>
-                <div class="menu-items-content  collapse" id="menu-items-content">
-                    <div class="menu-items" >
+                <h1 class="customer-order-list-heading">Your Order</h1>
+                <div class="menu-items-content">
+                    <div class="menu-items">
                         {% include "components/menu-item-details.html" %}
                     </div>
                     {% include "components/_itemization.html" %}

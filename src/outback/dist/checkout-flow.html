@@ -221,15 +221,175 @@
 </nav>
 
         
-<div class="container-fluid">
+<section class="customer-order-list d-lg-none" data-component="customer-order-list">
+    <h1 class="customer-order-list-heading collapsed d-lg-none" data-toggle="collapse"
+        data-target="#menu-items-content-mobile">Your
+        Order<span class="icon icon-zmdi-chevron-right"></span></h1>
+    <div class="menu-items-content d-lg-none collapse" id="menu-items-content-mobile">
+        <div class="menu-items">
+            <div class="menu-item" data-component="menu-item-details">
+    <a class="icon-carat collapsed toggle-menu-item-details"
+       data-toggle="collapse"
+       href="#menu-item-details-1"
+       role="button"
+       aria-expanded="false"
+       aria-controls="collapseExample">
+        <span class="sr-only">Toggle Item Details</span>
+        <div class="row no-gutters">
+            <div class="col-auto">
+                <img class="img-fluid menu-item-img" src="../img/menu-item.jpg" alt="">
+            </div>
+            <div class="col">
+                <div class="row no-gutters">
+                    <div class="col-2 order-row-header col-qty">
+                        <span class="text-uppercase">qty</span>
+                    </div>
+                    <div class="col-8 order-row-header col-item">
+                        <span class="text-uppercase">item</span>
+                    </div>
+                    <div class="col order-row-header col-price">
+                        <span class="text-uppercase">price</span>
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-2 col-qty">
+                        <h2 class="font-weight-bold">1</h2>
+                    </div>
+                    <div class="col-8 col-item">
+                        <h2>
+                            <span class="font-weight-bold text-uppercase">Victoria's Filet&reg; Mignon* </span> 6 oz.
+                        </h2>
+                    </div>
+                    <div class="col col-price">
+                        <h3 class="price">$33.07</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+    <div id="menu-item-details-1" class="menu-item-detail-view collapse" data-component="menu-item-detail-view">
+        <p><span class="font-weight-bold text-uppercase">Temperature: </span>Medium Rare</p>
+        <p><span class="font-weight-bold text-uppercase">First Side: </span>Signature Side
+            Salad, Honey Mustard Dressing, No Cheese, No
+            Croutons</p>
+        <p><span class="font-weight-bold text-uppercase">Second Side: </span>Sauteed
+            Mushrooms, No Onions</p>
+        <p><span class="font-weight-bold text-uppercase">Add-ons: </span>Baby Back Ribs</p>
+    </div>
+</div>
+<div class="menu-item" data-component="menu-item-details">
+    <a class="icon-carat collapsed toggle-menu-item-details"
+       data-toggle="collapse"
+       href="#menu-item-details-2"
+       role="button"
+       aria-expanded="false"
+       aria-controls="collapseExample">
+        <span class="sr-only">Toggle Item Details</span>
+        <div class="row no-gutters">
+            <div class="col-auto">
+                <img class="img-fluid menu-item-img" src="../img/menu-item.jpg" alt="">
+            </div>
+            <div class="col">
+                <div class="row no-gutters">
+                    <div class="col-2 order-row-header col-qty">
+                        <span class="text-uppercase">qty</span>
+                    </div>
+                    <div class="col-8 order-row-header col-item">
+                        <span class="text-uppercase">item</span>
+                    </div>
+                    <div class="col order-row-header col-price">
+                        <span class="text-uppercase">price</span>
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-2 col-qty">
+                        <h2 class="font-weight-bold">1</h2>
+                    </div>
+                    <div class="col-8 col-item">
+                        <h2>
+                            <span class="font-weight-bold text-uppercase">Victoria's Filet&reg; Mignon* </span> 6 oz.
+                        </h2>
+                    </div>
+                    <div class="col col-price">
+                        <h3 class="price">$33.07</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+    <div id="menu-item-details-2" class="menu-item-detail-view collapse" data-component="menu-item-detail-view">
+        <p><span class="font-weight-bold text-uppercase">Temperature: </span>Medium Rare</p>
+        <p><span class="font-weight-bold text-uppercase">First Side: </span>Signature Side
+            Salad, Honey Mustard Dressing, No Cheese, No
+            Croutons</p>
+        <p><span class="font-weight-bold text-uppercase">Second Side: </span>Sauteed
+            Mushrooms, No Onions</p>
+        <p><span class="font-weight-bold text-uppercase">Add-ons: </span>Baby Back Ribs</p>
+    </div>
+</div>
+
+        </div>
+        <div class="itemization" data-component="itemization">
+    <div class="row no-gutters">
+        <div class="col">
+            <span>Subtotal</span>
+        </div>
+        <div class="col">
+            <span>$XX.XX</span>
+        </div>
+    </div>
+    <div class="row no-gutters">
+        <div class="col">
+            <span>Tax</span>
+        </div>
+        <div class="col">
+            <span>$X.XX</span>
+        </div>
+    </div>
+    <div class="row no-gutters">
+        <div class="col">
+            <span>Delivery Fee</span>
+        </div>
+        <div class="col">
+            <span>$X.XX</span>
+        </div>
+    </div>
+    <div class="row no-gutters">
+        <div class="col">
+            <span>Tip</span>
+        </div>
+        <div class="col">
+            <span>$X.XX</span>
+        </div>
+    </div>
+    <div class="row no-gutters">
+        <div class="col">
+            <span>Discount</span>
+        </div>
+        <div class="col">
+            <span>$X.XX</span>
+        </div>
+    </div>
+    <div class="row no-gutters">
+        <div class="col">
+            <span>TOTAL</span>
+        </div>
+        <div class="col">
+            <span>$XX.XX</span>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+</section>
+<div class="container checkout-wrap">
     <div class="row">
-        <div class="col-lg-4 order-lg-last">
+        <div class="col-lg-4 order-lg-last d-none d-lg-block">
             <section class="customer-order-list" data-component="customer-order-list">
-                <h1 class="customer-order-list-heading d-none d-lg-block">Your Order</h1>
-                <h1 class="customer-order-list-heading collapsed d-lg-none" data-toggle="collapse" data-target="#menu-items-content">Your
-                    Order</h1>
-                <div class="menu-items-content  collapse" id="menu-items-content">
-                    <div class="menu-items" >
+                <h1 class="customer-order-list-heading">Your Order</h1>
+                <div class="menu-items-content">
+                    <div class="menu-items">
                         <div class="menu-item" data-component="menu-item-details">
     <a class="icon-carat collapsed toggle-menu-item-details"
        data-toggle="collapse"

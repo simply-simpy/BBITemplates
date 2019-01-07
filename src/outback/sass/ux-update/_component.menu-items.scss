@@ -13,6 +13,9 @@
 
   letter-spacing: -.04em;
   margin: $spacer * .625;
+  @include media-breakpoint-down(sm){
+    margin-top: 0;
+  }
   padding: $spacer;
 
   .menu-item-img {

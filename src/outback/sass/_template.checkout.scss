@@ -5,7 +5,7 @@
 
   background: $body-bg-checkout;
 
-  > .navbar + .container {
+  .checkout-wrap {
     min-height: calc(100vh - 145px - 134px);
   }
 
@@ -30,7 +30,7 @@
   }
 
   .navbar {
-    height: 200px;
+    height: 100px;
     @include media-breakpoint-up(lg) {
       height: 134px;
     }
@@ -44,7 +44,10 @@
   .step {
     background: #fff;
     margin-bottom: $spacer * 1.75;
-    padding: $spacer * 1.5;
+    padding: $spacer * .75;
+    @include media-breakpoint-up(lg){
+      padding: $spacer * 1.5;
+    }
 
     .custom-radio.custom-control-inline {
       background: #fff;
