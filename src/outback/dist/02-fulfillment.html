@@ -20,10 +20,10 @@
             
             
 <button type="button" class="btn form-control modal-trigger date-time-picker-trigger" data-toggle="modal"
-        data-target="#date-time-picker">
+        data-target="#date-time-picker" id="">
     <span class="inner">
         <span class="text">
-           Pay Online
+           
         </span>
         <span class="icon icon-carat"></span>
     </span>
@@ -31,51 +31,56 @@
 
             <div class="date-time-picker modal fade  datepicker-open" tabindex="-1" role="dialog" aria-hidden="false"
      data-component="date-time-picker" id="date-time-picker">
-    <form>
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title">Choose Date And Time</h1>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col">
-                            <h2>Choose Date</h2>
-                            <div class="form-group">
-                                <div class="input-group date" id="datetimepicker" data-target-input="nearest">
-                                    <div id="datetimepicker-toggle" class="form-control  date-picked"></div>
-                                    <input type="hidden" class="datetimepicker-input"/>
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title">Choose Date And Time</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col">
+                        <h2>Choose Date</h2>
+                        <div class="form-group">
+                            <div class="input-group date" id="datetimepicker" data-target-input="nearest">
 
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">
-                                            <i class="icon icon-zmdi-chevron-right"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="datetimepicker-container"></div>
+                                
+                                
+<button type="button" class="btn form-control modal-trigger" data-toggle="modal"
+        data-target="#" id="datetimepicker-toggle">
+    <span class="inner">
+        <span class="text">
+           
+        </span>
+        <span class="icon icon-carat"></span>
+    </span>
+</button>
+
+                                <input type="hidden" class="datetimepicker-input"/>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col">
-                            <div class="choose-time">
-                                <h2>Choose Time</h2>
-                                <div class="show-times">
-                                    <button data-time="" class="btn show-times-btn"><span class="time">5:00 PM</span><span class="icon icon-zmdi-chevron-right"></span></button>
-                                    <div class="times">
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        <div class="custom-control custom-radio  vehicle  grid-item ">
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="choose-time">
+                            <h2>Choose Time</h2>
+                            <div class="show-times">
+                                <button data-time="" class="btn show-times-btn"><span class="time">5:00 PM</span><span
+                                        class="icon icon-carat"></span></button>
+                                <div class="times">
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    <div class="custom-control custom-radio  vehicle  grid-item ">
     
-    <input type="radio" class="custom-control-input" name="time" id=10:00 data-time="10:00 AM" >
+    <input type="radio" class="custom-control-input" name="time" id=10:00 data-time="10:00 AM">
     <label class="custom-control-label grid-input" for="10:00">
         <span class="">10:00 AM</span>
         
@@ -83,13 +88,13 @@
     
 </div>
 
-                                        
-                                        
-                                        
-                                        
-                                        <div class="custom-control custom-radio  vehicle  grid-item ">
+                                    
+                                    
+                                    
+                                    
+                                    <div class="custom-control custom-radio  vehicle  grid-item ">
     
-    <input type="radio" class="custom-control-input" name="time" id=10:30 data-time="10:30 AM" >
+    <input type="radio" class="custom-control-input" name="time" id=10:30 data-time="10:30 AM">
     <label class="custom-control-label grid-input" for="10:30">
         <span class="">10:30 AM</span>
         
@@ -97,13 +102,13 @@
     
 </div>
 
-                                        
-                                        
-                                        
-                                        
-                                        <div class="custom-control custom-radio  vehicle  grid-item ">
+                                    
+                                    
+                                    
+                                    
+                                    <div class="custom-control custom-radio  vehicle  grid-item ">
     
-    <input type="radio" class="custom-control-input" name="time" id=11:00 data-time="11:00 AM" >
+    <input type="radio" class="custom-control-input" name="time" id=11:00 data-time="11:00 AM">
     <label class="custom-control-label grid-input" for="11:00">
         <span class="">11:00 AM</span>
         
@@ -111,13 +116,13 @@
     
 </div>
 
-                                        
-                                        
-                                        
-                                        
-                                        <div class="custom-control custom-radio  vehicle  grid-item ">
+                                    
+                                    
+                                    
+                                    
+                                    <div class="custom-control custom-radio  vehicle  grid-item ">
     
-    <input type="radio" class="custom-control-input" name="time" id=11:30 data-time="11:30 AM" >
+    <input type="radio" class="custom-control-input" name="time" id=11:30 data-time="11:30 AM">
     <label class="custom-control-label grid-input" for="11:30">
         <span class="">11:30 AM</span>
         
@@ -125,13 +130,13 @@
     
 </div>
 
-                                        
-                                        
-                                        
-                                        
-                                        <div class="custom-control custom-radio  vehicle  grid-item ">
+                                    
+                                    
+                                    
+                                    
+                                    <div class="custom-control custom-radio  vehicle  grid-item ">
     
-    <input type="radio" class="custom-control-input" name="time" id=12:00 data-time="12:00 PM" >
+    <input type="radio" class="custom-control-input" name="time" id=12:00 data-time="12:00 PM">
     <label class="custom-control-label grid-input" for="12:00">
         <span class="">12:00 PM</span>
         
@@ -139,13 +144,13 @@
     
 </div>
 
-                                        
-                                        
-                                        
-                                        
-                                        <div class="custom-control custom-radio  vehicle  grid-item ">
+                                    
+                                    
+                                    
+                                    
+                                    <div class="custom-control custom-radio  vehicle  grid-item ">
     
-    <input type="radio" class="custom-control-input" name="time" id=12:30 data-time="12:30 PM" >
+    <input type="radio" class="custom-control-input" name="time" id=12:30 data-time="12:30 PM">
     <label class="custom-control-label grid-input" for="12:30">
         <span class="">12:30 PM</span>
         
@@ -153,13 +158,13 @@
     
 </div>
 
-                                        
-                                        
-                                        
-                                        
-                                        <div class="custom-control custom-radio  vehicle  grid-item ">
+                                    
+                                    
+                                    
+                                    
+                                    <div class="custom-control custom-radio  vehicle  grid-item ">
     
-    <input type="radio" class="custom-control-input" name="time" id=1:00 data-time="1:00 PM" >
+    <input type="radio" class="custom-control-input" name="time" id=1:00 data-time="1:00 PM">
     <label class="custom-control-label grid-input" for="1:00">
         <span class="">1:00 PM</span>
         
@@ -167,13 +172,13 @@
     
 </div>
 
-                                        
-                                        
-                                        
-                                        
-                                        <div class="custom-control custom-radio  vehicle  grid-item ">
+                                    
+                                    
+                                    
+                                    
+                                    <div class="custom-control custom-radio  vehicle  grid-item ">
     
-    <input type="radio" class="custom-control-input" name="time" id=1:30 data-time="1:30 PM" >
+    <input type="radio" class="custom-control-input" name="time" id=1:30 data-time="1:30 PM">
     <label class="custom-control-label grid-input" for="1:30">
         <span class="">1:30 PM</span>
         
@@ -181,13 +186,13 @@
     
 </div>
 
-                                        
-                                        
-                                        
-                                        
-                                        <div class="custom-control custom-radio  vehicle  grid-item ">
+                                    
+                                    
+                                    
+                                    
+                                    <div class="custom-control custom-radio  vehicle  grid-item ">
     
-    <input type="radio" class="custom-control-input" name="time" id=2:00 data-time="2:00 PM" >
+    <input type="radio" class="custom-control-input" name="time" id=2:00 data-time="2:00 PM">
     <label class="custom-control-label grid-input" for="2:00">
         <span class="">2:00 PM</span>
         
@@ -195,13 +200,13 @@
     
 </div>
 
-                                        
-                                        
-                                        
-                                        
-                                        <div class="custom-control custom-radio  vehicle  grid-item ">
+                                    
+                                    
+                                    
+                                    
+                                    <div class="custom-control custom-radio  vehicle  grid-item ">
     
-    <input type="radio" class="custom-control-input" name="time" id=2:30 data-time="2:30 PM" >
+    <input type="radio" class="custom-control-input" name="time" id=2:30 data-time="2:30 PM">
     <label class="custom-control-label grid-input" for="2:30">
         <span class="">2:30 PM</span>
         
@@ -209,13 +214,13 @@
     
 </div>
 
-                                        
-                                        
-                                        
-                                        
-                                        <div class="custom-control custom-radio  vehicle  grid-item ">
+                                    
+                                    
+                                    
+                                    
+                                    <div class="custom-control custom-radio  vehicle  grid-item ">
     
-    <input type="radio" class="custom-control-input" name="time" id=3:00 data-time="3:00 PM" >
+    <input type="radio" class="custom-control-input" name="time" id=3:00 data-time="3:00 PM">
     <label class="custom-control-label grid-input" for="3:00">
         <span class="">3:00 PM</span>
         
@@ -223,13 +228,13 @@
     
 </div>
 
-                                        
-                                        
-                                        
-                                        
-                                        <div class="custom-control custom-radio  vehicle  grid-item ">
+                                    
+                                    
+                                    
+                                    
+                                    <div class="custom-control custom-radio  vehicle  grid-item ">
     
-    <input type="radio" class="custom-control-input" name="time" id=3:30 data-time="3:30 PM" >
+    <input type="radio" class="custom-control-input" name="time" id=3:30 data-time="3:30 PM">
     <label class="custom-control-label grid-input" for="3:30">
         <span class="">3:30 PM</span>
         
@@ -237,32 +242,31 @@
     
 </div>
 
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--Back and next buttons-->
-                <div class="sticky-buttons sticky-buttons-modal">
-                    <div class="sticky-buttons-inner">
-                        <div class="container justify-content-center">
-                            <div class="row">
-                                <div class="offset-lg-4 col-lg-4">
-                                    <button type="submit" class="btn btn-primary btn-lg btn-block"
-                                            role="button" aria-pressed="true">
-                                        <span class="d-md-none">OK mobile</span><!--mobile-->
-                                        <span class="d-none d-md-inline">OK</span><!--desktop-->
-                                    </button>
+                                    
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!--Back and next buttons-->
+            <div class="sticky-buttons sticky-buttons-modal">
+                <div class="sticky-buttons-inner">
+                    <div class="container justify-content-center">
+                        <div class="row">
+                            <div class="offset-lg-4 col-lg-4">
+                                <button type="submit" class="btn btn-primary btn-lg btn-block"
+                                        role="button" aria-pressed="true">
+                                    <span class="d-md-none">OK mobile</span><!--mobile-->
+                                    <span class="d-none d-md-inline">OK</span><!--desktop-->
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </form>
+    </div>
 </div>
 
         </div>
@@ -290,11 +294,13 @@
     
 <div class="custom-control custom-radio custom-control-inline vehicle ">
     
-        
-        <input type="radio" data-time="" class="custom-control-input" id="yes" name="curbside">
-        
-        <label class="custom-control-label" for="yes">Yes</label>
-        
+    
+    
+    <input type="radio" data-time="" class="custom-control-input" id="yes" name="curbside"/>
+    
+    
+    <label class="custom-control-label" for="yes">Yes</label>
+    
     
 </div>
 
@@ -303,11 +309,13 @@
     
 <div class="custom-control custom-radio custom-control-inline vehicle ">
     
-        
-        <input type="radio" data-time="" class="custom-control-input" id="no" name="curbside">
-        
-        <label class="custom-control-label" for="no">No</label>
-        
+    
+    
+    <input type="radio" data-time="" class="custom-control-input" id="no" name="curbside"/>
+    
+    
+    <label class="custom-control-label" for="no">No</label>
+    
     
 </div>
 
@@ -325,7 +333,7 @@
 
         <p>This information is used to identify your car when you pickup your order.</p>
         
-        <div data-component="vehicle-info">
+        <div data-component="vehicle-info" class="vehicle-info">
     <span class="form-label">Choose Vehicle Type</span>
     <div class="vehicles">
         
@@ -334,68 +342,72 @@
         
         <div class="custom-control custom-radio car vehicle ">
     
-    <input type="radio" class="custom-control-input" value="1" id="singleOption-1" name="vehicle_type">
+    <input type="radio" class="custom-control-input" value="1" id="singleOption-1"
+           name="vehicle_type">
     <label class="custom-control-label" for="singleOption-1"></label>
-        <span class="icon-car">1</span>
-        <span>car</span>
+    <span class="icon-car">1</span>
+    <span>car</span>
     
 </div>
 
         
         <div class="custom-control custom-radio suv vehicle ">
     
-    <input type="radio" class="custom-control-input" value="2" id="singleOption-2" name="vehicle_type">
+    <input type="radio" class="custom-control-input" value="2" id="singleOption-2"
+           name="vehicle_type">
     <label class="custom-control-label" for="singleOption-2"></label>
-        <span class="icon-suv">2</span>
-        <span>SUV</span>
+    <span class="icon-suv">2</span>
+    <span>SUV</span>
     
 </div>
 
         
         <div class="custom-control custom-radio van vehicle ">
     
-    <input type="radio" class="custom-control-input" value="3" id="singleOption-3" name="vehicle_type">
+    <input type="radio" class="custom-control-input" value="3" id="singleOption-3"
+           name="vehicle_type">
     <label class="custom-control-label" for="singleOption-3"></label>
-        <span class="icon-van">3</span>
-        <span>Van</span>
+    <span class="icon-van">3</span>
+    <span>Van</span>
     
 </div>
 
         
         <div class="custom-control custom-radio truck vehicle ">
     
-    <input type="radio" class="custom-control-input" value="4" id="singleOption-4" name="vehicle_type">
+    <input type="radio" class="custom-control-input" value="4" id="singleOption-4"
+           name="vehicle_type">
     <label class="custom-control-label" for="singleOption-4"></label>
-        <span class="icon-truck">4</span>
-        <span>Truck</span>
+    <span class="icon-truck">4</span>
+    <span>Truck</span>
     
 </div>
 
     </div>
-    <div class="row">
-        <div class="col-md-6">
-            <span class="form-label">Choose Vehicle Color</span>
-            <!-- Dropdown -->
-            <button type="button" class="btn modal-trigger" data-toggle="modal" data-target="#dateTimePickerModal">
+    <div class="step-item no-border">
+        <div class="row">
+            <div class="col-md-6">
+                <span class="form-label">Choose Vehicle Color</span>
+                <button type="button" class="btn modal-trigger choose-vehicle" data-toggle="modal" data-target="#dateTimePickerModal">
                 <span class="inner">
                     <span class="text date-picked font-weight-bold">
                         Select a vehicle color...
                     </span>
                     <span class="icon icon-carat"></span>
                 </span>
-            </button>
-        </div>
-        <div class="col-md-6">
-            <span class="form-label">Choose Vehicle Make</span>
-            <!-- Dropdown -->
-            <button type="button" class="btn modal-trigger" data-toggle="modal" data-target="#dateTimePickerModal">
+                </button>
+            </div>
+            <div class="col-md-6">
+                <span class="form-label">Choose Vehicle Make</span>
+                <button type="button" class="btn modal-trigger choose-vehicle" data-toggle="modal" data-target="#dateTimePickerModal">
                     <span class="inner">
                         <span class="text date-picked font-weight-bold">
                             Select a vehicle make...
                         </span>
                         <span class="icon icon-carat"></span>
                     </span>
-            </button>
+                </button>
+            </div>
         </div>
     </div>
 </div>
@@ -407,7 +419,7 @@
     
     
 
-<button type="button" class="btn btn-primary btn-lg" id="">
+<button type="" class="btn btn-primary btn-lg">
     <span class="d-md-none">Next</span>
     <span class="d-none d-md-inline">Next</span>
 </button>

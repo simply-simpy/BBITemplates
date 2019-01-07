@@ -1,0 +1,15 @@
+.wallet-options {
+  .disabled {
+    margin-left: $spacer * 2;
+  }
+  label {
+    @include rem(16px);
+  }
+  .custom-control-label:before,
+  .custom-control-label:after {
+    top: .1rem;
+  }
+  .custom-control {
+    margin-bottom: .5rem;
+  }
+}

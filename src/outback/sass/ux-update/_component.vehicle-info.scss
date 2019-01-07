@@ -1,7 +1,11 @@
-[data-component="vehicle-info"] {
+.vehicle-info {
+  .choose-vehicle {
+    margin-top: $spacer * .25;
+  }
   .vehicles {
     display: flex;
-    margin-top: $spacer * .5;
+    flex-wrap: wrap;
+    margin: $spacer * .5 auto 0;
     .custom-control {
       padding-left: 0;
     }
@@ -31,9 +35,16 @@
       justify-content: center;
       margin-right: $spacer * .3;
       padding-top: $spacer * 2.63;
+      min-width: 37vw;
+      @include media-breakpoint-up(sm){
+        min-width: 0;
+      }
       max-width: 130px;
       span[class^="icon"] {
-        @include rem(28px)
+        font-size: 4vw;
+        @include media-breakpoint-up(lg){
+          @include rem(28px)
+        }
       }
     }
   }

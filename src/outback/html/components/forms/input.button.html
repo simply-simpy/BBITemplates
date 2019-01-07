@@ -1,6 +1,6 @@
-{% macro addContent(text, mobileText, className, id) %}
+{% macro addContent(text, mobileText, className, id, type) %}
 
-<button type="button" class="btn {{ className }}" id="{{ id }}">
+<button type="{{ type }}" class="btn {{ className }}">
     <span class="d-md-none">{{text}}</span>
     <span class="d-none d-md-inline">{{text}}</span>
 </button>

@@ -1,0 +1,6 @@
+.contact-information {
+  .custom-control {
+    margin-top: $spacer * .25;
+    @include rem(17px);
+  }
+}

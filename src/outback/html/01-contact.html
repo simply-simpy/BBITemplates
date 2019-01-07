@@ -5,14 +5,14 @@
 
 {% block content %}
 <div class="step-item">
-    <div data-component="contact-information">
+    <div data-component="contact-information" class="contact-information">
         <div class="row">
             <div class="col-sm">
                 {% import './components/forms/input.text.html' as input %}
                 {{ input.addContent(
                 'first-name',
                 'First Name',
-                '',
+                'Jordan',
                 'text',
                 ''
                 )
@@ -23,7 +23,7 @@
                 {{ input.addContent(
                 'last-name',
                 'Last Name',
-                '',
+                'Smith',
                 'text',
                 ''
                 )
@@ -36,7 +36,7 @@
                 {{ input.addContent(
                 'email-address',
                 'Email',
-                '',
+                'jordansmith@gmail.com',
                 'email-address',
                 ''
                 )
@@ -47,31 +47,9 @@
                 {{ input.addContent(
                 'phone-number',
                 'Phone Number',
-                '',
+                '(555) 555-5555',
                 'phone',
                 ''
-                )
-                }}
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                {% import './components/forms/input.checkbox.html' as input %}
-                {{ input.addContent(
-                'Sign me up for Dine Rewards',
-                ' dine-rewards',
-                'dine-rewards'
-                )
-                }}
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                {% import './components/forms/input.checkbox.html' as input %}
-                {{ input.addContent(
-                'Sign me up for email',
-                ' email-signup',
-                'email-signup'
                 )
                 }}
             </div>
@@ -103,8 +81,8 @@
                 {% import './components/forms/input.checkbox.html' as input %}
                 {{ input.addContent(
                 'Sign me up to receive Outback exclusive email offers and promotions',
-                ' email-signup',
-                'email-signup'
+                ' email-signup-offers',
+                'email-signup-offers'
                 )
                 }}
             </div>
@@ -113,23 +91,28 @@
             <div class="col">
                 {% import './components/forms/input.checkbox.html' as input %}
                 {{ input.addContent(
-                'Thank you for being a member of the Dine Rewards loyalty program <a target="_blank" href="#">terms and conditions</a>',
+                'Thank you for being a member of the Dine Rewards loyalty program <a target="_blank" href="#">terms and
+                conditions</a>',
                 ' dine-rewards-thank-you',
                 'dine-rewards-thank-you'
                 )
                 }}
             </div>
         </div>
-        <p class="legal d-lg-none small mt-2"><strong>Legal Copy</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur delectus doloremque facere harum, laudantium neque non numquam qui reprehenderit sequi. Dolorem nobis non quaerat quasi suscipit. Eaque odit perferendis suscipit.</p>
+        <p class="legal d-lg-none small mt-2"><strong>Legal Copy</strong> Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Consequuntur delectus doloremque facere harum, laudantium neque non numquam qui
+            reprehenderit sequi. Dolorem nobis non quaerat quasi suscipit. Eaque odit perferendis suscipit.</p>
     </div>
-    <div class="button-group">
-        {% import './components/forms/input.button.html' as btn %}
-        {{ btn.addContent(
-        'Next',
-        '',
-        'btn-primary btn-lg disabled'
-        )
-        }}
-    </div>
+</div>
+<div class="button-group">
+    {% import './components/forms/input.button.html' as btn %}
+    {{ btn.addContent(
+    'Next',
+    '',
+    'btn-primary btn-lg disabled',
+    '',
+    'submit'
+    )
+    }}
 </div>
 {% endblock %}

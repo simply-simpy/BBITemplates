@@ -1,0 +1,23 @@
+<div data-component="wallet-options" class="wallet-options">
+    {% import 'components/forms/_input.generic.macro.html' as radio %}
+    {{ radio.addContent(
+    'checkbox',
+    'Save to wallet',
+    'save-to-wallet',
+    'disabled',
+    '',
+    '',
+    'saveToWallet'
+    )}}
+    {% import 'components/forms/_input.generic.macro.html' as radio %}
+    {{ radio.addContent(
+    'checkbox',
+    'Make default',
+    'make-default',
+    'disabled',
+    '',
+    '',
+    'disabled',
+    'true'
+    )}}
+</div>

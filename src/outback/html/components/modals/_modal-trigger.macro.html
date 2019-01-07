@@ -1,6 +1,6 @@
-{% macro addContent(btnText, btnTarget, btnClassName) %}
+{% macro addContent(btnText, btnTarget, btnClassName, btnId) %}
 <button type="button" class="btn form-control modal-trigger{{ btnClassName }}" data-toggle="modal"
-        data-target="#{{ btnTarget }}">
+        data-target="#{{ btnTarget }}" id="{{btnId}}">
     <span class="inner">
         <span class="text">
            {{ btnText }}

@@ -1,11 +1,18 @@
-.custom-control-label {
-  line-height: 1.2;
-}
-.form-inline {
-  .custom-control  {
-    & + .custom-control {
-      margin-left: $spacer * 2;
-    }
+[data-template="checkout"] {
+  .custom-control-label {
+    line-height: 1.2;
 
+  }
+
+  .form-inline {
+    .custom-control {
+      & + .custom-control {
+        margin-left: $spacer * 2;
+      }
+    }
+  }
+
+  .form-control {
+    margin-bottom: 0;
   }
 }

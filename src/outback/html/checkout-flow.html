@@ -1,29 +1,59 @@
 {% set dataTemplate = "checkout" %}
 {% extends '_layout.html' %}
 {% block content %}
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-lg-4 order-lg-last">
             <section class="customer-order-list" data-component="customer-order-list">
-                <h1 class="customer-order-list-heading">Your Order</h1>
-                <div class="menu-items">
-                    {% include "components/menu-item-details.html" %}
+                <h1 class="customer-order-list-heading d-none d-lg-block">Your Order</h1>
+                <h1 class="customer-order-list-heading collapsed d-lg-none" data-toggle="collapse" data-target="#menu-items-content">Your
+                    Order</h1>
+                <div class="menu-items-content  collapse" id="menu-items-content">
+                    <div class="menu-items" >
+                        {% include "components/menu-item-details.html" %}
+                    </div>
+                    {% include "components/_itemization.html" %}
                 </div>
-                {% include "components/_itemization.html" %}
             </section>
         </div>
 
         <div class="col-lg-8">
-            <form>
-                {% include "01-contact.html" %}
-                {% include "02-fulfillment.html" %}
-                {% include "03-payment.html" %}
-            </form>
-        </div>
-        <div class="order-steps">
+            <div class="page-content">
+                <form class="needs-validation" novalidate>
+                    {% include "01-contact.html" %}
+                </form>
+                <form novalidate>
+                    {% include "02-fulfillment.html" %}
+                </form>
+                <form novalidate>
+                    {% include "03-payment.html" %}
+                </form>
+            </div>
         </div>
     </div>
 </div>
+<!--THIS SCRIPT FOR PROTOTYPE ONLY-->
+<script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (function() {
+    "use strict";
+    window.addEventListener("load", function() {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName("needs-validation");
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener("submit", function(event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add("was-validated");
+        }, false);
+      });
+    }, false);
+  })();
+</script>
+<!--/THIS SCRIPT FOR PROTOTYPE ONLY-->
 
 
 {% endblock %}

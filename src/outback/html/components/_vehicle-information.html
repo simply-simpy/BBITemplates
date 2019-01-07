@@ -1,4 +1,4 @@
-<div data-component="vehicle-info">
+<div data-component="vehicle-info" class="vehicle-info">
     <span class="form-label">Choose Vehicle Type</span>
     <div class="vehicles">
         {% set isImageInput = true %}
@@ -8,30 +8,30 @@
         {% include './forms/_input.generic.html' %}
         {%- endfor %}
     </div>
-    <div class="row">
-        <div class="col-md-6">
-            <span class="form-label">Choose Vehicle Color</span>
-            <!-- Dropdown -->
-            <button type="button" class="btn modal-trigger" data-toggle="modal" data-target="#dateTimePickerModal">
+    <div class="step-item no-border">
+        <div class="row">
+            <div class="col-md-6">
+                <span class="form-label">Choose Vehicle Color</span>
+                <button type="button" class="btn modal-trigger choose-vehicle" data-toggle="modal" data-target="#dateTimePickerModal">
                 <span class="inner">
                     <span class="text date-picked font-weight-bold">
                         Select a vehicle color...
                     </span>
                     <span class="icon icon-carat"></span>
                 </span>
-            </button>
-        </div>
-        <div class="col-md-6">
-            <span class="form-label">Choose Vehicle Make</span>
-            <!-- Dropdown -->
-            <button type="button" class="btn modal-trigger" data-toggle="modal" data-target="#dateTimePickerModal">
+                </button>
+            </div>
+            <div class="col-md-6">
+                <span class="form-label">Choose Vehicle Make</span>
+                <button type="button" class="btn modal-trigger choose-vehicle" data-toggle="modal" data-target="#dateTimePickerModal">
                     <span class="inner">
                         <span class="text date-picked font-weight-bold">
                             Select a vehicle make...
                         </span>
                         <span class="icon icon-carat"></span>
                     </span>
-            </button>
+                </button>
+            </div>
         </div>
     </div>
 </div>

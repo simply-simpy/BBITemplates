@@ -1,22 +1,27 @@
 <div class="custom-control custom-{{type}} {{ className | lower }} vehicle {% if isGridInput === true %} grid-item {% endif %}">
     {% if isImageInput === true %}
-    <input type="{{ type }}" class="custom-control-input" value="{{ loop.index }}" id="singleOption-{{ loop.index }}" name="{{ name }}">
+    <input type="{{ type }}" class="custom-control-input" value="{{ loop.index }}" id="singleOption-{{ loop.index }}"
+           name="{{ name }}">
     <label class="custom-control-label" for="singleOption-{{ loop.index }}"></label>
-        <span class="icon-{{vehicle | lower}}">{{loop.index}}</span>
-        <span>{{vehicle}}</span>
+    <span class="icon-{{vehicle | lower}}">{{loop.index}}</span>
+    <span>{{vehicle}}</span>
     {% elif isGridInput === true %}
-    <input type="{{ type }}" class="custom-control-input" name="{{ name }}" id={{ id }} data-time="{{ data }}" >
+    <input type="{{ type }}" class="custom-control-input" name="{{ name }}" id={{ id }} data-time="{{ data }}">
     <label class="custom-control-label grid-input" for="{{ id }}">
         <span class="{{ text1Class }}">{{ text1 }}</span>
         {% if text2 %} <span>{{ text2 }}</span>{% endif %}
     </label>
     {% else %}
-        {% if type === 'text' %}
-        <label class="custom-control-label" for="{{ id }}">{{ text }}</label>
-        {% endif %}
-        <input type="{{ type }}" data-time="{{ data }}" class="custom-control-input" id="{{ id }}" name="{{ name }}">
-        {% if type !== 'text' %}
-        <label class="custom-control-label" for="{{ id }}">{{ text }}</label>
-        {% endif %}
+    {% if type === 'text' %}
+    <label class="custom-control-label" for="{{ id }}">{{ text }}</label>
+    {% endif %}
+    {% if isDisabled === 'true' %}
+    <input type="{{ type }}" data-time="{{ data }}" class="custom-control-input" id="{{ id }}" name="{{ name }}" disabled/>
+    {% else %}
+    <input type="{{ type }}" data-time="{{ data }}" class="custom-control-input" id="{{ id }}" name="{{ name }}"/>
+    {% endif %}
+    {% if type !== 'text' %}
+    <label class="custom-control-label" for="{{ id }}">{{ text }}</label>
+    {% endif %}
     {% endif %}
 </div>

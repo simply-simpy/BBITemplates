@@ -1,10 +1,26 @@
 .notification {
   background: $notification-default;
-  padding: $spacer * 1.5 $spacer * 12  $spacer * 1.25 $spacer * 1.25;
+  padding: $spacer * .75;
+  @include media-breakpoint-up(lg){
+    padding: $spacer * 1.5 $spacer * 12  $spacer * 1.25 $spacer * 1.25;
+  }
   line-height: 1.15;
   .custom-radio.custom-control-inline {
     margin-left: $spacer * .5;
     margin-top: $spacer * .25;
+  }
+  .custom-control-label {
+    padding-left: 30px;
+    width: calc(100% + 30px);
+    height: calc(100% + 27px);
+    right: 0;
+    margin-left: -30px;
+    &:before {
+      left: 5px;
+    }
+    &:after {
+      left: 5px;
+    }
   }
   @extend .font-weight-bold;
 

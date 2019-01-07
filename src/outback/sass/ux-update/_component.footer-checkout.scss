@@ -1,0 +1,19 @@
+.footer {
+  [data-template="checkout"] & {
+    background-color: #353535;
+    color: #fff;
+    font-size: 12px;
+    height: 145px;
+    p {
+      margin: 0;
+    }
+    > .container {
+      align-items: flex-end;
+      display: flex;
+      height: 100%;
+      padding-bottom: 43px;
+    }
+
+
+  }
+}

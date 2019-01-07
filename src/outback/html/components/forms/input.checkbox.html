@@ -1,6 +1,6 @@
 {% macro addContent(text, className, id) %}
 <div class="custom-control custom-checkbox{{ className }}">
-    <input type="checkbox" class="custom-control-input" id="{{ id }}">
+    <input type="checkbox" class="custom-control-input" id="{{ id }}" required>
     <label class="custom-control-label" for="{{ id }}">{{ text | safe }}</label>
 </div>
 {% endmacro %}

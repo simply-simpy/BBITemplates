@@ -4395,7 +4395,7 @@ button.bg-dark:focus {
   clear: both;
   content: ""; }
 
-.d-none {
+.d-none, .date-time-picker .collapse + .picker-switch.accordion-toggle {
   display: none !important; }
 
 .d-inline {
@@ -9578,6 +9578,22 @@ dl, dd {
 
 [data-template="checkout"] {
   background: #4A4A4A; }
+  [data-template="checkout"] .apply-discount.btn {
+    margin-top: 0.5rem; }
+  [data-template="checkout"] > .navbar + .container {
+    min-height: calc(100vh - 145px - 134px); }
+  [data-template="checkout"] .was-validated .custom-control-input:valid ~ .custom-control-label::before,
+  [data-template="checkout"] .custom-control-input.is-valid ~ .custom-control-label::before {
+    color: #2d2d2d; }
+  [data-template="checkout"] .page-content {
+    margin-top: 1.75rem; }
+    @media (min-width: 992px) {
+      [data-template="checkout"] .page-content {
+        margin-top: 95px; } }
+  [data-template="checkout"] .input-group-append {
+    margin-left: 0; }
+    [data-template="checkout"] .input-group-append button {
+      border: none; }
   [data-template="checkout"] .navbar {
     height: 200px; }
     @media (min-width: 992px) {
@@ -9594,12 +9610,12 @@ dl, dd {
       background: #fff;
       width: 118px;
       padding: .25rem 0 .25rem 2rem; }
+    [data-template="checkout"] .step .step-item-title {
+      margin-bottom: .5rem; }
     [data-template="checkout"] .step .date-picked {
       font-family: TradeGothic-BoldCondTwenty, sans-serif; }
     [data-template="checkout"] .step.inactive .step-number {
       background: #5ABB62i; }
-    [data-template="checkout"] .step:first-child {
-      margin-top: 95px; }
     [data-template="checkout"] .step.completed .step-number {
       background-color: #5ABB62;
       text-indent: -9999em; }
@@ -9622,6 +9638,8 @@ dl, dd {
   [data-template="checkout"] .step-item {
     padding: 42px 0 30px;
     border-top: 1px solid #979797; }
+    [data-template="checkout"] .step-item.no-border {
+      border-top: none; }
   [data-template="checkout"] .step-item-component {
     margin-bottom: 2.25rem; }
   [data-template="checkout"] .step-title {
@@ -10084,7 +10102,7 @@ dl, dd {
   font-weight: 400;
   font-size: 20px;
   font-size: 1.25rem;
-  font-family: TradeGothic-CondEighteen, sans-serif;
+  font-family: TradeGothic-BoldCondTwenty, sans-serif;
   padding: .25rem .75rem;
   position: relative;
   text-align: left;
@@ -10096,6 +10114,7 @@ dl, dd {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    height: 100%;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between; }
@@ -10523,14 +10542,19 @@ dl, dd {
     position: static;
     margin-right: 0.5rem; }
 
-[data-component="vehicle-info"] .vehicles {
+.vehicle-info .choose-vehicle {
+  margin-top: 0.25rem; }
+
+.vehicle-info .vehicles {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 0.5rem; }
-  [data-component="vehicle-info"] .vehicles .custom-control {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0.5rem auto 0; }
+  .vehicle-info .vehicles .custom-control {
     padding-left: 0; }
-  [data-component="vehicle-info"] .vehicles .custom-control-label {
+  .vehicle-info .vehicles .custom-control-label {
     bottom: 0;
     cursor: pointer;
     display: block !important;
@@ -10540,10 +10564,10 @@ dl, dd {
     margin-bottom: 0;
     right: 0;
     top: 0; }
-    [data-component="vehicle-info"] .vehicles .custom-control-label:before {
+    .vehicle-info .vehicles .custom-control-label:before {
       margin: 1rem auto;
       position: static; }
-  [data-component="vehicle-info"] .vehicles .vehicle {
+  .vehicle-info .vehicles .vehicle {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -10566,10 +10590,17 @@ dl, dd {
     justify-content: center;
     margin-right: 0.3rem;
     padding-top: 2.63rem;
+    min-width: 37vw;
     max-width: 130px; }
-    [data-component="vehicle-info"] .vehicles .vehicle span[class^="icon"] {
-      font-size: 28px;
-      font-size: 1.75rem; }
+    @media (min-width: 576px) {
+      .vehicle-info .vehicles .vehicle {
+        min-width: 0; } }
+    .vehicle-info .vehicles .vehicle span[class^="icon"] {
+      font-size: 4vw; }
+      @media (min-width: 992px) {
+        .vehicle-info .vehicles .vehicle span[class^="icon"] {
+          font-size: 28px;
+          font-size: 1.75rem; } }
 
 .pickup-location {
   border: 1px solid #979797;
@@ -10619,25 +10650,48 @@ dl, dd {
       margin-top: 0.6rem; }
 
 .customer-order-list {
-  margin-top: 95px;
-  background: #fff;
-  padding-top: 1.25rem; }
+  margin-top: 2rem;
+  background: #fff; }
+  @media (min-width: 992px) {
+    .customer-order-list {
+      margin-top: 95px; } }
+  @media (min-width: 992px) {
+    .customer-order-list {
+      padding-top: 1.25rem; } }
+  @media (min-width: 992px) {
+    .customer-order-list .menu-items-content {
+      display: block !important; } }
   .customer-order-list .customer-order-list-heading {
-    margin-bottom: 1.25rem;
     text-transform: uppercase;
     font-size: 20px;
     font-size: 1.25rem; }
+    @media (min-width: 992px) {
+      .customer-order-list .customer-order-list-heading {
+        margin-bottom: 1.25rem; } }
     @media (min-width: 992px) {
       .customer-order-list .customer-order-list-heading {
         text-align: center; } }
 
 .notification {
   background: #f2ecde;
-  padding: 1.5rem 12rem 1.25rem 1.25rem;
+  padding: 0.75rem;
   line-height: 1.15; }
+  @media (min-width: 992px) {
+    .notification {
+      padding: 1.5rem 12rem 1.25rem 1.25rem; } }
   .notification .custom-radio.custom-control-inline {
     margin-left: 0.5rem;
     margin-top: 0.25rem; }
+  .notification .custom-control-label {
+    padding-left: 30px;
+    width: calc(100% + 30px);
+    height: calc(100% + 27px);
+    right: 0;
+    margin-left: -30px; }
+    .notification .custom-control-label:before {
+      left: 5px; }
+    .notification .custom-control-label:after {
+      left: 5px; }
 
 .menu-items {
   border: 1px solid #979797;
@@ -10701,10 +10755,13 @@ dl, dd {
 
 .date-time-picker {
   height: 90vh; }
+  .date-time-picker .modal-content {
+    padding-bottom: 80px; }
   @media (min-width: 992px) {
     .date-time-picker .modal-body {
       margin: 0 auto;
-      width: 500px; } }
+      width: 500px;
+      min-height: 600px; } }
   .date-time-picker .input-group-text {
     -webkit-box-align: start;
     -ms-flex-align: start;
@@ -10818,7 +10875,11 @@ dl, dd {
   grid-gap: 0;
   color: #444; }
 
+.choose-time .show-times .icon-carat {
+  margin-left: auto; }
+
 .choose-time .show-times-btn {
+  border: 1px solid #979797;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10838,11 +10899,50 @@ dl, dd {
   border-radius: 2px;
   border: 1px solid gray; }
 
-.custom-control-label {
+[data-template="checkout"] .footer {
+  background-color: #353535;
+  color: #fff;
+  font-size: 12px;
+  height: 145px; }
+  [data-template="checkout"] .footer p {
+    margin: 0; }
+  [data-template="checkout"] .footer > .container {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    padding-bottom: 43px; }
+
+.wallet-options .disabled {
+  margin-left: 2rem; }
+
+.wallet-options label {
+  font-size: 16px;
+  font-size: 1rem; }
+
+.wallet-options .custom-control-label:before,
+.wallet-options .custom-control-label:after {
+  top: .1rem; }
+
+.wallet-options .custom-control {
+  margin-bottom: .5rem; }
+
+.contact-information .custom-control {
+  margin-top: 0.25rem;
+  font-size: 17px;
+  font-size: 1.0625rem; }
+
+[data-template="checkout"] .custom-control-label {
   line-height: 1.2; }
 
-.form-inline .custom-control + .custom-control {
+[data-template="checkout"] .form-inline .custom-control + .custom-control {
   margin-left: 2rem; }
+
+[data-template="checkout"] .form-control {
+  margin-bottom: 0; }
 
 .credit-card {
   -webkit-box-orient: vertical;
