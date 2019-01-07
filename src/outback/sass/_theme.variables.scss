@@ -67,6 +67,7 @@ $enable-print-styles:       true !default;
 @import 'config/config.tooltip';    // TOOLTIP SETTINGS
 @import 'config/config.z-index';    // Z-INDEX MASTER LIST
 @import 'config/config.carousel';    // CAROUSEL
+@import 'config/config.custom-forms'; // CUSTOM RADIO AND CHECKBOXES ETC...
 
 /*========================================================*
 | PLUGINS                                                 |
@@ -83,4 +84,4 @@ $enable-print-styles:       true !default;
 *========================================================*/
 @import "ux-update/theme.colors";
 @import "ux-update/config/config.body";
-@import "ux-update/config/config.custom-forms";
+
