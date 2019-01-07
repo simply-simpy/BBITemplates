@@ -5,11 +5,9 @@
 
   height: 90vh;
 
-
-    .modal-content {
-      padding-bottom: 80px;
-    }
-
+  .modal-content {
+    padding-bottom: 80px;
+  }
 
   .modal-body {
     @include media-breakpoint-up(lg) {
@@ -21,15 +19,6 @@
 
   .input-group-text {
     align-items: flex-start;
-  }
-
-  .bootstrap-datetimepicker-widget {
-    position: static;
-  }
-
-  .dropdown:hover .dropdown-menu {
-    max-height: 200px;
-    opacity: 1;
   }
 
   .icon-arrow-right,
@@ -75,45 +64,6 @@
     }
   }
 
-  .choose-time {
-
-    ul {
-      max-height: 55vh;
-      overflow-y: scroll;
-      list-style-type: none;
-      padding-bottom: 6vh;
-      padding-left: $spacer * 2;
-      /* padding-bottom: 6vh; */
-      @include media-breakpoint-up(lg) {
-        position: absolute;
-        bottom: 40px;
-        left: 5px;
-        max-height: none;
-        padding-bottom: $spacer;
-        padding-right: $spacer * 4;
-        top: 30px;
-      }
-    }
-
-    li {
-      align-items: center;
-      cursor: pointer;
-      display: flex;
-      position: relative;
-      @extend .my-0;
-
-      &.active {
-        @extend .icon-check;
-
-        &:before {
-          color: $brand-primary;
-          margin-left: -1.25rem;
-          margin-right: .35rem;
-        }
-      }
-    }
-  }
-
   &.datepicker-open {
     .choose-time {
       @include media-breakpoint-down(sm) {
@@ -122,13 +72,6 @@
         }
       }
     }
-  }
-
-  .choose-time .times {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-gap: 0;
-    color: #444;
   }
 
   .grid-item {
@@ -141,28 +84,11 @@
   }
 }
 
-.bootstrap-datetimepicker-widget {
-  background-color: $white;
-
-  .active {
-    background-color: $brand-primary;
-  }
-}
-
 .choose-time {
-  .dropdown {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .dropdown-menu {
-    position: static !important;
-    transform: none !important;
-  }
 
   .times {
     display: grid;
-    grid-template-columns: 200px 200px;
+    grid-template-columns: 50% 50%;
     grid-gap: 0;
     color: #444;
   }
@@ -190,7 +116,4 @@
   }
 }
 
-.grid-item {
-  border-radius: 2px;
-  border: 1px solid gray;
-}
+
