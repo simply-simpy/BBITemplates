@@ -2,10 +2,10 @@
 {% extends '_layout.html' %}
 {% block content %}
 <section class="customer-order-list d-lg-none" data-component="customer-order-list">
-    <h1 class="customer-order-list-heading collapsed d-lg-none" data-toggle="collapse"
+    <h1 class="customer-order-list-heading collapsed" data-toggle="collapse"
         data-target="#menu-items-content-mobile">Your
         Order<span class="icon icon-zmdi-chevron-right"></span></h1>
-    <div class="menu-items-content d-lg-none collapse" id="menu-items-content-mobile">
+    <div class="menu-items-content collapse" id="menu-items-content-mobile">
         <div class="menu-items">
             {% include "components/menu-item-details.html" %}
         </div>

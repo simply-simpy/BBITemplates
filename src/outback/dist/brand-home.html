@@ -1,0 +1,774 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Outback Steakhouse: Brand Home </title>
+    <link rel="stylesheet" href="../css/index.css">
+    <!-- FAVICON FILES -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body><script id="__bs_script__">//<![CDATA[
+document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.24.5'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+
+
+<div class="wrapper" data-template="brand-site">
+    <!-- ALERT PROMO -->
+    <div data-component="promo-alert">
+        <div class="col-12 text-center py-2 alert alert-dismissable fade show" role="alert">
+            <span>Want 50% off your next visit? <a href="#">Join</a> Dine Rewards today.</span>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div>
+    <!-- /ALERT PROMO -->
+
+    <!-- HEADER NAVIGATION -->
+    <nav class="navbar navbar-expand-lg navbar-dark justify-content-start w-100">
+        <button class="navbar-toggler pl-0" type="button" data-toggle="modal" data-target="#mobileNav" aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Logo -->
+        <a href="#"><img src="../img/logo.png" class="logo" alt="brand logo"></a>
+
+        <div class="collapse navbar-collapse flex-fill" id="navbarNavAltMarkup">
+            <div class="navbar-nav text-uppercase h2">
+                <a class="nav-item nav-link active" href="#">Menu/Order<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#">Offers</a>
+                <a class="nav-item nav-link" href="#">Dine Rewards</a>
+                <a class="nav-item nav-link" href="#">Gift Cards</a>
+                <a class="nav-item nav-link" href="#">Wait List</a>
+            </div>
+        </div>
+
+        <div class="text-right account-wrapper">
+
+            <!-- EDIT LOCATION DESKTOP -->
+            <div class="edit-location d-none d-lg-block">
+                <p class="m-0 text-right">
+                    <span class="text-uppercase font-weight-bold label">Delivery:</span>
+                    <span class="text-uppercase font-weight-bold address">3403 Henderson Blvd.</span>
+                    (<a href="#">Edit</a>)
+                </p>
+            </div>
+
+            <!-- LOGGED OUT -->
+            <a href="#" class="pr-2 text-uppercase" data-toggle="modal" data-target="#signIn">Sign In</a>
+
+            <!-- LOGGED IN -->
+            <a href="#" class="pr-2 d-none" data-toggle="modal" data-target="#account-info">Hi John <i class="carat-down"></i></a>
+
+            <!--
+                NOTE TO SITECORE DEV:
+                A script will be required to close 'createAccount' modal when either 'forgotPassword' or 'signIn' is opened.
+            -->
+
+            <!-- ACCOUNT SIGN-IN MODAL -->
+            <div class="modal" id="signIn" tabindex="-1" role="dialog" aria-labelledby="signIn" aria-hidden="false">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title" id="exampleModalCenterTitle">Sign in or Register</h1>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body text-left w-auto">
+
+                            <div class="row">
+                                <div class="col-lg-6 p-0 col-left">
+                                    <!-- EMAIL -->
+                                    <div class="col">
+                                        <label for="emailAddress" class="form-label">Email Address (Required)</label>
+                                        <div class="input-group mb-3">
+                                            <input type="text" name="emailAddress" class="form-control" required>
+                                            <span class="text-danger w-100">Please enter a value.</span>
+                                        </div>
+                                    </div>
+                                    <!-- PASSWORD -->
+                                    <div class="col">
+                                        <label for="passwordConfirm" class="form-label">Password (Required)</label>
+                                        <div class="input-group mb-3">
+                                            <input type="password" name="passwordConfirm" class="form-control passwordInput" aria-label="Enter Password" aria-describedby="passwordToggle">
+                                            <div class="input-group-append d-lg-none ml-0">
+                                                <button class="btn btn-sm btn-outline-secondary passwordToggle" type="button">SHOW</button>
+                                            </div>
+                                            <div class="w-100 d-flex justify-content-between">
+                                                <span class="text-danger mb-3">Please enter a value.</span>
+                                                <a href="#" class="text-right" data-toggle="modal" data-target="#forgotPassword">Forgot Password?</a>
+                                            </div>
+                                        </div>
+
+                                        <!-- SIGN IN BUTTON -->
+                                        <div class="col p-0 col-lg-6 mt-4">
+                                            <button type="submit" class="btn btn-block btn-primary disabled">Sign In</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-right">
+                                    <h2 class="mb-3 d-none d-lg-block">Create An Account</h2>
+                                    <p class="mt-4 d-none d-lg-block">Tell us more about yourself and check out faster next time. It's easy!</p>
+                                    <p class="d-none d-lg-block">Plus, sign up to receive special offers & discounts from Outback Steakhouse.</p>
+                                    <!-- REGISTER BUTTON -->
+                                    <button class="btn btn-block btn-outline-secondary mt-3" data-toggle="modal" data-target="#createAccount">Register</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /ACCOUNT SIGN-IN MODAL -->
+
+            <!-- FORGOT PASSWORD MODAL -->
+            <div class="modal"
+                 id="forgotPassword"
+                 tabindex="-1"
+                 role="dialog"
+                 aria-labelledby="forgotPassword"
+                 aria-hidden="false">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body text-left w-auto">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <h2>Forgot Password</h2>
+                                    <p>If you forgot your password, enter your email below and we'll send you an email with further instructions. Please remember, this process will also reset your password for your Carrabba's Italian Grill online ordering site.</p>
+
+                                    <label for="emailAddress" class="form-label">Email Address (Required)</label>
+                                    <div class="input-group">
+                                        <input type="text" name="emailAddress" class="form-control col-lg-8" required>
+                                        <span class="text-danger mb-3 w-100">Please enter a value.</span>
+                                    </div>
+
+                                    <!-- SUBMIT/CANCEL -->
+                                    <div class="col p-0 col-lg-6 mt-4">
+                                        <button class="btn btn-block btn-primary mt-3" data-toggle="modal" data-target="#resetToken">Reset Password</button>
+                                        <a href="#" class="text-uppercase text-center text-lg-left d-block mt-3" data-dismiss="modal" aria-label="Close">Cancel Request</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /FORGOT PASSWORD MODAL -->
+
+            <!-- ENTER CODE MODAL -->
+            <div class="modal"
+                 id="resetToken"
+                 tabindex="-1"
+                 role="dialog"
+                 aria-labelledby="resetToken"
+                 aria-hidden="false">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body text-left w-auto">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <h2>Reset Password</h2>
+                                    <p>For your security, we need to verify your identity. We’ve sent a code to the email xxxx@gmail.com. Please enter it below.</p>
+
+                                    <label for="emailAddress" class="form-label">Enter Code (Required)</label>
+                                    <div class="input-group">
+                                        <input type="text" name="resetToken" class="form-control col-lg-8" required>
+                                        <span class="text-danger mb-3 w-100">Please enter a value.</span>
+                                    </div>
+
+                                    <!-- SUBMIT/CANCEL -->
+                                    <div class="col p-0 col-lg-6 mt-4">
+                                        <button class="btn btn-block btn-primary mt-3" data-toggle="modal" data-target="#resetPassword">Continue</button>
+                                        <a href="#" class="text-uppercase text-center text-lg-left d-block mt-3" data-dismiss="modal" aria-label="Close">Cancel Request</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /ENTER CODE MODAL -->
+
+            <!-- RESET PASSWORD MODAL -->
+            <div class="modal"
+                 id="resetPassword"
+                 tabindex="-1"
+                 role="dialog"
+                 aria-labelledby="resetPassword"
+                 aria-hidden="false">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body text-left w-auto">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <h2>Reset Password</h2>
+                                    <p>After entering your verification code, please enter your new password below.</p>
+
+                                    <div class="row">
+                                        <!-- Show/Hide Password -->
+                                        <div class="col-lg-6">
+                                            <label for="emailAddress" class="form-label">New Password (Required)</label>
+                                            <div class="input-group mb-3">
+                                                <input type="password" name="passwordConfirm" class="form-control passwordInput" aria-label="Enter Password" aria-describedby="passwordToggle">
+                                                <div class="input-group-append d-lg-none ml-0">
+                                                    <button class="btn btn-sm btn-outline-secondary passwordToggle" type="button">SHOW</button>
+                                                </div>
+                                                <span class="text-danger w-100">Please enter a value.</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Show/Hide Password Example -->
+                                        <div class="col-lg-6">
+                                            <label for="emailAddress" class="form-label">Confirm Password (Required)</label>
+                                            <div class="input-group mb-3">
+                                                <input type="password" name="passwordConfirm" class="form-control passwordInput" aria-label="Enter Password" aria-describedby="passwordToggle">
+                                                <div class="input-group-append d-lg-none ml-0">
+                                                    <button class="btn btn-sm btn-outline-secondary passwordToggle" type="button">SHOW</button>
+                                                </div>
+                                                <span class="text-danger w-100">Please enter a value.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p>Use 8 to 30 characters, including at least one number, one letter, and one symbol.</p>
+
+                                    <!-- SUBMIT/CANCEL -->
+                                    <div class="col p-0 col-lg-6 mt-4">
+                                        <button class="btn btn-block btn-primary mt-3">Continue</button>
+                                        <a href="#" class="text-uppercase text-center text-lg-left d-block mt-3" data-dismiss="modal" aria-label="Close">Cancel Request</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- RESET PASSWORD MODAL -->
+
+            <!-- CREATE AN ACCOUNT MODAL -->
+            <div class="modal"
+                 id="createAccount"
+                 tabindex="-1"
+                 role="dialog"
+                 aria-labelledby="createAccount"
+                 aria-hidden="false">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title" id="exampleModalCenterTitle">Create An Account</h1>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body text-left w-auto">
+                            <p class="text-lg-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet distinctio dolorum ex exercitationem obcaecati officia velit...</p>
+                            <h1 class="modal-title mb-3">Contact Information</h1>
+
+                            <div class="row">
+                                <div class="col-lg-6 p-0 col-left">
+                                    <div class="col">
+                                        <label for="firstName" class="form-label">First Name (Required)</label>
+                                        <input type="text" name="firstName" class="form-control" required>
+                                        <span class="text-danger mb-3">Please enter a value.</span>
+                                    </div>
+                                    <div class="col">
+                                        <label for="lastName" class="form-label">Last Name (Required)</label>
+                                        <input type="text" name="lastName" class="form-control" required>
+                                        <span class="text-danger mb-3">Please enter a value.</span>
+                                    </div>
+                                    <div class="col">
+                                        <label for="emailAddress" class="form-label">Email Address (Required)</label>
+                                        <input type="text" name="emailAddress" class="form-control" required>
+                                        <span class="text-danger mb-3">Please enter a value.</span>
+                                    </div>
+                                    <div class="col">
+                                        <label for="telNum" class="form-label">Phone (Required)</label>
+                                        <input type="text" name="telNum" class="form-control" required>
+                                        <span class="text-danger mb-3">Please enter a value.</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 p-0 col-right">
+                                    <div class="col">
+                                        <label for="password" class="form-label">Password (Required)</label>
+                                        <input type="password" name="password" class="form-control" required>
+                                        <span class="text-danger mb-3">Please enter a value.</span>
+                                    </div>
+                                    <div class="col">
+                                        <label for="passwordConfirm" class="form-label">Confirm Password (Required)</label>
+
+                                        <!-- Show/Hide Password Example -->
+                                        <div class="input-group mb-3">
+                                            <input type="password" name="passwordConfirm" class="form-control passwordInput" aria-label="Enter Password" aria-describedby="passwordToggle">
+                                            <div class="input-group-append d-lg-none ml-0">
+                                                <button class="btn btn-sm btn-outline-secondary passwordToggle" type="button">Show</button>
+                                            </div>
+                                        </div>
+                                        <span class="text-danger mb-3">Please enter a value.</span>
+                                    </div>
+                                    <div class="col">
+                                        <p class="mt-4">Use 8 to 30 characters, including at least one number, one letter, and one symbol.</p>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="confirmOne">
+                                            <label class="form-check-label" for="confirmOne">
+                                                I acknowledge that I am 18 years of age or older, want to receive email offers from both Outback and Carabba's and agree to the terms and conditions. (Required)
+                                            </label>
+                                            <span class="text-danger mb-3">Please enter a value.</span>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="confirmTwo">
+                                            <label class="form-check-label" for="confirmTwo">
+                                                I acknowledge that I am creating an account in both the Outback online ordering and the Carabba's online ordering sites. (Required)
+                                            </label>
+                                            <span class="text-danger mb-3">Please enter a value.</span>
+                                        </div>
+                                        <div class="col p-0 col-lg-6 mt-4">
+                                            <!-- Disabled until for is complete -->
+                                            <button type="submit" class="btn btn-block btn-primary disabled">Register</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /CREATE AN ACCOUNT MODAL -->
+
+            <!-- ACCOUNT INFO FLYOUT MENU (LOGGED IN) -->
+            <div class="modal"
+                 id="account-info"
+                 data-component="account-info"
+                 tabindex="-1"
+                 role="dialog"
+                 aria-hidden="false">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title text-uppercase">Your Account</h1>
+                        </div>
+                        <div class="modal-body">
+                            <a href="#" class="btn btn-block btn-outline-secondary">Account Information</a>
+                            <a href="#" class="btn btn-block btn-outline-secondary">My Wallet</a>
+                            <a href="#" class="btn btn-block btn-outline-secondary">Location Preference</a>
+                            <a href="#" class="btn btn-block btn-primary">Sign Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VIEW CART MODAL -->
+            <div data-component="view-cart" class="modal" id="viewCart" tabindex="-1" role="dialog" aria-labelledby="viewCart" aria-hidden="false">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                    <div class="modal-content">
+                        <!-- Cart Header -->
+                        <div class="modal-header row w-100 ml-0">
+                            <div class="row m-0 w-100 text-uppercase">
+                                <h1 class="modal-title text-center col-12 p-0" id="viewCartTitle">Your Order</h1>
+                                <div class="row w-100 m-0">
+                                    <p class="col-8 col-lg-9 pl-0 m-0">Item</p>
+                                    <p class="col-auto m-0">Price</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Cart Body -->
+                        <div class="modal-body">
+                            <div class="row m-0">
+                                <ul class="list-unstyled d-flex flex-column cart-content w-100">
+                                    <li class="item row mb-3">
+                                        <div class="col-8 col-lg-9 cart-items">
+                                            <p class="text-uppercase m-0">Victoria's Filet&reg; Mignon</p>
+                                            <p class="mb-0">6 oz. Medium</p>
+                                        </div>
+
+                                        <div class="col-auto cart-price">$37.73</div>
+                                        <div class="edit-order w-100 pb-2 mx-3">
+                                            <a href="#">Edit</a> | <span>Confirm Item Removal?</span>
+
+                                            <!-- CONFIRM DELETE -->
+                                            <div class="w-100 mt-3 d-flex justify-content-center">
+                                                <button type="button" class="btn btn-outline-dark mb-2 m-0">Cancel</button>
+                                                <button type="button" class="btn btn-outline-dark mb-2 ml-3">Delete</button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item row mb-3">
+                                        <div class="col-8 col-lg-9 cart-items">
+                                            <p class="text-uppercase m-0">Victoria's Filet&reg; Mignon</p>
+                                            <p class="mb-0">6 oz. Medium</p>
+                                        </div>
+
+                                        <div class="col-auto cart-price">$37.73</div>
+                                        <div class="edit-order w-100 pb-2 mx-3">
+                                            <a href="#">Edit</a> | <a href="#">Delete</a>
+                                        </div>
+                                    </li>
+                                    <li class="item row mb-3">
+                                        <div class="col-8 col-lg-9 cart-items">
+                                            <p class="text-uppercase m-0">Victoria's Filet&reg; Mignon</p>
+                                            <p class="mb-0">6 oz. Medium</p>
+                                        </div>
+
+                                        <div class="col-auto cart-price">$37.73</div>
+                                        <div class="edit-order w-100 pb-2 mx-3">
+                                            <a href="#">Edit</a> | <a href="#">Delete</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="modal-footer d-block">
+                            <ul class="list-unstyled">
+                                <li class="row">
+                                    <div class="col-8 col-lg-9">
+                                        <h2>Subtotal</h2>
+                                    </div>
+                                    <div class="col-auto">
+                                        <h2>$37.73</h2>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="row justify-content-lg-between">
+                                <button type="button" class="btn btn-outline-dark">Add More Food</button>
+                                <button type="button" class="btn btn-primary">Checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <i class="icon-cart_bag pl-2" data-toggle="modal" data-target="#viewCart">
+                <span class="badge">99</span>
+            </i>
+        </div>
+
+        <!-- MOBILE NAVIGATION -->
+        <div class="modal fade mobile-nav" id="mobileNav" tabindex="-1" role="dialog" aria-labelledby="mobileNav" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <!-- BRAND LOGO -->
+                        <div class="modal-title col-6 ml-2">
+                            <img class="img-fluid" src="../img/logo-dark.png" class="logo" alt="brand logo" />
+                        </div>
+                        <!-- CLOSE BUTTON -->
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <!-- NAV ITEMS -->
+                    <div class="modal-body">
+                        <ul class="list-unstyled">
+                            <li><a href="#">Menu/Order</a></li>
+                            <li><a href="#">Locations</a></li>
+                            <li><a href="#">Offers</a></li>
+                            <li><a href="#">Dine Rewards</a></li>
+                            <li><a href="#">Gift Cards</a></li>
+                            <li><a href="#">Waitlist</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /MOBILE NAVIGATION -->
+    </nav>
+    <!-- HEADER NAVIGATION -->
+
+    <!-- CONTENT -->
+    <div class="container-fluid p-0">
+
+        <!-- EDIT LOCATION MOBILE -->
+        <div class="edit-location d-lg-none">
+            <p class="m-0 text-right">
+                <span class="text-uppercase font-weight-bold label">Delivery:</span>
+                <span class="text-uppercase font-weight-bold address">3403 Henderson Blvd.</span>
+                (<a href="#">Edit</a>)
+            </p>
+        </div>
+        <!-- /EDIT LOCATION MOBILE -->
+
+        <!-- CAROUSEL -->
+        <div class="carousel-wrapper">
+            <div class="hero-carousel" data-slick='{"autoplaySpeed": 2000}'>
+                <div class="responsive-hero">
+                    <a href="#">
+                        <!--<img class="w-100 d-lg-none" src="../img/hero-1_sm.png" alt="First slide">
+                        <img class="w-100 d-none d-lg-block" src="../img/hero-1.png" alt="First slide">-->
+                        <picture>
+                            <source media="(min-width: 992px)" srcset="../img/hero-1.png"/>
+                            <source media="(max-width: 991px)" srcset="../img/hero-1_sm.png 2x"/>
+                            <img src="../img/hero-1.png" alt="First slide"/>
+                        </picture>
+                    </a>
+                </div>
+                <div class="responsive-hero">
+                    <a href="#">
+                        <!--<img class="w-100 d-lg-none" src="../img/hero-2_sm.png" alt="Second slide">
+                        <img class="w-100 d-none d-lg-block" src="../img/hero-2.png" alt="Second slide">-->
+                        <picture>
+                            <source media="(min-width: 992px)" srcset="../img/hero-2.png"/>
+                            <source media="(max-width: 991px)" srcset="../img/hero-2_sm.png 2x"/>
+                            <img src="../img/hero-2.png" alt="Second slide"/>
+                        </picture>
+                    </a>
+                </div>
+                <div class="responsive-hero">
+                    <a href="#">
+                        <!--<img class="w-100 d-lg-none" src="../img/hero-3_sm.png" alt="Third slide">
+                        <img class="w-100 d-none d-lg-block" src="../img/hero-3.png" alt="Third slide">-->
+                        <picture>
+                            <source media="(min-width: 992px)" srcset="../img/hero-3.png"/>
+                            <source media="(max-width: 991px)" srcset="../img/hero-3_sm.png 2x"/>
+                            <img src="../img/hero-2.png" alt="Third slide"/>
+                        </picture>
+                    </a>
+                </div>
+                <div class="responsive-hero">
+                    <div class="responsive-hero-inner">
+                        <!-- Add the dark-text class after hgroup class to change text color -->
+                        <!-- Slide displaying requested optional elements -->
+                        <div class="hgroup">
+                            <h1 class="title">Outback offers</h1>
+                            <h2 class="subtitle">Heaps of specials and extras</h2>
+                            <!-- Add class btn-outline-light for the other version -->
+                            <a href="#" class="btn btn-primary">Sign Up</a>
+                        </div>
+                        <picture>
+                            <source media="(min-width: 992px)" srcset="../img/brand-offers/hero-background.jpg"/>
+                            <source media="(max-width: 991px)" srcset="../img/brand-offers/hero-mobile.jpg 2x"/>
+                            <img src="../img/brand-offers/hero-background.jpg" alt="Fourth slide"/>
+                        </picture>
+                    </div>
+                </div>
+            </div>
+            <div class="arrow-left icon-boomerang"></div>
+            <div class="arrow-right icon-boomerang"></div>
+        </div>
+        <!-- /CAROUSEL -->
+
+        <div class="container">
+            <!-- ORDERING OPTION -->
+            <div class="container text-center" data-component="ordering-options">
+
+                <!-- Mobile Headline -->
+                <h1 class="headline d-lg-none">No rules.<br/>And no waiting.</h1>
+
+                <!-- Desktop Headline -->
+                <h1 class="headline d-none d-lg-block">No rules. And no waiting.</h1>
+                <h2 class="tagline mb-3">Order to go now!</h2>
+                <a href="#" class="btn btn-primary">pickup</a>
+                <span class="font-weight-bold px-1">-OR-</span>
+                <a href="#" class="btn btn-primary">delivery</a>
+                <p>(Delivery only available from select locations)</p>
+            </div>
+        </div>
+        <!-- /ORDERING OPTION -->
+
+        <!-- DINE REWARDS BANNER -->
+        <div class="container-fluid p-0" data-component="dine-rewards-banner">
+            <div class="text-center">
+                <img class="dine-rewards-banner-logo img-responsive" src="../img/dine-rewards-logo-white.png" alt="Dine Rewards Logo">
+                <h1 class="headline">Take 50% off your next visit. <a href="#" class="rewards-banner-link">Sign up now</a>.</h1>
+            </div>
+        </div>
+        <!-- /DINE REWARDS BANNER -->
+
+        <!-- RESPONSIVE IMAGE GRID -->
+        <div class="container">
+            <div class="container-fluid" data-component="responsive-img-grid">
+                <!-- HALF-WIDTH GRID ITEMS -->
+                <div class="half-width card-columns">
+                    <a href="#" class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Get $10 when you give $50.</h5>
+                            <p class="card-text">Get $10 for yourself when you buy a $50 gift card. That's Aussie
+                                generosity!</p>
+                            <span class="btn d-lg-none btn-outline-dark">Buy Cards Now</span>
+                            <span class="btn d-none d-lg-block btn-outline-light">Buy Cards Now</span>
+                        </div>
+                        <!-- Mobile Image -->
+                        <img class="card-img-top d-lg-none" src="../img/grid-1.png" alt="Card image cap">
+                        <!-- Desktop Image -->
+                        <img class="card-img-top d-none d-lg-block" src="../img/grid-1.png" alt="Card image cap">
+                    </a>
+                    <a href="#" class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Your party. Our Platters.</h5>
+                            <p class="card-text">Planning a get-together? Serve heaps of everything they love with
+                                Aussie Party Platters.</p>
+                            <span class="btn d-lg-none btn-outline-dark">Order Platters Now</span>
+                            <span class="btn d-none d-lg-block btn-outline-light">Order Platters Now</span>
+                        </div>
+                        <!-- Mobile Image -->
+                        <img class="card-img-top d-lg-none" src="../img/grid-2.png" alt="Card image cap">
+                        <!-- Desktop Image -->
+                        <img class="card-img-top d-none d-lg-block" src="../img/grid-2.png" alt="Card image cap">
+                    </a>
+                </div>
+                <!-- THIRD-WIDTH GRID ITEMS -->
+                <div class="third-width card-columns">
+                    <a href="#" class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Free Bloomin' Onion Mondays.</h5>
+                            <span class="btn d-lg-none btn-outline-dark">Get the secret password</span>
+                            <span class="btn d-none d-lg-block btn-outline-light">Get the secret password</span>
+                        </div>
+                        <!-- Mobile Image -->
+                        <img class="card-img-top d-lg-none" src="../img/grid-3.png" alt="Card image cap">
+                        <!-- Desktop Image -->
+                        <img class="card-img-top d-none d-lg-block" src="../img/grid-3.png" alt="Card image cap">
+                    </a>
+                    <a href="#" class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Endless shrimp. Limited time.</h5>
+                            <span class="btn d-lg-none btn-outline-dark">Dive In Now</span>
+                            <span class="btn d-none d-lg-block btn-outline-light">Dive In Now</span>
+                        </div>
+                        <!-- Mobile Image -->
+                        <img class="card-img-top d-lg-none" src="../img/grid-4.png" alt="Card image cap">
+                        <!-- Desktop Image -->
+                        <img class="card-img-top d-none d-lg-block" src="../img/grid-4.png" alt="Card image cap">
+                    </a>
+                    <a href="#" class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">See the story of sizzle.</h5>
+                            <span class="btn d-lg-none btn-outline-dark">Watch us cook</span>
+                            <span class="btn d-none d-lg-block btn-outline-light">Watch us cook</span>
+                        </div>
+                        <!-- Mobile Image -->
+                        <img class="card-img-top d-lg-none" src="../img/grid-5.png" alt="Card image cap">
+                        <!-- Desktop Image -->
+                        <img class="card-img-top d-none d-lg-block" src="../img/grid-5.png" alt="Card image cap">
+                    </a>
+                    <a href="#" class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">The secret to a great steak at home.</h5>
+                            <span class="btn d-lg-none btn-outline-dark">Dont' Tell</span>
+                            <span class="btn d-none d-lg-block btn-outline-light">Dont' Tell</span>
+                        </div>
+                        <!-- Mobile Image -->
+                        <img class="card-img-top d-lg-none" src="../img/grid-6.png" alt="Card image cap">
+                        <!-- Desktop Image -->
+                        <img class="card-img-top d-none d-lg-block" src="../img/grid-6.png" alt="Card image cap">
+                    </a>
+                    <a href="#" class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Have what it takes to bloom?</h5>
+                            <span class="btn d-lg-none btn-outline-dark">#BeTheBloom</span>
+                            <span class="btn d-none d-lg-block btn-outline-light">#BeTheBloom</span>
+                        </div>
+                        <!-- Mobile Image -->
+                        <img class="card-img-top d-lg-none" src="../img/grid-7.png" alt="Card image cap">
+                        <!-- Desktop Image -->
+                        <img class="card-img-top d-none d-lg-block" src="../img/grid-7.png" alt="Card image cap">
+                    </a>
+                    <a href="#" class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Beyond the ordinary.</h5>
+                            <span class="btn d-lg-none btn-outline-dark">The Real Outback Story</span>
+                            <span class="btn d-none d-lg-block btn-outline-light">The Real Outback Story</span>
+                        </div>
+                        <!-- Mobile Image -->
+                        <img class="card-img-top d-lg-none" src="../img/grid-8.png" alt="Card image cap">
+                        <!-- Desktop Image -->
+                        <img class="card-img-top d-none d-lg-block" src="../img/grid-8.png" alt="Card image cap">
+                    </a>
+                </div>
+            </div>
+            <!-- /RESPONSIVE IMAGE GRID -->
+        </div>
+
+        <!-- WELCOME BACK -->
+        <div class="container-fluid rewards-member-message">
+            <h1>Welcome Back, USERNAME!</h1>
+            <div class="container">
+                <p>Thanks for being a Dine Rewards member!</p>
+                <p>You can view your activity anytime at <a href="#">dine-rewards.com</a> or in the Outback app.</p>
+                <a href="#" class="btn btn-primary">How Dine Rewards Works</a>
+            </div>
+        </div>
+        <!-- /WELCOME BACK -->
+
+        <!-- SIGNUP FORM -->
+        <div data-component="signup-form" class="container-fluid">
+            <div class="container text-center">
+
+                <!-- Dine Rewards Logo -->
+                <img src="../img/dine-rewards-logo.png" class="signup-logo" alt="Dine Rewards Logo">
+                <!-- Mobile Headline -->
+                <h1 class="headline d-lg-none">Want 50% off your next visit? Join dine rewards today.</h1>
+                <!-- Desktop Headline -->
+                <h1 class="headline d-none d-lg-block">Want 50% off your next visit? <br/> Join dine rewards today.</h1>
+                <!-- Tagline -->
+                <h2 class="tagline">Get more specials, offers and exclusives.</h2>
+
+                <!-- Form -->
+                <form class="mt-4">
+                    <div class="form-row">
+                        <div class="form-group col-md-9">
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <input type="text" class="form-control" id="inputZip" placeholder="Zip Code">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <input type="text" class="form-control" id="tel" placeholder="Phone">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                </form>
+
+                <p class="footer">In signing up I acknowledge that I am 18 years of age or older, want to receive email
+                    offers
+                    from Outback and agree to the <a href="#">terms and conditions</a> of the program.</p>
+            </div>
+        </div>
+        <!-- /SIGNUP FORM -->
+
+        <!-- ACCOUNT CONFIRMATION -->
+        <div class="container-fluid rewards-member-message">
+            <h1>You're In, USERNAME!</h1>
+            <div class="container">
+                <p>Thanks for signing up to get offers from Outback and to start earning 50% off, up to $20, every 4th visit
+                    with Dine Rewards!</p>
+                <p>To view your Dine Rewards member account, look for an email from us with a temporary password to login at
+                    <a
+                            href="#">dine-rewards.com</a>.</p>
+                <p><a href="#">Visiting Soon</a>? Let your server know you're a Dine Rewards member, give them the phone
+                    number
+                    you used for sign up and start earning today.</p>
+                <a href="#" class="btn btn-primary">How Dine Rewards Works</a>
+            </div>
+            <!-- /ACCOUNT CONFIRMATION -->
+        </div>
+        <!-- /CONTENT -->
+
+        <!-- FOOTER TBD -->
+    </div>
+
+    <!-- JS -->
+    <script src="./js/libs/jquery.min.js"></script>
+    <script src="./js/libs/bootstrap.bundle.js"></script>
+    <script src="./js/libs/moment-with-locales.js"></script>
+    <script src="./js/libs/tempusdominus-bootstrap-4.js"></script>
+    <script src="./js/libs/slick.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

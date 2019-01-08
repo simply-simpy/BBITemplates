@@ -10273,10 +10273,44 @@ dl, dd {
     @media (min-width: 768px) {
       .modal .close {
         top: .5rem; } }
-  .modal .modal-footer {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center; }
+
+#createAccount .modal-content,
+#resetToken .modal-content,
+#resetPassword .modal-content,
+#forgotPassword .modal-content,
+#signIn .modal-content {
+  background: #FFFFFF;
+  color: #111111; }
+
+#createAccount a,
+#resetToken a,
+#resetPassword a,
+#forgotPassword a,
+#signIn a {
+  color: #931A1A; }
+
+@media (min-width: 992px) {
+  #createAccount .col-left,
+  #resetToken .col-left,
+  #resetPassword .col-left,
+  #forgotPassword .col-left,
+  #signIn .col-left {
+    padding-right: 1rem; }
+  #createAccount .col-right,
+  #resetToken .col-right,
+  #resetPassword .col-right,
+  #forgotPassword .col-right,
+  #signIn .col-right {
+    padding-left: 1rem;
+    border-left: 1px solid #111111; }
+    #createAccount .col-right .btn,
+    #resetToken .col-right .btn,
+    #resetPassword .col-right .btn,
+    #forgotPassword .col-right .btn,
+    #signIn .col-right .btn {
+      position: absolute;
+      width: 50%;
+      bottom: 0; } }
 
 [data-component="progress-wizard"] {
   display: -webkit-box;

@@ -43,12 +43,37 @@
     }
     right: 1rem;
   }
-  .modal-footer {
-    justify-content: center;
-  }
 }
 
+// Account Modal Styles
+// TODO: Refactor this for global brand modal styles
+#createAccount,
+#resetToken,
+#resetPassword,
+#forgotPassword,
+#signIn {
+  .modal-content {
+    background: $white;
+    color: $brand-fg-dark;
+  }
 
+  a {
+    color: $brand-primary;
+  }
 
+  @include media-breakpoint-up(lg) {
+    .col-left {
+      padding-right: 1rem;
+    }
+    .col-right {
+      padding-left: 1rem;
+      border-left: 1px solid $brand-fg-dark;
 
-
+      .btn {
+        position: absolute;
+        width: 50%;
+        bottom: 0;
+      }
+    }
+  }
+}
