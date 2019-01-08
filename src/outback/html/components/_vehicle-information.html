@@ -3,8 +3,9 @@
     <div class="vehicles">
         {% set isImageInput = true %}
         {% set type = 'radio' %}
+        {% set className = 'vehicle' %}
         {% for vehicle in vehicles %}
-        {% set className = vehicle %}
+
         {% include './forms/_input.generic.html' %}
         {%- endfor %}
     </div>

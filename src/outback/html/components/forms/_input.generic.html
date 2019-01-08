@@ -1,4 +1,4 @@
-<div class="custom-control custom-{{type}} {{ className | lower }} vehicle {% if isGridInput === true %} grid-item {% endif %}">
+<div class="custom-control custom-{{type}} {{ className | lower }}{% if isGridInput === true %} grid-item{% endif %}">
     {% if isImageInput === true %}
     <input type="{{ type }}" class="custom-control-input" value="{{ loop.index }}" id="singleOption-{{ loop.index }}"
            name="{{ name }}">
