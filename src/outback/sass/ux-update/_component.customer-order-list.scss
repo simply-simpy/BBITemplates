@@ -8,20 +8,15 @@
     padding-top: $spacer * 1.25;
   }
 
-  .menu-items-content {
-    @include media-breakpoint-up(lg) {
-      display: block !important;
-    }
-  }
-
   .customer-order-list-heading {
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(md) {
       align-items: center;
       background: #fff;
       display: flex;
       padding: $spacer;
       .icon {
         margin-left: auto;
+
         &:before {
           @include rem(32px)
         }
@@ -31,7 +26,7 @@
       margin-bottom: 1.25rem;
     }
     text-transform: uppercase;
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
       text-align: center;
     }
     @include rem(20px);

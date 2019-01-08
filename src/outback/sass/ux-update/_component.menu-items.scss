@@ -2,6 +2,13 @@
   border: $border-1;
   @include rem(18px);
 
+  .col-qty {
+    min-width: $spacer * 1.5;
+  }
+  @include media-breakpoint-only(sm){
+
+  }
+
   .order-row-header.col-qty,
   .order-row-header.col-item {
     border-bottom: 1px solid;
@@ -72,6 +79,9 @@
 
   .col.col-price {
     @extend .offset-2;
+    @include media-breakpoint-only(lg){
+      padding-left: 6px;
+    }
   }
 
   [data-template="order-confirmation"] & {
@@ -84,3 +94,4 @@
     }
   }
 }
+
