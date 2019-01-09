@@ -11174,12 +11174,16 @@ dl, dd {
     cursor: pointer; }
 
 .choose-time .times {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 50% 0 50%;
-  grid-template-columns: 50% 50%;
-  grid-gap: 0;
-  color: #444; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .choose-time .times .grid-item {
+    width: 50%; }
+
+.choose-time.collapsed .times {
+  display: none; }
 
 .choose-time .show-times .icon-carat {
   margin-left: auto; }

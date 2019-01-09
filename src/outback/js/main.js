@@ -1,5 +1,6 @@
 'use strict';
 /* eslint no-unused-vars: 0 */
+/* eslint no-invalid-this: 0 */
 
 // Init all Bootstrap generated tooltips
 $('[data-toggle="tooltip"]').tooltip();
@@ -84,9 +85,7 @@ $(function() {
     $($datepicker).on('change.datetimepicker', function(event) {
       let theValue = event.date.format('L');
       $('.date-picked').text(theValue);
-      /* eslint-disable */
       $(this).datetimepicker('hide');
-      /* eslint-enable */
     });
 
     // Shows today's date on page load for display only. This is not the value sent from the input field when submitting the form. The value is in a hidden text input.
@@ -208,20 +207,55 @@ $('.phone-mask').keypress(function(evt) {
 });
 
 
-// Set time for date and time picker
-/* eslint-disable */
-$('.show-times .times').toggle();
-$('.show-times .show-times-btn').on('click', function(){
-  $('.show-times .times').toggle();
+// Toggle password visibility
+$.toggleShowPassword = function(options) {
+  let settings = $.extend({
+    field: '.password_input',
+    control: '.toggle_password_visibility',
+  }, options);
+
+  console.log(settings);
+
+  const control = $(settings.control);
+  const field = $(settings.field);
+
+  control.bind('click', function() {
+    let $this = $(this);
+    field.attr('type', function(i, oldType) {
+      console.log(oldType);
+      // Toggle 'field' type.
+      this.type = oldType === 'password' ? 'text' : 'password';
+    });
+
+    $(this).text(function(i, text) {
+      return text === 'HIDE' ? 'SHOW' : 'HIDE';
+    });
+  });
+};
+
+$.toggleShowPassword({
+  field: '.passwordInput',
+  control: '.passwordToggle',
 });
 
-$('.times').each(function(){
-  $(this).find('input').change(function(){
-    console.log($(this))
-    let time =  $(this).data('time');
-    $('.show-times-btn .time').text(time);
-    $('.show-times .show-times-btn').click();
-    $(this).parent('.choose-time').toggleClass('times-visible')
-  })
+// Prevent two modals from being open at the same time.
+$('.modal').on('show.bs.modal', function() {
+  $('.modal').not($(this)).each( function() {
+    $(this).modal('hide');
+  });
 });
 
+// Collapse time and change time in UI
+$('.times input').change(function(evt) {
+  let input = $(evt.target);
+  input
+    .closest('.choose-time')
+    .addClass('collapsed')
+    .find('.time')
+    .text(input.data('time'));
+});
+
+// Toggle time picker
+$('.show-times-btn').on('click', function(evt) {
+  $(evt.target).closest('.choose-time').toggleClass('collapsed');
+});

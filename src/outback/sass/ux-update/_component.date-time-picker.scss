@@ -82,10 +82,15 @@
 .choose-time {
 
   .times {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-gap: 0;
-    color: #444;
+    display: flex;
+    flex-wrap: wrap;
+
+    .grid-item {
+      width: 50%;
+    }
+  }
+  &.collapsed .times {
+    display: none;
   }
 
   .show-times {
