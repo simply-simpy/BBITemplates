@@ -11170,9 +11170,6 @@ dl, dd {
   @media (max-width: 767.98px) {
     .date-time-picker.datepicker-open .choose-time ul {
       max-height: 10vh; } }
-  .date-time-picker .grid-item {
-    border-radius: 2px;
-    border: 1px solid gray; }
   .date-time-picker .custom-control {
     cursor: pointer; }
 

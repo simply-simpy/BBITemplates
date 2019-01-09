@@ -217,6 +217,7 @@ $('.show-times .show-times-btn').on('click', function(){
 
 $('.times').each(function(){
   $(this).find('input').change(function(){
+    console.log($(this))
     let time =  $(this).data('time');
     $('.show-times-btn .time').text(time);
     $('.show-times .show-times-btn').click();

@@ -32,12 +32,15 @@
                         <div class="choose-time">
                             <h2>Choose Time</h2>
                             <div class="show-times">
-                                <button data-time="" class="btn show-times-btn"><span class="time">5:00 PM</span><span
+                                <button class="btn show-times-btn"><span class="time">5:00 PM</span><span
                                         class="icon icon-carat"></span></button>
                                 <div class="times">
                                     {% set type = 'radio' %}
                                     {% set name = 'time' %}
+                                    {% set hasTime = true %}
                                     {% set isGridInput = true %}
+                                    {% set className = 'grid-item' %}
+                                    {% set text1Class = 'time' %}
                                     {% for time in times %}
                                     {% set text1 = time.time %}
                                     {% set data = time.dataTime %}
